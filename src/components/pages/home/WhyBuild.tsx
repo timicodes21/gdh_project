@@ -37,11 +37,11 @@ const WhyBuild = () => {
             </p>
             <p className="text-secondary-4 font-32 font-400 avenuex">
               The Great Divine Holy Order of the Third Era was established in
-              1941 with the goal of building a Grand Temple according to God's
-              specified dimensions. The organization started in rented rooms and
-              has since built two Temporary Temples, with the second one
-              currently in use. The dream of building the Grand Temple is yet to
-              be fulfilled.
+              1941 with the goal of building a Grand Temple according to
+              God&apos;s specified dimensions. The organization started in
+              rented rooms and has since built two Temporary Temples, with the
+              second one currently in use. The dream of building the Grand
+              Temple is yet to be fulfilled.
             </p>
             <ReadMore onClick={openModal} />
           </Grid>

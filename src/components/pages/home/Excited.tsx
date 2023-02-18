@@ -25,9 +25,10 @@ const Excited: React.FC<IProps> = ({ templePage }) => {
         </p>
         <Box sx={{ px: { xs: 1, md: 5, lg: 10 } }}>
           <p className="text-secondary-4 font-32 font-400 avenuex text-center">
-            "Join us in building God's Grand Temple. Your donation will bring us
-            closer to fulfilling God's divine plan and bring blessings to our
-            community. Let's come together to make this a reality. Donate now."
+            "Join us in building God&apos;s Grand Temple. Your donation will
+            bring us closer to fulfilling God&apos;s divine plan and bring
+            blessings to our community. Let&apos;s come together to make this a
+            reality. Donate now."
           </p>
         </Box>
         <Grid container spacing={4}>
