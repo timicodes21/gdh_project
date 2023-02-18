@@ -1,6 +1,5 @@
 import * as React from "react";
 import Box from "@mui/material/Box";
-import Modal from "@mui/material/Modal";
 import { IoMdCloseCircle } from "react-icons/io";
 import { Dialog, SxProps } from "@mui/material";
 import { ReactNode } from "react";
@@ -20,14 +19,7 @@ interface IProps {
 
 const CustomModal: React.FC<IProps> = ({ open, closeModal, children }) => {
   return (
-    // <Modal
-    //   open={open}
-    //   onClose={closeModal}
-    //   aria-labelledby="modal-modal-title"
-    //   aria-describedby="modal-modal-description"
-    //   style={{ overflow: "scroll" }}
-    // >
-    <Dialog open={open} onClose={closeModal} scroll="body">
+    <Dialog open={open} onClose={closeModal} scroll="body" maxWidth="lg">
       <Box sx={style}>
         <Box sx={{ display: "flex", justifyContent: "flex-end" }}>
           <IoMdCloseCircle
@@ -38,7 +30,6 @@ const CustomModal: React.FC<IProps> = ({ open, closeModal, children }) => {
         {children}
       </Box>
     </Dialog>
-    // </Modal>
   );
 };
 
