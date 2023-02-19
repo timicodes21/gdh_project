@@ -15,17 +15,30 @@ const TempleImageSection: React.FC<IProps> = ({ sectionB }) => {
     <Box sx={{ py: 5 }}>
       <Wrapper>
         <Box>
-          <Box className="text-center">
+          <Box
+            className="text-center"
+            data-aos="zoom-in"
+            data-aos-duration="2000"
+          >
             <span className="text-primary font-30 font-400 avenuex text-center">
               {sectionB ? "SECTION B," : "SECTION A,"}
             </span>
           </Box>
-          <Box className="text-center">
+          <Box
+            className="text-center"
+            data-aos="fade-up"
+            data-aos-duration="2000"
+          >
             <span className="text-secondary-3 font-40 font-400 montaga">
               Section name
             </span>
           </Box>
-          <Box sx={{ px: { xs: 1, md: 5, lg: 10 } }}>
+          <Box
+            sx={{ px: { xs: 1, md: 5, lg: 10 } }}
+            data-aos="fade-up"
+            data-aos-delay=""
+            data-aos-duration="2000"
+          >
             <p className="text-secondary-4 font-32 font-400 avenuex text-center">
               Here we have some block of text giving more information about the
               project Here we have some block of text giving more information

@@ -15,7 +15,12 @@ const TempleImageLayout: React.FC<IProps> = ({ src, alt }) => {
         <Box className={classes.img_container}>
           <Image alt={alt ?? ""} src={src} fill />
         </Box>
-        <Box sx={{ position: "absolute", bottom: 200, left: 200 }}>
+        <Box
+          sx={{ position: "absolute", bottom: 200, left: 200 }}
+          data-aos="fade-up"
+          data-aos-delay=""
+          data-aos-duration="2000"
+        >
           <span
             className="font-64 font-400 montaga text-white"
             style={{ lineHeight: "70%" }}

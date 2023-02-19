@@ -21,12 +21,23 @@ const TempleImportance = () => {
               height={373}
             />
           </Box>
-          <p className="text-secondary-3 font-52 font-400 montaga text-center">
+          <p
+            className="text-secondary-3 font-52 font-400 montaga text-center"
+            data-aos="fade-up"
+            data-aos-duration="2000"
+          >
             Importance of the temple
           </p>
           <Grid container>
             <Grid item xs={12} md={2}></Grid>
-            <Grid item xs={12} md={8}>
+            <Grid
+              item
+              xs={12}
+              md={8}
+              data-aos="fade-up"
+              data-aos-delay="500"
+              data-aos-duration="2000"
+            >
               <Box
                 className={classes.shadow_bg_1}
                 sx={{ py: { xs: 2, md: 5 }, px: { xs: 2, md: 10 } }}
@@ -42,7 +53,13 @@ const TempleImportance = () => {
           </Grid>
           <Grid container sx={{ mt: { xs: 5, md: 10 } }}>
             <Grid item xs={12} md={2}></Grid>
-            <Grid item xs={12} md={8}>
+            <Grid
+              item
+              xs={12}
+              md={8}
+              data-aos="fade-up"
+              data-aos-duration="2000"
+            >
               <Box
                 className={classes.shadow_bg_2}
                 sx={{ py: { xs: 2, md: 5 }, px: { xs: 2, md: 10 } }}

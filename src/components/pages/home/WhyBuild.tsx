@@ -14,7 +14,7 @@ const WhyBuild = () => {
     <Box sx={{ py: 5 }}>
       <Wrapper>
         <Grid container>
-          <Grid item xs={12} md={5}>
+          <Grid item xs={12} md={5} data-aos="fade-up" data-aos-duration="2000">
             <Box
               sx={{
                 position: "relative",
@@ -32,7 +32,14 @@ const WhyBuild = () => {
               />
             </Box>
           </Grid>
-          <Grid item xs={12} md={7}>
+          <Grid
+            item
+            xs={12}
+            md={7}
+            data-aos="fade-up"
+            data-aos-delay="500"
+            data-aos-duration="2000"
+          >
             <p className="font-52 font-400 text-secondary-3 montaga">
               Why build a temple?{" "}
             </p>

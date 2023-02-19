@@ -10,6 +10,7 @@ import { useRouter } from "next/router";
 import { useNavbar } from "@/hooks/useNavbar";
 import { HiOutlineMenuAlt3 } from "react-icons/hi";
 import { IoMdClose } from "react-icons/io";
+import classes from "../../styles/Home.module.css";
 
 const Navbar = () => {
   const router = useRouter();
@@ -60,10 +61,7 @@ const Navbar = () => {
             <Box sx={{ display: { xs: "none", lg: "flex" } }}>
               {navbarItems.map((item, index) => (
                 <Box key={index} sx={{ ml: 2 }}>
-                  <Link
-                    href={item.link}
-                    className="avenuex font-16 font-400 text-secondary-2"
-                  >
+                  <Link href={item.link} className={classes.navbar_link}>
                     {item.text}
                   </Link>
                 </Box>
