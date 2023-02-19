@@ -9,7 +9,7 @@ import Excited from "@/components/pages/home/Excited";
 
 const home = () => {
   return (
-    <Box>
+    <Box sx={{ pt: 10 }}>
       <GrandProject />
       <WhyBuild />
       <TempleImportance />

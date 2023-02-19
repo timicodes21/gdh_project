@@ -19,7 +19,7 @@ interface IProps {
 
 const CustomModal: React.FC<IProps> = ({ open, closeModal, children }) => {
   return (
-    <Dialog open={open} onClose={closeModal} scroll="body" maxWidth="lg">
+    <Dialog open={open} onClose={closeModal} maxWidth="lg">
       <Box sx={style}>
         <Box sx={{ display: "flex", justifyContent: "flex-end" }}>
           <IoMdCloseCircle

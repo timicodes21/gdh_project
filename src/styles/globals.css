@@ -191,3 +191,35 @@ a {
   min-height: 100%;
   z-index: -1000;
 }
+
+.nav_container {
+  display: block;
+  transition: 0.5s ease-in;
+}
+
+.nav_container.hide {
+  display: none;
+}
+
+.mobile-navbar {
+  display: none;
+}
+
+@media (max-width: 992px) {
+  .mobile-navbar {
+    display: block;
+    position: fixed;
+    top: 0;
+    min-height: 100vh;
+    width: 70%;
+    left: -992px;
+    -moz-transition: all 500ms ease-in;
+    -webkit-transition: all 500ms ease-in;
+    -o-transition: all 500ms ease-in;
+    transition: all 500ms ease-in;
+    z-index: 1000;
+  }
+  .mobile-navbar.open {
+    left: 0;
+  }
+}

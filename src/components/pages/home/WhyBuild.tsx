@@ -6,9 +6,10 @@ import { FaLongArrowAltRight } from "react-icons/fa";
 import ReadMore from "@/components/buttons/ReadMore";
 import { useModal } from "@/hooks/useModal";
 import CustomModal from "@/components/modals/CustomModal";
+import classes from "../../../styles/Home.module.css";
 
 const WhyBuild = () => {
-  const { open, setOpen, openModal, closeModal } = useModal();
+  const { open, openModal, closeModal } = useModal();
   return (
     <Box sx={{ py: 5 }}>
       <Wrapper>
@@ -48,7 +49,7 @@ const WhyBuild = () => {
         </Grid>
       </Wrapper>
       <CustomModal open={open} closeModal={closeModal}>
-        <Box>
+        <Box sx={{ overflowY: "scroll" }} className={classes?.scroll}>
           <Image
             src="/assets/icons/question_mark.svg"
             alt="question_mark"
