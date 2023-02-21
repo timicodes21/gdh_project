@@ -172,6 +172,7 @@ const Navbar = () => {
             className="pointer"
             sx={{ py: 1 }}
             onClick={() => changeLanguage(item)}
+            key={index}
           >
             <span className="font-16 font-400 satoshi">{item}</span>
           </Box>
