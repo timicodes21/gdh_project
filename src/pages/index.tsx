@@ -1,4 +1,4 @@
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, MutableRefObject } from "react";
 import BlueButton from "@/components/buttons/BlueButton";
 import TextInput from "@/components/formFields/TextInput";
 import Wrapper from "@/components/layout/Wrapper";
@@ -12,12 +12,11 @@ import { AiOutlineEye, AiOutlineEyeInvisible } from "react-icons/ai";
 export default function Home() {
   const { passwordShow, showPassword } = usePasswordShow();
   const router = useRouter();
-  const videoRef = useRef<HTMLVideoElement>();
+  const videoRef = useRef<MutableRefObject<HTMLVideoElement | undefined>>();
 
   useEffect(() => {
     setTimeout(() => {
-      const node = videoRef.current;
-      node?.play();
+      videoRef?.current?.play();
     }, 5000);
   }, []);
 
