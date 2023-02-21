@@ -78,3 +78,25 @@
   transform: scaleX(1) !important;
   transform-origin: bottom left;
 }
+
+@media (max-width: 992px) {
+  .shadow_bg_1 {
+    background: url(../../public/assets/images/shadow_1.png);
+    background-position: center;
+    background-size: 130%;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .shadow_bg_2 {
+    background: url(../../public/assets/images/shadow_2.png);
+    background-position: center;
+    background-size: 130%;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
