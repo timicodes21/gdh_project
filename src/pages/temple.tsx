@@ -6,7 +6,7 @@ import React from "react";
 
 const temple = () => {
   return (
-    <Box sx={{ pt: 10 }}>
+    <Box sx={{ pt: { xs: 3, md: 10 } }}>
       <GrandProject templePage />
       <TempleImageSection />
       <Excited templePage />

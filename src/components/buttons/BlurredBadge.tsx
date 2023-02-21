@@ -17,13 +17,13 @@ const BlurredBadge: React.FC<IProps> = ({ children, onClick }) => {
         display: "flex",
         justifyContent: "center",
         alignItems: "center",
-        width: "378px",
+        width: { xs: "200px", md: "378px" },
       }}
       className="pointer"
       onClick={onClick}
     >
       <Box sx={{ display: "flex", alignItems: "center" }}>
-        <p className="font-24 font-700 text-white satoshi">{children}</p>
+        <p className="font-20 font-700 text-white satoshi">{children}</p>
         <Box sx={{ mx: 1 }}></Box>
         <BsArrowRight className="text-white font-700 font-24" />
       </Box>

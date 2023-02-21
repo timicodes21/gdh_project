@@ -16,18 +16,23 @@ const TempleImageLayout: React.FC<IProps> = ({ src, alt }) => {
           <Image alt={alt ?? ""} src={src} fill />
         </Box>
         <Box
-          sx={{ position: "absolute", bottom: 200, left: 200 }}
+          sx={{
+            position: "absolute",
+            bottom: { xs: 50, md: 100, lg: 200 },
+            left: { xs: 50, md: 100, lg: 200 },
+          }}
           data-aos="fade-up"
           data-aos-delay=""
           data-aos-duration="2000"
         >
-          <span
-            className="font-64 font-400 montaga text-white"
-            style={{ lineHeight: "70%" }}
+          <Box
+            sx={{ lineHeight: "70%", display: { xs: "none", md: "inline" } }}
           >
-            Name of this <br />
-            part
-          </span>
+            <span className="font-60 font-400 montaga text-white">
+              Name of this <br />
+              part
+            </span>
+          </Box>
           <br />
           <Box sx={{ mt: 3 }}></Box>
           <span className="font-18 font-400 avenir text-white">

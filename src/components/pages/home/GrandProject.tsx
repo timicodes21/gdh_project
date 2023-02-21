@@ -68,13 +68,14 @@ const GrandProject: NextPage<IProps> = ({ templePage }) => {
                 sx={{
                   display: "flex",
                   flexDirection: "column",
-                  justifyContent: "flex-end",
-                  alignItems: "flex-end",
+                  justifyContent: { xs: "flex-start", lg: "flex-end" },
+                  alignItems: { xs: "flex-start", lg: "flex-end" },
+                  mt: { xs: 3, lg: 0 },
                 }}
               >
                 {!templePage && (
                   <BlurredBadge onClick={() => router.push("/temple")}>
-                    Explore temple sections
+                    Explore temple
                   </BlurredBadge>
                 )}
                 <Box sx={{ mt: 2 }}></Box>

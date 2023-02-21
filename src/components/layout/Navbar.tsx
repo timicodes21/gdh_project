@@ -149,12 +149,12 @@ const Navbar = () => {
               ))}
             </Box>
             <Box sx={{ display: "flex", flexDirection: "column", mt: 3 }}>
-              <TransparentButton onClick={() => {}} dropdown>
+              <TransparentButton onClick={toggleLanguageModal} dropdown>
                 {languageText}
               </TransparentButton>
               <Box sx={{ mt: 1 }}></Box>
               <a href="#excited">
-                <BlueButton onClick={() => {}} arrow size="small">
+                <BlueButton onClick={() => {}} arrow width="100%">
                   Make a donation
                 </BlueButton>
               </a>

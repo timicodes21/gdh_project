@@ -9,7 +9,7 @@ interface IProps {
 const Wrapper: NextPage<IProps> = ({ children }) => {
   return (
     <>
-      <Container maxWidth="xl" sx={{ px: { xs: 3, md: 5, lg: 10 } }}>
+      <Container maxWidth="xl" sx={{ px: { xs: 1, md: 5, lg: 10 } }}>
         {children}
       </Container>
     </>

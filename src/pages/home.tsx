@@ -9,7 +9,7 @@ import Excited from "@/components/pages/home/Excited";
 
 const home = () => {
   return (
-    <Box sx={{ pt: 10 }}>
+    <Box sx={{ pt: { xs: 3, md: 10 } }}>
       <GrandProject />
       <WhyBuild />
       <TempleImportance />
