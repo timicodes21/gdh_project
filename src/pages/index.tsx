@@ -1,3 +1,4 @@
+import { useEffect, useRef } from "react";
 import BlueButton from "@/components/buttons/BlueButton";
 import TextInput from "@/components/formFields/TextInput";
 import Wrapper from "@/components/layout/Wrapper";
@@ -11,11 +12,19 @@ import { AiOutlineEye, AiOutlineEyeInvisible } from "react-icons/ai";
 export default function Home() {
   const { passwordShow, showPassword } = usePasswordShow();
   const router = useRouter();
+  const videoRef = useRef();
+
+  useEffect(() => {
+    setTimeout(() => {
+      videoRef ? videoRef?.current.play() : () => {};
+    }, 5000);
+  }, []);
+
   return (
     <>
-      {/* <video muted loop id="myVideo">
+      <video muted loop id="myVideo" ref={videoRef}>
         <source src="/assets/videos/background.mp4" type="video/mp4"></source>
-      </video> */}
+      </video>
       <Box sx={authStyles.container}>
         <Wrapper>
           <Grid container>
