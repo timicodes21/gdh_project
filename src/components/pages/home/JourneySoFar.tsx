@@ -26,20 +26,20 @@ const JourneySoFar = () => {
           </p>
           <Box
             sx={{
-              display: "flex",
+              display: { xs: "block", lg: "flex" },
               justifyContent: "space-between",
               px: { xs: 2, md: 10 },
             }}
           >
             <p
-              className="text-secondary-4 font-32 font-400 avenuex"
+              className="text-secondary-4 font-32 font-300 avenuex text-justify"
               data-aos="fade-up"
               data-aos-duration="2000"
             >
               PHASE 1
             </p>
             <p
-              className="text-secondary-4 font-32 font-400 avenuex"
+              className="text-secondary-4 font-32 font-300 avenuex text-justify"
               data-aos="fade-up"
               data-aos-delay="500"
               data-aos-duration="2000"
@@ -47,7 +47,7 @@ const JourneySoFar = () => {
               INTERIORS AND FINISHES
             </p>
             <p
-              className="text-secondary-4 font-32 font-400 avenuex"
+              className="text-secondary-4 font-32 font-300 avenuex text-justify"
               data-aos="fade-up"
               data-aos-delay="1000"
               data-aos-duration="2000"
@@ -60,7 +60,7 @@ const JourneySoFar = () => {
             data-aos="fade-up"
             data-aos-duration="2000"
           >
-            <p className="text-secondary-4 font-32 font-400 avenuex text-center">
+            <p className="text-secondary-4 font-32 font-300 avenuex text-justify text-justify">
               Here we have some block of text giving more information about the
               project Here we have some block of text giving more information
               about the project.
@@ -80,119 +80,132 @@ const JourneySoFar = () => {
               ))}
             </Carousel>
           </Box>
-          <Box
-            sx={{
-              display: "flex",
-              justifyContent: "space-between",
-              px: { xs: 2, md: 10 },
-              mt: 10,
-            }}
-          >
-            <p
-              className="text-secondary-4 font-32 font-400 avenuex"
+          <div id="where_we_are">
+            <Box
+              sx={{
+                display: { xs: "block", lg: "flex" },
+                justifyContent: "space-between",
+                px: { xs: 2, md: 10 },
+                mt: 10,
+              }}
+            >
+              <p
+                className="text-secondary-4 font-32 font-300 avenuex text-justify"
+                data-aos="fade-up"
+                data-aos-duration="2000"
+              >
+                PHASE 2
+              </p>
+              <p
+                className="text-secondary-4 font-32 font-300 avenuex text-justify"
+                data-aos="fade-up"
+                data-aos-delay="500"
+                data-aos-duration="2000"
+              >
+                INTERIORS AND FINISHES
+              </p>
+              <p
+                className="text-secondary-4 font-32 font-300 avenuex text-justify"
+                data-aos="fade-up"
+                data-aos-delay="1000"
+                data-aos-duration="2000"
+              >
+                NON-JUL 2022
+              </p>
+            </Box>
+
+            <Box
+              sx={{ px: { xs: 1, md: 5, lg: 10 } }}
               data-aos="fade-up"
               data-aos-duration="2000"
             >
-              PHASE 2
-            </p>
-            <p
-              className="text-secondary-4 font-32 font-400 avenuex"
-              data-aos="fade-up"
-              data-aos-delay="500"
-              data-aos-duration="2000"
-            >
-              INTERIORS AND FINISHES
-            </p>
-            <p
-              className="text-secondary-4 font-32 font-400 avenuex"
-              data-aos="fade-up"
-              data-aos-delay="1000"
-              data-aos-duration="2000"
-            >
-              NON-JUL 2022
-            </p>
-          </Box>
-          <Box
-            sx={{ px: { xs: 1, md: 5, lg: 10 } }}
-            data-aos="fade-up"
-            data-aos-duration="2000"
-          >
-            <p className="text-secondary-4 font-32 font-400 avenuex text-center">
-              Here we have some block of text giving more information about the
-              project Here we have some block of text giving more information
-              about the project.
-            </p>
-          </Box>
-          <Box sx={{ mt: 10, py: 10, borderBottom: "0.5px solid #98A2B3" }}>
-            <Carousel>
-              {[1, 2, 3, 4, 5].map((item, index) => (
-                <Box className={classes.img_container} key={index}>
-                  <Image alt="phase_2" src="/assets/images/phase_2.png" fill />
-                </Box>
-              ))}
-            </Carousel>
-          </Box>
-          <Box
-            sx={{ mt: 10 }}
-            data-aos="fade-up"
-            data-aos-delay="500"
-            data-aos-duration="2000"
-          >
-            <p className="text-secondary-3 font-52 font-400 montaga text-center">
-              Where we are going
-            </p>
-            <p className="text-primary avenuex font-40 font-400 text-center avenuex">
-              ThE FINAL LOOK OF THE PROJECT IN 3D RENDERS
-            </p>
-          </Box>
-          <Box
-            sx={{
-              display: "flex",
-              justifyContent: "space-between",
-              px: { xs: 2, md: 10 },
-              mt: 10,
-            }}
-          >
-            <p
-              className="text-secondary-4 font-32 font-400 avenuex"
-              data-aos="fade-up"
-              data-aos-duration="2000"
-            >
-              PHASE 3
-            </p>
-            <p
-              className="text-secondary-4 font-32 font-400 avenuex"
+              <p className="text-secondary-4 font-32 font-300 avenuex text-justify text-justify">
+                Here we have some block of text giving more information about
+                the project Here we have some block of text giving more
+                information about the project.
+              </p>
+            </Box>
+            <Box sx={{ mt: 10, py: 10, borderBottom: "0.5px solid #98A2B3" }}>
+              <Carousel>
+                {[1, 2, 3, 4, 5].map((item, index) => (
+                  <Box className={classes.img_container} key={index}>
+                    <Image
+                      alt="phase_2"
+                      src="/assets/images/phase_2.png"
+                      fill
+                    />
+                  </Box>
+                ))}
+              </Carousel>
+            </Box>
+          </div>
+          <div id="where_we_are_going">
+            <Box
+              sx={{ mt: 10 }}
               data-aos="fade-up"
               data-aos-delay="500"
               data-aos-duration="2000"
             >
-              INTERIORS AND FINISHES
-            </p>
-            <p
-              className="text-secondary-4 font-32 font-400 avenuex"
-              data-aos="fade-up"
-              data-aos-delay="1000"
-              data-aos-duration="2000"
+              <p className="text-secondary-3 font-52 font-400 montaga text-center">
+                Where we are going
+              </p>
+              <p className="text-primary avenuex font-40 font-400 text-center avenuex">
+                ThE FINAL LOOK OF THE PROJECT IN 3D RENDERS
+              </p>
+            </Box>
+            <Box
+              sx={{
+                display: { xs: "block", lg: "flex" },
+                justifyContent: "space-between",
+                px: { xs: 2, md: 10 },
+                mt: 10,
+              }}
             >
-              THE FUTURE
-            </p>
-          </Box>
-          <Box sx={{ px: { xs: 1, md: 5, lg: 10 } }}>
-            <p className="text-secondary-4 font-32 font-400 avenuex text-center">
-              Here we have some block of text giving more information about the
-              project Here we have some block of text giving more information
-              about the project.
-            </p>
-          </Box>
-          <Box sx={{ mt: 10, py: 10, borderBottom: "0.5px solid #98A2B3" }}>
-            <Carousel>
-              {[1, 2, 3, 4, 5].map((item, index) => (
-                <Box className={classes.img_container} key={index}>
-                  <Image alt="phase_3" src="/assets/images/phase_3.png" fill />
-                </Box>
-              ))}
-            </Carousel>
-          </Box>
+              <p
+                className="text-secondary-4 font-32 font-300 avenuex text-justify"
+                data-aos="fade-up"
+                data-aos-duration="2000"
+              >
+                PHASE 3
+              </p>
+              <p
+                className="text-secondary-4 font-32 font-300 avenuex text-justify"
+                data-aos="fade-up"
+                data-aos-delay="500"
+                data-aos-duration="2000"
+              >
+                INTERIORS AND FINISHES
+              </p>
+              <p
+                className="text-secondary-4 font-32 font-300 avenuex text-justify"
+                data-aos="fade-up"
+                data-aos-delay="1000"
+                data-aos-duration="2000"
+              >
+                THE FUTURE
+              </p>
+            </Box>
+            <Box sx={{ px: { xs: 1, md: 5, lg: 10 } }}>
+              <p className="text-secondary-4 font-32 font-300 avenuex text-justify text-justify">
+                Here we have some block of text giving more information about
+                the project Here we have some block of text giving more
+                information about the project.
+              </p>
+            </Box>
+            <Box sx={{ mt: 10, py: 10, borderBottom: "0.5px solid #98A2B3" }}>
+              <Carousel>
+                {[1, 2, 3, 4, 5].map((item, index) => (
+                  <Box className={classes.img_container} key={index}>
+                    <Image
+                      alt="phase_3"
+                      src="/assets/images/phase_3.png"
+                      fill
+                    />
+                  </Box>
+                ))}
+              </Carousel>
+            </Box>
+          </div>
         </Wrapper>
       </Box>
     </>

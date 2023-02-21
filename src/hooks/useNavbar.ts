@@ -4,13 +4,24 @@ export const useNavbar = () => {
   const [show, setShow] = useState(true);
   const [lastScrollY, setLastScrollY] = useState(0);
   const [mobileNav, setMobileNav] = useState(false);
+  const [showLanguage, setShowLanguage] = useState(false);
+  const [languageText, setLanguageText] = useState("English");
 
   const toggleNav = () => {
     setMobileNav(!mobileNav);
   };
 
+  const toggleLanguageModal = () => {
+    setShowLanguage(!showLanguage);
+  };
+
   const closeNav = () => {
     setMobileNav(false);
+  };
+
+  const changeLanguage = (text: string) => {
+    setLanguageText(text);
+    setShowLanguage(false);
   };
 
   const controlNavbar = () => {
@@ -39,5 +50,14 @@ export const useNavbar = () => {
     }
   }, [lastScrollY]);
 
-  return { show, closeNav, toggleNav, mobileNav };
+  return {
+    show,
+    closeNav,
+    toggleNav,
+    mobileNav,
+    showLanguage,
+    toggleLanguageModal,
+    changeLanguage,
+    languageText,
+  };
 };

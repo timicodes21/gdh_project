@@ -30,6 +30,7 @@ const BlueButton: React.FC<IProps> = ({
         width: width ? width : "inherit",
         color: "#F2F4F7",
         boxShadow: 0,
+        px: { xs: 2, md: 5 },
       }}
       onClick={onClick}
       variant="contained"

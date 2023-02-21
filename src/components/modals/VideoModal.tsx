@@ -1,14 +1,20 @@
 import * as React from "react";
 import Box from "@mui/material/Box";
 import { IoMdCloseCircle } from "react-icons/io";
-import { Dialog, SxProps } from "@mui/material";
+import { Dialog, SxProps, Modal } from "@mui/material";
 import { ReactNode } from "react";
 
 const style: SxProps = {
+  position: "absolute" as "absolute",
+  top: "50%",
+  left: "50%",
+  transform: "translate(-50%, -50%)",
   bgcolor: "background.paper",
   border: "2px solid #FFF",
   boxShadow: 24,
   p: 4,
+  minWidth: { xs: 320, md: 600, lg: 900 },
+  maxWidth: 992,
 };
 
 interface IProps {
@@ -19,14 +25,14 @@ interface IProps {
   hideCloseIcon?: boolean;
 }
 
-const CustomModal: React.FC<IProps> = ({
+const VideoModal: React.FC<IProps> = ({
   open,
   closeModal,
   children,
   hideCloseIcon,
 }) => {
   return (
-    <Dialog open={open} onClose={closeModal} maxWidth="lg">
+    <Modal open={open} onClose={closeModal}>
       <Box sx={style}>
         {!hideCloseIcon && (
           <Box sx={{ display: "flex", justifyContent: "flex-end" }}>
@@ -38,8 +44,8 @@ const CustomModal: React.FC<IProps> = ({
         )}
         {children}
       </Box>
-    </Dialog>
+    </Modal>
   );
 };
 
-export default CustomModal;
+export default VideoModal;

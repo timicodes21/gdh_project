@@ -11,11 +11,21 @@ import { useNavbar } from "@/hooks/useNavbar";
 import { HiOutlineMenuAlt3 } from "react-icons/hi";
 import { IoMdClose } from "react-icons/io";
 import classes from "../../styles/Home.module.css";
+import CustomModal from "../modals/CustomModal";
 
 const Navbar = () => {
   const router = useRouter();
 
-  const { show, toggleNav, closeNav, mobileNav } = useNavbar();
+  const {
+    show,
+    toggleNav,
+    closeNav,
+    mobileNav,
+    showLanguage,
+    toggleLanguageModal,
+    languageText,
+    changeLanguage,
+  } = useNavbar();
 
   return (
     <Box
@@ -61,21 +71,29 @@ const Navbar = () => {
             <Box sx={{ display: { xs: "none", lg: "flex" } }}>
               {navbarItems.map((item, index) => (
                 <Box key={index} sx={{ ml: 2 }}>
-                  <Link href={item.link} className={classes.navbar_link}>
+                  <a href={item.link} className={classes.navbar_link}>
                     {item.text}
-                  </Link>
+                  </a>
                 </Box>
               ))}
             </Box>
           </Box>
-          <Box sx={{ display: { xs: "none", lg: "flex" } }}>
-            <TransparentButton onClick={() => {}} dropdown>
-              English
+          <Box
+            sx={{ display: { xs: "none", lg: "flex" }, alignItems: "center" }}
+          >
+            <TransparentButton
+              onClick={toggleLanguageModal}
+              dropdown
+              size="small"
+            >
+              {languageText}
             </TransparentButton>
             <Box sx={{ mx: 1 }}></Box>
-            <BlueButton width="100%" onClick={() => {}} arrow size="large">
-              Make a donation
-            </BlueButton>
+            <a href="#excited">
+              <BlueButton onClick={() => {}} arrow size="small">
+                Make a donation
+              </BlueButton>
+            </a>
           </Box>
           <Box
             sx={{ display: { xs: "flex", lg: "none" }, alignItems: "center" }}
@@ -120,28 +138,45 @@ const Navbar = () => {
             >
               {navbarItems.map((item, index) => (
                 <Box key={index} sx={{ ml: 2, mt: { xs: 2, md: 3 } }}>
-                  <Link
+                  <a
                     href={item.link}
-                    className="avenuex font-16 font-400 text-secondary-2"
+                    className={classes.navbar_link}
                     onClick={closeNav}
                   >
                     {item.text}
-                  </Link>
+                  </a>
                 </Box>
               ))}
             </Box>
             <Box sx={{ display: "flex", flexDirection: "column", mt: 3 }}>
               <TransparentButton onClick={() => {}} dropdown>
-                English
+                {languageText}
               </TransparentButton>
               <Box sx={{ mt: 1 }}></Box>
-              <BlueButton width="100%" onClick={() => {}} arrow size="large">
-                Make a donation
-              </BlueButton>
+              <a href="#excited">
+                <BlueButton onClick={() => {}} arrow size="small">
+                  Make a donation
+                </BlueButton>
+              </a>
             </Box>
           </Box>
         </Box>
       </Wrapper>
+      <CustomModal
+        open={showLanguage}
+        closeModal={toggleLanguageModal}
+        hideCloseIcon
+      >
+        {["English", "Yoruba"].map((item, index) => (
+          <Box
+            className="pointer"
+            sx={{ py: 1 }}
+            onClick={() => changeLanguage(item)}
+          >
+            <span className="font-16 font-400 satoshi">{item}</span>
+          </Box>
+        ))}
+      </CustomModal>
     </Box>
   );
 };

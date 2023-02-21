@@ -2,6 +2,7 @@ import BlurredBadge from "@/components/buttons/BlurredBadge";
 import ReadMore from "@/components/buttons/ReadMore";
 import Wrapper from "@/components/layout/Wrapper";
 import CustomModal from "@/components/modals/CustomModal";
+import VideoModal from "@/components/modals/VideoModal";
 import { useModal } from "@/hooks/useModal";
 import { Box, Grid } from "@mui/material";
 import { NextPage } from "next";
@@ -9,6 +10,7 @@ import Image from "next/image";
 import { useRouter } from "next/router";
 import React from "react";
 import { BsChevronLeft } from "react-icons/bs";
+import ReactPlayer from "react-player";
 import classes from "../../../styles/Home.module.css";
 
 interface IProps {
@@ -17,6 +19,11 @@ interface IProps {
 
 const GrandProject: NextPage<IProps> = ({ templePage }) => {
   const { open, openModal, closeModal } = useModal();
+  const {
+    open: open2,
+    openModal: openModal2,
+    closeModal: closeModal2,
+  } = useModal();
   const router = useRouter();
   return (
     <Box sx={{ py: 5 }}>
@@ -50,7 +57,7 @@ const GrandProject: NextPage<IProps> = ({ templePage }) => {
                 </span>
                 <br />
                 <span className="font-18 font-400 text-white avenir">
-                  THE GREAT DIVINE HOLY ORDER OF THE THIR ERA
+                  THE GREAT DIVINE HOLY ORDER OF THE THIRD ERA
                 </span>
               </Grid>
 
@@ -72,7 +79,9 @@ const GrandProject: NextPage<IProps> = ({ templePage }) => {
                 )}
                 <Box sx={{ mt: 2 }}></Box>
                 {!templePage && (
-                  <BlurredBadge onClick={() => {}}>See whats new</BlurredBadge>
+                  <BlurredBadge onClick={openModal2}>
+                    See whats new
+                  </BlurredBadge>
                 )}
               </Grid>
             </Grid>
@@ -80,16 +89,16 @@ const GrandProject: NextPage<IProps> = ({ templePage }) => {
         </Box>
         {templePage && (
           <Box sx={{ mt: 4 }} data-aos="fade-up" data-aos-duration="2000">
-            <span className="font-32 font-400 avenuex text-secondary-4">
+            <p className="font-32 font-300 avenuex text-justify text-secondary-4">
               The Grand Temple for the Great Divine Holy Order is a religious
               building located at 27 Oke-Olu street, Iponri, Lagos, Nigeria. The
               construction of the temple began in 2009 and is currently underway
               with plans to complete it in 2023. The completion of the Grand
               Temple will fulfill a vision set by the Holy Order decades ago and
               provide a place of worship for its members.
-            </span>
+            </p>
             <Box sx={{ mt: { xs: 2, md: 5 } }}>
-              <ReadMore onClick={() => {}} />
+              <ReadMore onClick={openModal} />
             </Box>
           </Box>
         )}
@@ -106,7 +115,7 @@ const GrandProject: NextPage<IProps> = ({ templePage }) => {
             <p className="font-52 font-400 text-secondary-3 montaga">
               About the temple
             </p>
-            <p className="text-secondary-4 font-32 font-400 avenuex">
+            <p className="text-secondary-4 font-32 font-300 avenuex text-justify">
               The proposed project is the completion of the GrandTemple for
               Great Divine Holy Order at 27 Oke-Olustreet, Iponri, Lagos, Lagos
               State Nigeria. The buildingis currently under construction and the
@@ -135,6 +144,20 @@ const GrandProject: NextPage<IProps> = ({ templePage }) => {
           </Box>
         </Box>
       </CustomModal>
+      <VideoModal open={open2} closeModal={closeModal2}>
+        <Box>
+          <Box>
+            <BsChevronLeft
+              className="font-24 font-800 pointer"
+              onClick={closeModal2}
+            />
+          </Box>
+          <ReactPlayer
+            url="https://www.youtube.com/watch?v=iLpxzQ_FriQ&ab_channel=UniversityofMinnesota"
+            width="100%"
+          />
+        </Box>
+      </VideoModal>
     </Box>
   );
 };

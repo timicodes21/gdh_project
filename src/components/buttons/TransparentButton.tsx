@@ -1,6 +1,7 @@
 import { Button, Box } from "@mui/material";
 import React, { ReactNode } from "react";
 import { FiChevronDown } from "react-icons/fi";
+import { FaLongArrowAltRight } from "react-icons/fa";
 
 interface IProps {
   children: ReactNode;
@@ -39,7 +40,10 @@ const TransparentButton: React.FC<IProps> = ({
     >
       {children}
       {dropdown && (
-        <FiChevronDown style={{ marginLeft: 10, color: "#386EB2" }} />
+        <FiChevronDown
+          style={{ marginLeft: 10, color: "#386EB2" }}
+          className="text-primary"
+        />
       )}
     </Button>
   );

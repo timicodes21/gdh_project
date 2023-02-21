@@ -31,7 +31,7 @@ const TempleImageLayout: React.FC<IProps> = ({ src, alt }) => {
           <br />
           <Box sx={{ mt: 3 }}></Box>
           <span className="font-18 font-400 avenir text-white">
-            THE GREAT DIVINE HOLY ORDER OF THE THIR ERA
+            THE GREAT DIVINE HOLY ORDER OF THE THIRD ERA
           </span>
         </Box>
       </Box>

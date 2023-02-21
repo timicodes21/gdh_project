@@ -11,7 +11,7 @@
 .shadow_bg_1 {
   background: url(../../public/assets/images/shadow_1.png);
   background-position: center;
-  background-size: cover;
+  background-size: 120%;
   background-repeat: no-repeat;
   display: flex;
   align-items: center;
@@ -21,7 +21,7 @@
 .shadow_bg_2 {
   background: url(../../public/assets/images/shadow_2.png);
   background-position: center;
-  background-size: cover;
+  background-size: 120%;
   background-repeat: no-repeat;
   display: flex;
   align-items: center;

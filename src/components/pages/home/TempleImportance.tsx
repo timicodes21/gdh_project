@@ -42,7 +42,7 @@ const TempleImportance = () => {
                 className={classes.shadow_bg_1}
                 sx={{ py: { xs: 2, md: 5 }, px: { xs: 2, md: 10 } }}
               >
-                <p className="text-secondary-4 font-32 font-400 avenuex">
+                <p className="text-secondary-4 font-32 font-300 avenuex text-justify">
                   The temple will bring close interaction with the creator,
                   protection from attacks and accusations, love and favor of the
                   Almighty..
@@ -64,7 +64,7 @@ const TempleImportance = () => {
                 className={classes.shadow_bg_2}
                 sx={{ py: { xs: 2, md: 5 }, px: { xs: 2, md: 10 } }}
               >
-                <p className="text-secondary-4 font-32 font-400 avenuex">
+                <p className="text-secondary-4 font-32 font-300 avenuex text-justify">
                   The temple will bring close interaction with the creator,
                   protection from attacks and accusations, love and favor of the
                   Almighty..
@@ -90,7 +90,7 @@ const TempleImportance = () => {
             <p className="font-52 font-400 text-secondary-3 montaga">
               Importance of the temple
             </p>
-            <p className="text-secondary-4 font-32 font-400 avenuex">
+            <p className="text-secondary-4 font-32 font-300 avenuex text-justify">
               The Grand Temple is the abode of God. Being His abode, it affords
               you as members of the Holy Order, the closest companion and
               interaction with the Creator of the heavens and the earth; it
