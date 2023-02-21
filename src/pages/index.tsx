@@ -16,7 +16,9 @@ export default function Home() {
 
   useEffect(() => {
     setTimeout(() => {
-      videoRef ? videoRef?.current.play() : () => {};
+      if (videoRef) {
+        videoRef?.current.play();
+      }
     }, 5000);
   }, []);
 
