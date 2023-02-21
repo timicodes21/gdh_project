@@ -12,13 +12,12 @@ import { AiOutlineEye, AiOutlineEyeInvisible } from "react-icons/ai";
 export default function Home() {
   const { passwordShow, showPassword } = usePasswordShow();
   const router = useRouter();
-  const videoRef = useRef();
+  const videoRef = useRef<HTMLVideoElement>();
 
   useEffect(() => {
     setTimeout(() => {
-      if (videoRef) {
-        videoRef?.current.play();
-      }
+      const node = videoRef.current;
+      node?.play();
     }, 5000);
   }, []);
 
