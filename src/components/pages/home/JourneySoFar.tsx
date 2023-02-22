@@ -12,15 +12,15 @@ const JourneySoFar = () => {
         <Wrapper>
           <p
             className="text-secondary-3 font-52 font-400 montaga text-center"
-            data-aos="fade-up"
-            data-aos-duration="2000"
+            data-aos="fade-up-right"
+            data-aos-duration="1000"
           >
             The journey so far
           </p>
           <p
             className="text-primary avenuex font-40 font-400 text-center avenuex"
-            data-aos="zoom-in"
-            data-aos-duration="2000"
+            data-aos="fade-up-left"
+            data-aos-duration="1000"
           >
             THE CONSTRUCTION STAGES OF THE PROJECT
           </p>
@@ -34,7 +34,7 @@ const JourneySoFar = () => {
             <p
               className="text-secondary-4 font-32 font-300 avenuex text-justify"
               data-aos="fade-up"
-              data-aos-duration="2000"
+              data-aos-duration="1000"
             >
               PHASE 1
             </p>
@@ -42,7 +42,7 @@ const JourneySoFar = () => {
               className="text-secondary-4 font-32 font-300 avenuex text-justify"
               data-aos="fade-up"
               data-aos-delay="500"
-              data-aos-duration="2000"
+              data-aos-duration="1000"
             >
               INTERIORS AND FINISHES
             </p>
@@ -50,7 +50,7 @@ const JourneySoFar = () => {
               className="text-secondary-4 font-32 font-300 avenuex text-justify"
               data-aos="fade-up"
               data-aos-delay="1000"
-              data-aos-duration="2000"
+              data-aos-duration="1000"
             >
               1989-2010
             </p>
@@ -60,7 +60,11 @@ const JourneySoFar = () => {
             data-aos="fade-up"
             data-aos-duration="2000"
           >
-            <p className="text-secondary-4 font-32 font-300 avenuex text-justify text-justify">
+            <p
+              className="text-secondary-4 font-32 font-300 avenuex text-justify text-justify"
+              data-aos="fade-right"
+              data-aos-duration="1000"
+            >
               Here we have some block of text giving more information about the
               project Here we have some block of text giving more information
               about the project.
@@ -68,9 +72,9 @@ const JourneySoFar = () => {
           </Box>
           <Box
             sx={{ mt: 10 }}
-            data-aos="zoom-in"
+            data-aos="flip-left"
             data-aos-delay="500"
-            data-aos-duration="2000"
+            data-aos-duration="1000"
           >
             <Carousel>
               {[1, 2, 3, 4, 5].map((item, index) => (
@@ -92,7 +96,7 @@ const JourneySoFar = () => {
               <p
                 className="text-secondary-4 font-32 font-300 avenuex text-justify"
                 data-aos="fade-up"
-                data-aos-duration="2000"
+                data-aos-duration="1000"
               >
                 PHASE 2
               </p>
@@ -100,7 +104,7 @@ const JourneySoFar = () => {
                 className="text-secondary-4 font-32 font-300 avenuex text-justify"
                 data-aos="fade-up"
                 data-aos-delay="500"
-                data-aos-duration="2000"
+                data-aos-duration="1000"
               >
                 INTERIORS AND FINISHES
               </p>
@@ -108,18 +112,18 @@ const JourneySoFar = () => {
                 className="text-secondary-4 font-32 font-300 avenuex text-justify"
                 data-aos="fade-up"
                 data-aos-delay="1000"
-                data-aos-duration="2000"
+                data-aos-duration="1000"
               >
                 NON-JUL 2022
               </p>
             </Box>
 
-            <Box
-              sx={{ px: { xs: 1, md: 5, lg: 10 } }}
-              data-aos="fade-up"
-              data-aos-duration="2000"
-            >
-              <p className="text-secondary-4 font-32 font-300 avenuex text-justify text-justify">
+            <Box sx={{ px: { xs: 1, md: 5, lg: 10 } }}>
+              <p
+                className="text-secondary-4 font-32 font-300 avenuex text-justify text-justify"
+                data-aos="fade-left"
+                data-aos-duration="1000"
+              >
                 Here we have some block of text giving more information about
                 the project Here we have some block of text giving more
                 information about the project.
@@ -140,16 +144,19 @@ const JourneySoFar = () => {
             </Box>
           </div>
           <div id="where_we_are_going">
-            <Box
-              sx={{ mt: 10 }}
-              data-aos="fade-up"
-              data-aos-delay="500"
-              data-aos-duration="2000"
-            >
-              <p className="text-secondary-3 font-52 font-400 montaga text-center">
+            <Box sx={{ mt: 10 }}>
+              <p
+                className="text-secondary-3 font-52 font-400 montaga text-center"
+                data-aos="fade-up-left"
+                data-aos-duration="1000"
+              >
                 Where we are going
               </p>
-              <p className="text-primary avenuex font-40 font-400 text-center avenuex">
+              <p
+                className="text-primary avenuex font-40 font-400 text-center avenuex"
+                data-aos="fade-up-right"
+                data-aos-duration="1000"
+              >
                 ThE FINAL LOOK OF THE PROJECT IN 3D RENDERS
               </p>
             </Box>
@@ -164,7 +171,7 @@ const JourneySoFar = () => {
               <p
                 className="text-secondary-4 font-32 font-300 avenuex text-justify"
                 data-aos="fade-up"
-                data-aos-duration="2000"
+                data-aos-duration="1000"
               >
                 PHASE 3
               </p>
@@ -172,7 +179,7 @@ const JourneySoFar = () => {
                 className="text-secondary-4 font-32 font-300 avenuex text-justify"
                 data-aos="fade-up"
                 data-aos-delay="500"
-                data-aos-duration="2000"
+                data-aos-duration="1000"
               >
                 INTERIORS AND FINISHES
               </p>
@@ -180,19 +187,27 @@ const JourneySoFar = () => {
                 className="text-secondary-4 font-32 font-300 avenuex text-justify"
                 data-aos="fade-up"
                 data-aos-delay="1000"
-                data-aos-duration="2000"
+                data-aos-duration="1000"
               >
                 THE FUTURE
               </p>
             </Box>
             <Box sx={{ px: { xs: 1, md: 5, lg: 10 } }}>
-              <p className="text-secondary-4 font-32 font-300 avenuex text-justify text-justify">
+              <p
+                className="text-secondary-4 font-32 font-300 avenuex text-justify text-justify"
+                data-aos="fade-left"
+                data-aos-duration="1000"
+              >
                 Here we have some block of text giving more information about
                 the project Here we have some block of text giving more
                 information about the project.
               </p>
             </Box>
-            <Box sx={{ mt: 10, py: 10, borderBottom: "0.5px solid #98A2B3" }}>
+            <Box
+              sx={{ mt: 10, py: 10, borderBottom: "0.5px solid #98A2B3" }}
+              data-aos="flip-left"
+              data-aos-duration="1000"
+            >
               <Carousel>
                 {[1, 2, 3, 4, 5].map((item, index) => (
                   <Box className={classes.img_container} key={index}>

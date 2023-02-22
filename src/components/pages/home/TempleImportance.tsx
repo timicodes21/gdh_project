@@ -24,25 +24,23 @@ const TempleImportance = () => {
           <p
             className="text-secondary-3 font-52 font-400 montaga text-center"
             data-aos="fade-up"
-            data-aos-duration="2000"
+            data-aos-duration="1000"
           >
             Importance of the temple
           </p>
           <Grid container>
             <Grid item xs={12} md={2}></Grid>
-            <Grid
-              item
-              xs={12}
-              md={8}
-              data-aos="fade-up"
-              data-aos-delay="500"
-              data-aos-duration="2000"
-            >
+            <Grid item xs={12} md={8}>
               <Box
                 className={classes.shadow_bg_1}
                 sx={{ py: { xs: 2, md: 5 }, px: { xs: 2, md: 10 } }}
               >
-                <p className="text-secondary-4 font-32 font-300 avenuex text-justify">
+                <p
+                  className="text-secondary-4 font-32 font-300 avenuex text-justify"
+                  data-aos="fade-right"
+                  data-aos-delay="500"
+                  data-aos-duration="1000"
+                >
                   The temple will bring close interaction with the creator,
                   protection from attacks and accusations, love and favor of the
                   Almighty..
@@ -53,18 +51,17 @@ const TempleImportance = () => {
           </Grid>
           <Grid container sx={{ mt: { xs: 5, md: 10 } }}>
             <Grid item xs={12} md={2}></Grid>
-            <Grid
-              item
-              xs={12}
-              md={8}
-              data-aos="fade-up"
-              data-aos-duration="2000"
-            >
+            <Grid item xs={12} md={8}>
               <Box
                 className={classes.shadow_bg_2}
                 sx={{ py: { xs: 2, md: 5 }, px: { xs: 2, md: 10 } }}
               >
-                <p className="text-secondary-4 font-32 font-300 avenuex text-justify">
+                <p
+                  className="text-secondary-4 font-32 font-300 avenuex text-justify"
+                  data-aos="fade-left"
+                  data-aos-delay="500"
+                  data-aos-duration="1000"
+                >
                   The temple will bring close interaction with the creator,
                   protection from attacks and accusations, love and favor of the
                   Almighty..

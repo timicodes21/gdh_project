@@ -15,13 +15,7 @@ const WhyBuild = () => {
       <div id="why_build">
         <Wrapper>
           <Grid container>
-            <Grid
-              item
-              xs={12}
-              md={5}
-              data-aos="fade-up"
-              data-aos-duration="2000"
-            >
+            <Grid item xs={12} md={5}>
               <Box
                 sx={{
                   position: "relative",
@@ -43,9 +37,9 @@ const WhyBuild = () => {
               item
               xs={12}
               md={7}
-              data-aos="fade-up"
+              data-aos="fade-left"
               data-aos-delay="500"
-              data-aos-duration="2000"
+              data-aos-duration="1000"
             >
               <p className="font-52 font-400 text-secondary-3 montaga">
                 Why build a temple?{" "}

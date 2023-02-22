@@ -10,7 +10,12 @@ const Congregation = () => {
     <Box sx={{ py: 5 }}>
       <div id="congregation">
         <Wrapper>
-          <p className="text-secondary-3 font-52 font-400 montaga text-center">
+          <p
+            className="text-secondary-3 font-52 font-400 montaga text-center"
+            data-aos="fade-right"
+            data-aos-delay=""
+            data-aos-duration="1000"
+          >
             What the congregation is saying
           </p>
 

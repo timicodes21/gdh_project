@@ -16,13 +16,21 @@ const Excited: React.FC<IProps> = ({ templePage }) => {
     <Box sx={{ py: 5 }}>
       <div id="excited">
         <Wrapper>
-          <p className="text-secondary-3 font-48 font-400 montaga text-center">
+          <p
+            className="text-secondary-3 font-48 font-400 montaga text-center"
+            data-aos="fade-right"
+            data-aos-duration="1000"
+          >
             {templePage
               ? "Excited by this section?"
               : "Excited with what you have seen so far?"}
           </p>
           <Box sx={{ px: { xs: 1, md: 5, lg: 10 } }}>
-            <p className="text-secondary-4 font-32 font-400 avenuex text-center">
+            <p
+              className="text-secondary-4 font-32 font-400 avenuex text-center"
+              data-aos="fade-left"
+              data-aos-duration="1000"
+            >
               &quot;Join us in building God&apos;s Grand Temple. Your donation
               will bring us closer to fulfilling God&apos;s divine plan and
               bring blessings to our community. Let&apos;s come together to make

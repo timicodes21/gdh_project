@@ -38,8 +38,6 @@ const GrandProject: NextPage<IProps> = ({ templePage }) => {
               display: "flex",
               alignItems: "flex-end",
             }}
-            data-aos="fade-up"
-            data-aos-duration="2000"
           >
             <Grid container sx={{ px: 5, pb: 3 }}>
               <Grid
@@ -51,6 +49,8 @@ const GrandProject: NextPage<IProps> = ({ templePage }) => {
                   flexDirection: "column",
                   justifyContent: "flex-end",
                 }}
+                data-aos="fade-down"
+                data-aos-duration="500"
               >
                 <span className="font-64 font-400 montaga text-white">
                   The Grand Temple {templePage ? "" : "project"}
@@ -72,6 +72,9 @@ const GrandProject: NextPage<IProps> = ({ templePage }) => {
                   alignItems: { xs: "flex-start", lg: "flex-end" },
                   mt: { xs: 3, lg: 0 },
                 }}
+                data-aos="fade-down"
+                data-aos-duration="500"
+                data-aos-delay="500"
               >
                 {!templePage && (
                   <BlurredBadge onClick={() => router.push("/temple")}>
@@ -89,7 +92,7 @@ const GrandProject: NextPage<IProps> = ({ templePage }) => {
           </Box>
         </Box>
         {templePage && (
-          <Box sx={{ mt: 4 }} data-aos="fade-up" data-aos-duration="2000">
+          <Box sx={{ mt: 4 }} data-aos="fade-up" data-aos-duration="1000">
             <p className="font-32 font-300 avenuex text-justify text-secondary-4">
               The Grand Temple for the Great Divine Holy Order is a religious
               building located at 27 Oke-Olu street, Iponri, Lagos, Nigeria. The

@@ -17,8 +17,8 @@ const TempleImageSection: React.FC<IProps> = ({ sectionB }) => {
         <Box>
           <Box
             className="text-center"
-            data-aos="zoom-in"
-            data-aos-duration="2000"
+            data-aos="fade-left"
+            data-aos-duration="1000"
           >
             <span className="text-primary font-30 font-400 avenuex text-center">
               {sectionB ? "SECTION B," : "SECTION A,"}
@@ -26,8 +26,8 @@ const TempleImageSection: React.FC<IProps> = ({ sectionB }) => {
           </Box>
           <Box
             className="text-center"
-            data-aos="fade-up"
-            data-aos-duration="2000"
+            data-aos="fade-right"
+            data-aos-duration="1000"
           >
             <span className="text-secondary-3 font-40 font-400 montaga">
               Section name
@@ -37,7 +37,7 @@ const TempleImageSection: React.FC<IProps> = ({ sectionB }) => {
             sx={{ px: { xs: 1, md: 5, lg: 10 } }}
             data-aos="fade-up"
             data-aos-delay=""
-            data-aos-duration="2000"
+            data-aos-duration="1000"
           >
             <p className="text-secondary-4 font-32 font-400 avenuex text-center">
               Here we have some block of text giving more information about the
@@ -47,10 +47,10 @@ const TempleImageSection: React.FC<IProps> = ({ sectionB }) => {
           </Box>
           {sectionB
             ? templeImagesSectionB?.map((item, index) => (
-                <TempleImageLayout key={index} src={item?.src} />
+                <TempleImageLayout key={index} index={index} src={item?.src} />
               ))
             : templeImages?.map((item, index) => (
-                <TempleImageLayout key={index} src={item?.src} />
+                <TempleImageLayout key={index} index={index} src={item?.src} />
               ))}
         </Box>
       </Wrapper>

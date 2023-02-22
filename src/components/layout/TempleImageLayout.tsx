@@ -6,13 +6,19 @@ import classes from "../../styles/Home.module.css";
 interface IProps {
   src: string;
   alt?: string;
+  index: number;
 }
 
-const TempleImageLayout: React.FC<IProps> = ({ src, alt }) => {
+const TempleImageLayout: React.FC<IProps> = ({ src, alt, index }) => {
   return (
     <Box sx={{ mt: 10 }}>
       <Box sx={{ position: "relative" }}>
-        <Box className={classes.img_container}>
+        <Box
+          className={classes.img_container}
+          data-aos={index % 2 ? "fade-right" : "fade-left"}
+          data-aos-delay=""
+          data-aos-duration="1000"
+        >
           <Image alt={alt ?? ""} src={src} fill />
         </Box>
         <Box
@@ -21,9 +27,9 @@ const TempleImageLayout: React.FC<IProps> = ({ src, alt }) => {
             bottom: { xs: 50, md: 100, lg: 200 },
             left: { xs: 50, md: 100, lg: 200 },
           }}
-          data-aos="fade-up"
+          data-aos={index % 2 ? "fade-right" : "fade-left"}
           data-aos-delay=""
-          data-aos-duration="2000"
+          data-aos-duration="1000"
         >
           <Box
             sx={{ lineHeight: "70%", display: { xs: "none", md: "inline" } }}
@@ -35,7 +41,12 @@ const TempleImageLayout: React.FC<IProps> = ({ src, alt }) => {
           </Box>
           <br />
           <Box sx={{ mt: 3 }}></Box>
-          <span className="font-18 font-400 avenir text-white">
+          <span
+            className="font-18 font-400 avenir text-white"
+            data-aos={index % 2 ? "fade-left" : "fade-right"}
+            data-aos-delay=""
+            data-aos-duration="1000"
+          >
             THE GREAT DIVINE HOLY ORDER OF THE THIRD ERA
           </span>
         </Box>
