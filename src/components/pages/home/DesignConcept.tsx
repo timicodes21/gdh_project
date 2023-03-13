@@ -49,7 +49,7 @@ const DesignConcept = () => {
                 }}
               >
                 <Image
-                  src="/assets/images/stages_table.png"
+                  src="/assets/images/stages_table.PNG"
                   alt="question_mark"
                   layout="fill"
                 />
