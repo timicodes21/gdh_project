@@ -6,7 +6,7 @@ interface Item {
 export const navbarItems: Item[] = [
   {
     text: "How it Started",
-    link: "#why_build",
+    link: "/home",
   },
   {
     text: "Where we are going",
@@ -14,7 +14,7 @@ export const navbarItems: Item[] = [
   },
   {
     text: "Explore Temple",
-    link: "#where_we_are_going",
+    link: "/where_we_are_going",
   },
   {
     text: "The congregation",
