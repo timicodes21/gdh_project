@@ -8,12 +8,10 @@ export const navbarItems: Item[] = [
     text: "How it Started",
     link: "#why_build",
   },
-
   {
     text: "Where we are going",
-    link: "#where_we_are_going",
+    link: "/where_we_are_going",
   },
-
   {
     text: "Explore Temple",
     link: "#where_we_are_going",
