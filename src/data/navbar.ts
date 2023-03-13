@@ -5,15 +5,17 @@ interface Item {
 
 export const navbarItems: Item[] = [
   {
-    text: "The Temple",
+    text: "How it Started",
     link: "#why_build",
   },
-  {
-    text: "Where we are",
-    link: "#where_we_are",
-  },
+
   {
     text: "Where we are going",
+    link: "#where_we_are_going",
+  },
+
+  {
+    text: "Explore Temple",
     link: "#where_we_are_going",
   },
   {

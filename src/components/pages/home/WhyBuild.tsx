@@ -42,15 +42,19 @@ const WhyBuild = () => {
               data-aos-duration="1000"
             >
               <p className="font-52 font-400 text-secondary-3 montaga">
-                Why build a temple?{" "}
+                {/* Why build a temple?{" "} */}
+                Introduction
               </p>
-              <p className="text-secondary-4 font-32 font-300 text-justify avenuex">
-                The Great Divine Holy Order of the Third Era was established in
+              <p className="text-secondary-4 font-32 font-300 text-justify avenuex line-150">
+                {/* The Great Divine Holy Order of the Third Era was established in
                 1941 with the goal of building a Grand Temple according to
                 God&apos;s specified dimensions. The organization started in
                 rented rooms and has since built two Temporary Temples, with the
                 second one currently in use. The dream of building the Grand
-                Temple is yet to be fulfilled.
+                Temple is yet to be fulfilled. */}
+                The Great Divine Holy Order of the Third Era was thronically
+                christened in a divine message of 16th September 1941, and the
+                divine structure was called the Cogent Arrangement.
               </p>
               <ReadMore onClick={openModal} />
             </Grid>
@@ -66,10 +70,10 @@ const WhyBuild = () => {
             />
             <Box>
               <p className="font-52 font-400 text-secondary-3 montaga">
-                Why build a temple?{" "}
+                {/* Why build a temple?{" "} */}Introduction
               </p>
-              <p className="text-secondary-4 font-32 font-300 text-justify avenuex">
-                The Great Divine Holy Order of the Third Era was thronically
+              <p className="text-secondary-4 font-32 font-300 text-justify avenuex line-20">
+                {/* The Great Divine Holy Order of the Third Era was thronically
                 christened in a divine message of 16th September 1941, and the
                 divine structure was called the Cogent Arrangement. Ever since
                 then, God declared His intention for the Holy Order to build a
@@ -89,7 +93,40 @@ const WhyBuild = () => {
                 body of the Temple is on the first floor, and the prayer
                 chambers and others on the second floor. Still the command and
                 intention of God to build a Grand Temple for Him, with His
-                specifications is yet to be fulfilled.
+                specifications is yet to be fulfilled. */}
+                The Great Divine Holy Order of the Third Era was thronically
+                christened in a divine message of 16th September 1941, and the
+                divine structure was called the Cogent Arrangement. <br />
+                <br />
+                Ever since then, God declared His intention for the Holy Order
+                to build a Grand Temple for Him. The dimensions were specified.
+                The Holy Order was established by God in the same way the
+                Creator meditated, and the resultant divine products were the
+                heavens, earth, and the universe. Thus, God is the Founder of
+                the GDHOTE. <br />
+                <br />
+                Let us listen to the explanation of the holy angels of God, it
+                says: “Dateline Spring 1941 THE EMANATION OF THE THIRD ERA was
+                established in the Name ELOHIM-MISHEN - as a final passover,
+                restoration and initiation of the ADAMIC SOUL back to the
+                presence of God, and in which the hidden secrets and mysteries
+                of creation are revealed first-hand to mankind, meant to be the
+                Glory of God’s creation in the Cosmic Empire. <br />
+                <br />
+                Due to the ever changing face of the Earth and the boundless
+                expanse of man’s mind that is subjected to his will in
+                retrospect, a smaller version of this Grand Ritual was
+                instituted that the favoured ones of the black race may be in
+                constant favour of THE ALMIGHTY GOD, through time and clime,”
+                Tetra, Pastor, Michael the Patron. <br />
+                <br />
+                From this Angelic explanation, the GDHOTE in all ramifications
+                is an extraordinary spiritual Citadel for human souls’ awakening
+                in pursuance and search for divine realities. It is a divine
+                institution of esoteric science for spiritual research and
+                development for selfrealisation of man in the image and likeness
+                of God. It is an advanced school for experienced souls in Christ
+                light to have positive impact on the world of mortals.
               </p>
             </Box>
           </Box>

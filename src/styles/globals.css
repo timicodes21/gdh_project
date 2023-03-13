@@ -112,7 +112,7 @@ body {
 }
 
 .font-32 {
-  font-size: 32px !important;
+  font-size: 28px !important;
 }
 
 .font-36 {
@@ -145,6 +145,11 @@ body {
 
 .font-64 {
   font-size: 64px !important;
+}
+
+/* Line height */
+.line-150 {
+  line-height: 150% !important;
 }
 
 /* Colors */

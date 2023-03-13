@@ -26,7 +26,8 @@ const TempleImportance = () => {
             data-aos="fade-up"
             data-aos-duration="1000"
           >
-            Importance of the temple
+            {/* Importance of the temple */}
+            The Tempoary Temple
           </p>
           <Grid container>
             <Grid item xs={12} md={2}></Grid>
@@ -41,9 +42,11 @@ const TempleImportance = () => {
                   data-aos-delay="500"
                   data-aos-duration="1000"
                 >
-                  The temple will bring close interaction with the creator,
+                  {/* The temple will bring close interaction with the creator,
                   protection from attacks and accusations, love and favor of the
-                  Almighty..
+                  Almighty.. */}
+                  The Holy Order started from a very humble beginning, using a
+                  rented room and parlour apartment as her place of worship.
                 </p>
               </Box>
             </Grid>
@@ -62,9 +65,12 @@ const TempleImportance = () => {
                   data-aos-delay="500"
                   data-aos-duration="1000"
                 >
-                  The temple will bring close interaction with the creator,
+                  {/* The temple will bring close interaction with the creator,
                   protection from attacks and accusations, love and favor of the
-                  Almighty..
+                  Almighty.. */}
+                  Efforts were intensified to build a more spacious and
+                  befitting place of worship, which resulted in dedicating the
+                  second Temporary Temple on 10th of August 1986.
                 </p>
               </Box>
             </Grid>
@@ -85,10 +91,11 @@ const TempleImportance = () => {
           />
           <Box>
             <p className="font-52 font-400 text-secondary-3 montaga">
-              Importance of the temple
+              {/* Importance of the temple */}
+              The Tempoary Temple
             </p>
-            <p className="text-secondary-4 font-32 font-300 avenuex text-justify">
-              The Grand Temple is the abode of God. Being His abode, it affords
+            <p className="text-secondary-4 font-32 font-300 avenuex text-justify line-150">
+              {/* The Grand Temple is the abode of God. Being His abode, it affords
               you as members of the Holy Order, the closest companion and
               interaction with the Creator of the heavens and the earth; it
               shields you away from all warranted and unwarranted attacks and
@@ -106,7 +113,28 @@ const TempleImportance = () => {
               where God dwells, the people of the area cannot lack any good
               thing; where God dwells, His Kingdom, yea His desired reign shall
               supersede over the land. These are great blessings for the race
-              and her people.
+              and her people. */}
+              The Holy Order started from a very humble beginning, using a
+              rented room and parlour apartment as her place of worship. They
+              started at 13, Jebba Street, Ebute Meta West, and later moved to
+              33, Jones Street, Ebute Meta West. Later land was secured at
+              Iponri village, close to Ebute Meta West. After much efforts the
+              first Temporary Temple was built in 1961 on this land, this
+              building is now being used as the Sabbath School. Efforts were
+              intensified to build a more spacious and befitting place of
+              worship, which resulted in dedicating the second Temporary Temple
+              on 10th of August 1986. <br />
+              <br />
+              This is the present Temple we are using now; it is a three floor
+              building. Holy Order of Saint Mary chapel is on the ground floor,
+              the sanctuary and the body of the Temple is on the first floor,
+              and the prayer chambers and others on the second floor. <br />
+              <br /> Still the command and intention of God to build a Grand
+              Temple for Him, with His specifications is yet to be fulfilled
+              prayer chambers and others on the second floor. <br />
+              <br />
+              Still the command and intention of God to build a Grand Temple for
+              Him, with His specifications is yet to be fulfilled
             </p>
           </Box>
         </Box>
