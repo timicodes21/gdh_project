@@ -4,7 +4,11 @@ import Wrapper from "@/components/layout/Wrapper";
 import Image from "next/image";
 import classes from "../../../styles/Home.module.css";
 import Carousel from "react-material-ui-carousel";
-import { designSystemsImages, stMaryImages } from "@/data/images";
+import {
+  designSystemsImages,
+  floorPlanImages,
+  stMaryImages,
+} from "@/data/images";
 import ReadMore from "@/components/buttons/ReadMore";
 import { useModal } from "@/hooks/useModal";
 import CustomModal from "@/components/modals/CustomModal";
@@ -38,7 +42,7 @@ const StMaryHall = () => {
             </Carousel>
           </Box>
 
-          <div id="where_we_are_going">
+          <div id="">
             <Box sx={{ mt: 10 }}>
               <p
                 className="text-secondary-3 font-52 font-400 montaga text-center"
@@ -109,7 +113,28 @@ const StMaryHall = () => {
               <Carousel>
                 {designSystemsImages.map((item, index) => (
                   <Box className={classes.img_container} key={index}>
-                    <Image alt="phase_3" src={item} fill />
+                    <Image alt="design_systems" src={item} fill />
+                  </Box>
+                ))}
+              </Carousel>
+            </Box>
+
+            <Box
+              sx={{ mt: 10, py: 10, borderBottom: "0.5px solid #98A2B3" }}
+              data-aos="fade-left"
+              data-aos-duration="1000"
+            >
+              <p
+                className="text-secondary-3 font-52 font-400 montaga text-center"
+                data-aos="fade-up-left"
+                data-aos-duration="1000"
+              >
+                Floor Plans
+              </p>
+              <Carousel>
+                {floorPlanImages.map((item, index) => (
+                  <Box className={classes.img_container} key={index}>
+                    <Image alt="design_systems" src={item} fill />
                   </Box>
                 ))}
               </Carousel>

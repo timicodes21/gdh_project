@@ -24,3 +24,15 @@ export const designSystemsImages: string[] = [
   "/assets/images/design_systems_3.PNG",
   "/assets/images/design_systems_4.PNG",
 ];
+
+export const floorPlanImages: string[] = [
+  "/assets/images/floor_plan_1.PNG",
+  "/assets/images/floor_plan_2.PNG",
+  "/assets/images/floor_plan_3.PNG",
+];
+
+export const electricalSystemImages: string[] = [
+  "/assets/images/floor_plan_1.PNG",
+  "/assets/images/floor_plan_2.PNG",
+  "/assets/images/floor_plan_3.PNG",
+];
