@@ -5,7 +5,7 @@ interface Item {
 
 export const navbarItems: Item[] = [
   {
-    text: "How it Started",
+    text: "How we Started",
     link: "/home",
   },
   {

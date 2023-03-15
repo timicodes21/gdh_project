@@ -18,7 +18,7 @@ const DesignConcept = () => {
               item
               xs={12}
               md={6}
-              data-aos="fade-left"
+              data-aos="fade-right"
               data-aos-delay="500"
               data-aos-duration="1000"
             >
@@ -44,14 +44,13 @@ const DesignConcept = () => {
                   flexDirection: "column",
                   justifyContent: "flex-end",
                   alignItems: "center",
-                  height: "80vh",
                   mt: 10,
                 }}
               >
-                <Image
+                <img
                   src="/assets/images/stages_table.PNG"
                   alt="question_mark"
-                  layout="fill"
+                  style={{ height: "auto", maxWidth: "100%" }}
                 />
               </Box>
             </Grid>

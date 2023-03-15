@@ -104,7 +104,7 @@ const StMaryHall = () => {
                 <ReadMore onClick={openModal} />
               </Box>
             </Box>
-
+            {/* 
             <Box
               sx={{ mt: 10, py: 10, borderBottom: "0.5px solid #98A2B3" }}
               data-aos="flip-left"
@@ -117,7 +117,7 @@ const StMaryHall = () => {
                   </Box>
                 ))}
               </Carousel>
-            </Box>
+            </Box> */}
 
             <Box
               sx={{ mt: 10, py: 10, borderBottom: "0.5px solid #98A2B3" }}

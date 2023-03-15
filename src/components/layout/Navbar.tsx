@@ -16,6 +16,8 @@ import CustomModal from "../modals/CustomModal";
 const Navbar = () => {
   const router = useRouter();
 
+  console.log("router query", router.pathname);
+
   const {
     show,
     toggleNav,
@@ -71,7 +73,14 @@ const Navbar = () => {
             <Box sx={{ display: { xs: "none", lg: "flex" } }}>
               {navbarItems.map((item, index) => (
                 <Box key={index} sx={{ ml: 2 }}>
-                  <a href={item.link} className={classes.navbar_link}>
+                  <a
+                    href={item.link}
+                    className={
+                      router.pathname === item?.link
+                        ? classes.navbar_link_active
+                        : classes.navbar_link
+                    }
+                  >
                     {item.text}
                   </a>
                 </Box>
