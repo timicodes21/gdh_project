@@ -28,12 +28,12 @@ const StMaryHall = () => {
             St Mary&apos;s Hall
           </p>
           <Box
-            sx={{ mt: 10 }}
-            data-aos="flip-left"
+            sx={{ mt: 10, display: "flex", justifyContent: "center" }}
+            data-aos="fade-left"
             data-aos-delay="500"
             data-aos-duration="1000"
           >
-            <Carousel>
+            <Carousel sx={{ width: { xs: "90%", md: "80%", lg: "55%" } }}>
               {stMaryImages.map((item, index) => (
                 <Box className={classes.img_container} key={index}>
                   <Image alt="phase_1" src={item} fill />
@@ -107,7 +107,7 @@ const StMaryHall = () => {
             {/* 
             <Box
               sx={{ mt: 10, py: 10, borderBottom: "0.5px solid #98A2B3" }}
-              data-aos="flip-left"
+              data-aos="fade-left"
               data-aos-duration="1000"
             >
               <Carousel>
@@ -131,13 +131,15 @@ const StMaryHall = () => {
               >
                 Floor Plans
               </p>
-              <Carousel>
-                {floorPlanImages.map((item, index) => (
-                  <Box className={classes.img_container} key={index}>
-                    <Image alt="design_systems" src={item} fill />
-                  </Box>
-                ))}
-              </Carousel>
+              <Box sx={{ display: "flex", justifyContent: "center" }}>
+                <Carousel sx={{ width: { xs: "90%", md: "80%", lg: "55%" } }}>
+                  {floorPlanImages.map((item, index) => (
+                    <Box className={classes.img_container} key={index}>
+                      <Image alt="design_systems" src={item} fill />
+                    </Box>
+                  ))}
+                </Carousel>
+              </Box>
             </Box>
           </div>
         </Wrapper>

@@ -78,12 +78,12 @@ const JourneySoFar = () => {
             </p>
           </Box>
           <Box
-            sx={{ mt: 10 }}
-            data-aos="flip-left"
+            sx={{ mt: 10, display: "flex", justifyContent: "center" }}
+            data-aos="fade-left"
             data-aos-delay="500"
             data-aos-duration="1000"
           >
-            <Carousel>
+            <Carousel sx={{ width: { xs: "90%", md: "80%", lg: "55%" } }}>
               {stageOneImages.map((item, index) => (
                 <Box className={classes.img_container} key={index}>
                   <Image alt="phase_1" src={item} fill />
@@ -127,8 +127,10 @@ const JourneySoFar = () => {
             <Box sx={{ display: "flex", justifyContent: "end" }}>
               <ReadMore onClick={openModal} />
             </Box>
-            <Box sx={{ mt: 10, py: 10, borderBottom: "0.5px solid #98A2B3" }}>
-              <Carousel>
+            <Box
+              sx={{ mt: 10, py: 10, display: "flex", justifyContent: "center" }}
+            >
+              <Carousel sx={{ width: { xs: "90%", md: "80%", lg: "55%" } }}>
                 {designChangesImages.map((item, index) => (
                   <Box className={classes.img_container} key={index}>
                     <Image alt="phase_2" src={item} fill />
@@ -198,11 +200,11 @@ const JourneySoFar = () => {
               </p>
             </Box>
             <Box
-              sx={{ mt: 10, py: 10, borderBottom: "0.5px solid #98A2B3" }}
-              data-aos="flip-left"
+              sx={{ mt: 10, py: 10, display: "flex", justifyContent: "center" }}
+              data-aos="fade-left"
               data-aos-duration="1000"
             >
-              <Carousel>
+              <Carousel sx={{ width: { xs: "90%", md: "80%", lg: "55%" } }}>
                 {[1, 2, 3, 4, 5].map((item, index) => (
                   <Box className={classes.img_container} key={index}>
                     <Image
