@@ -11,6 +11,7 @@ import { HiOutlineMenuAlt3 } from "react-icons/hi";
 import { IoMdClose } from "react-icons/io";
 import classes from "../../styles/Home.module.css";
 import CustomModal from "../modals/CustomModal";
+import Link from "next/link";
 
 const Navbar = () => {
   const router = useRouter();
@@ -71,7 +72,7 @@ const Navbar = () => {
 
             <Box sx={{ display: { xs: "none", lg: "flex" } }}>
               <Box sx={{ ml: 2 }}>
-                <a
+                <Link
                   href="/home"
                   className={
                     router.pathname === "/home"
@@ -80,11 +81,11 @@ const Navbar = () => {
                   }
                 >
                   Where it Started
-                </a>
+                </Link>
               </Box>
               <Box sx={{ ml: 2 }}>
                 <Box className="dropdown">
-                  <a
+                  <Link
                     href="/where_we_are_going"
                     className={
                       router.pathname.includes("/where_we_are_going")
@@ -93,11 +94,11 @@ const Navbar = () => {
                     }
                   >
                     Where we are going
-                  </a>
+                  </Link>
                   <Box className="dropdown_content" sx={{ p: 2 }}>
                     {navbarWhereItems.map((item, index) => (
                       <Box key={index} sx={{ mb: 2 }}>
-                        <a
+                        <Link
                           href={item.link}
                           className={
                             router.pathname === item?.link
@@ -106,7 +107,7 @@ const Navbar = () => {
                           }
                         >
                           {item.text}
-                        </a>
+                        </Link>
                       </Box>
                     ))}
                   </Box>
