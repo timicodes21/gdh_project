@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import { Box } from "@mui/material";
 import Wrapper from "./Wrapper";
 import Image from "next/image";
-import { navbarItems } from "@/data/navbar";
+import { navbarItems, navbarWhereItems } from "@/data/navbar";
 import Link from "next/link";
 import TransparentButton from "../buttons/TransparentButton";
 import BlueButton from "../buttons/BlueButton";
@@ -70,19 +70,39 @@ const Navbar = () => {
               />
             </Box>
 
-            <Box sx={{ display: { xs: "none", lg: "flex" } }}>
+            <Box
+              sx={{ display: { xs: "none", lg: "flex" } }}
+              className="dropdown"
+            >
               {navbarItems.map((item, index) => (
                 <Box key={index} sx={{ ml: 2 }}>
                   <a
                     href={item.link}
                     className={
                       router.pathname === item?.link
-                        ? classes.navbar_link_active
-                        : classes.navbar_link
+                        ? "navbar_link_active"
+                        : "navbar_link"
                     }
                   >
                     {item.text}
                   </a>
+
+                  <Box
+                    className={
+                      item?.link === "/where_we_are_going"
+                        ? "dropdown_content"
+                        : "d-none"
+                    }
+                    sx={{ p: 2 }}
+                  >
+                    {navbarWhereItems.map((item, index) => (
+                      <Box key={index} sx={{ mb: 2 }}>
+                        <a href={item.link} className="navbar_link">
+                          {item.text}
+                        </a>
+                      </Box>
+                    ))}
+                  </Box>
                 </Box>
               ))}
             </Box>

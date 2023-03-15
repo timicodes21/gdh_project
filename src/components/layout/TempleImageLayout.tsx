@@ -16,7 +16,6 @@ const TempleImageLayout: React.FC<IProps> = ({ src, alt, index }) => {
         <Box
           className={classes.img_container}
           data-aos={index % 2 ? "fade-right" : "fade-left"}
-          data-aos-delay=""
           data-aos-duration="1000"
         >
           <Image alt={alt ?? ""} src={src} fill />
@@ -28,7 +27,6 @@ const TempleImageLayout: React.FC<IProps> = ({ src, alt, index }) => {
             left: { xs: 50, md: 100, lg: 200 },
           }}
           data-aos={index % 2 ? "fade-right" : "fade-left"}
-          data-aos-delay=""
           data-aos-duration="1000"
         >
           <Box
@@ -44,7 +42,6 @@ const TempleImageLayout: React.FC<IProps> = ({ src, alt, index }) => {
           <span
             className="font-18 font-400 avenir text-white"
             data-aos={index % 2 ? "fade-left" : "fade-right"}
-            data-aos-delay=""
             data-aos-duration="1000"
           >
             THE GREAT DIVINE HOLY ORDER OF THE THIRD ERA
