@@ -4,7 +4,12 @@ import Wrapper from "@/components/layout/Wrapper";
 import Image from "next/image";
 import classes from "../../../styles/Home.module.css";
 import Carousel from "react-material-ui-carousel";
-import { designChangesImages, stageOneImages } from "@/data/images";
+import {
+  designChangesImages,
+  musicalEquipmentsImages,
+  stageOneImages,
+  stainedGlassImages,
+} from "@/data/images";
 import ReadMore from "@/components/buttons/ReadMore";
 import { useModal } from "@/hooks/useModal";
 import CustomModal from "@/components/modals/CustomModal";
@@ -21,7 +26,6 @@ const JourneySoFar = () => {
             data-aos="fade-up-right"
             data-aos-duration="1000"
           >
-            {/* The journey so far */}
             How it Started
           </p>
           <p
@@ -199,6 +203,7 @@ const JourneySoFar = () => {
                 information about the project.
               </p>
             </Box>
+
             <Box
               sx={{ mt: 10, py: 10, display: "flex", justifyContent: "center" }}
               data-aos="fade-left"
@@ -212,6 +217,46 @@ const JourneySoFar = () => {
                       src="/assets/images/phase_3.png"
                       fill
                     />
+                  </Box>
+                ))}
+              </Carousel>
+            </Box>
+            <p
+              className="text-secondary-4 font-32 text-center font-300 avenuex"
+              data-aos="fade-up"
+              data-aos-duration="1000"
+            >
+              STAINED GLASS
+            </p>
+            <Box
+              sx={{ display: "flex", justifyContent: "center", mb: 10 }}
+              data-aos="fade-left"
+              data-aos-duration="1000"
+            >
+              <Carousel sx={{ width: { xs: "90%", md: "80%", lg: "55%" } }}>
+                {stainedGlassImages.map((item, index) => (
+                  <Box className={classes.img_container} key={index}>
+                    <Image alt="phase_3" src={item} fill />
+                  </Box>
+                ))}
+              </Carousel>
+            </Box>
+            <p
+              className="text-secondary-4 font-32 text-center font-300 avenuex text-center"
+              data-aos="fade-up"
+              data-aos-duration="1000"
+            >
+              MUSICAL EQUIPMENT
+            </p>
+            <Box
+              sx={{ display: "flex", justifyContent: "center", mb: 10 }}
+              data-aos="fade-left"
+              data-aos-duration="1000"
+            >
+              <Carousel sx={{ width: { xs: "90%", md: "80%", lg: "55%" } }}>
+                {musicalEquipmentsImages.map((item, index) => (
+                  <Box className={classes.img_container} key={index}>
+                    <Image alt="phase_3" src={item} fill />
                   </Box>
                 ))}
               </Carousel>

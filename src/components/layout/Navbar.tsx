@@ -3,7 +3,6 @@ import { Box } from "@mui/material";
 import Wrapper from "./Wrapper";
 import Image from "next/image";
 import { navbarItems, navbarWhereItems } from "@/data/navbar";
-import Link from "next/link";
 import TransparentButton from "../buttons/TransparentButton";
 import BlueButton from "../buttons/BlueButton";
 import { useRouter } from "next/router";
@@ -70,41 +69,49 @@ const Navbar = () => {
               />
             </Box>
 
-            <Box
-              sx={{ display: { xs: "none", lg: "flex" } }}
-              className="dropdown"
-            >
-              {navbarItems.map((item, index) => (
-                <Box key={index} sx={{ ml: 2 }}>
+            <Box sx={{ display: { xs: "none", lg: "flex" } }}>
+              <Box sx={{ ml: 2 }}>
+                <a
+                  href="/home"
+                  className={
+                    router.pathname === "/home"
+                      ? "navbar_link_active"
+                      : "navbar_link"
+                  }
+                >
+                  Where it Started
+                </a>
+              </Box>
+              <Box sx={{ ml: 2 }}>
+                <Box className="dropdown">
                   <a
-                    href={item.link}
+                    href="/where_we_are_going"
                     className={
-                      router.pathname === item?.link
+                      router.pathname.includes("/where_we_are_going")
                         ? "navbar_link_active"
                         : "navbar_link"
                     }
                   >
-                    {item.text}
+                    Where we are going
                   </a>
-
-                  <Box
-                    className={
-                      item?.link === "/where_we_are_going"
-                        ? "dropdown_content"
-                        : "d-none"
-                    }
-                    sx={{ p: 2 }}
-                  >
+                  <Box className="dropdown_content" sx={{ p: 2 }}>
                     {navbarWhereItems.map((item, index) => (
                       <Box key={index} sx={{ mb: 2 }}>
-                        <a href={item.link} className="navbar_link">
+                        <a
+                          href={item.link}
+                          className={
+                            router.pathname === item?.link
+                              ? "navbar_link_active"
+                              : "navbar_link"
+                          }
+                        >
                           {item.text}
                         </a>
                       </Box>
                     ))}
                   </Box>
                 </Box>
-              ))}
+              </Box>
             </Box>
           </Box>
           <Box

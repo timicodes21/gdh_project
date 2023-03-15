@@ -4,12 +4,7 @@ import Wrapper from "@/components/layout/Wrapper";
 import Image from "next/image";
 import classes from "../../../styles/Home.module.css";
 import Carousel from "react-material-ui-carousel";
-import {
-  designSystemsImages,
-  electricalSystemImages,
-  floorPlanImages,
-  stMaryImages,
-} from "@/data/images";
+import { acousticSystemImages, electricalSystemImages } from "@/data/images";
 import ReadMore from "@/components/buttons/ReadMore";
 import { useModal } from "@/hooks/useModal";
 import CustomModal from "@/components/modals/CustomModal";
@@ -59,7 +54,7 @@ const AcousticDesign = () => {
               data-aos-duration="1000"
             >
               <Carousel sx={{ width: { xs: "90%", md: "80%", lg: "55%" } }}>
-                {electricalSystemImages.map((item, index) => (
+                {acousticSystemImages.map((item, index) => (
                   <Box className={classes.img_container} key={index}>
                     <Image alt="design_systems" src={item} fill />
                   </Box>

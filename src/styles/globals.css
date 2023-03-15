@@ -346,12 +346,15 @@ a {
 
 .dropdown .dropdown_content {
   position: absolute;
-  display: none;
+
   background: #fff !important;
   width: 300px;
   height: 260px;
-
   box-shadow: 0px 2px 6px 1px rgba(0, 0, 0, 0.18);
+  /* height: 0; */
+  display: none;
+  overflow: hidden;
+  transition: display 2s ease-in-out;
 }
 
 .d-none {
@@ -359,7 +362,20 @@ a {
 }
 
 .dropdown:hover .dropdown_content {
+  /* height: 260px; */
   display: block;
+}
+
+/* Define animation */
+@keyframes dropdown-height {
+  from {
+    height: 0;
+    overflow: hidden;
+  }
+  to {
+    height: 100px;
+    overflow: hidden;
+  }
 }
 
 .navbar_link {

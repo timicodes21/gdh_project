@@ -1,7 +1,6 @@
 import Congregation from "@/components/pages/home/Congregation";
 import Excited from "@/components/pages/home/Excited";
 import GrandProject from "@/components/pages/home/GrandProject";
-import TempleImageSection from "@/components/pages/temple/TempleImageSection";
 import AcousticDesign from "@/components/pages/whereGoing/AcousticDesign";
 import DesignSystemsElec from "@/components/pages/whereGoing/DesignSystemsElect";
 import Introduction from "@/components/pages/whereGoing/Introduction";

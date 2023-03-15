@@ -32,7 +32,30 @@ export const floorPlanImages: string[] = [
 ];
 
 export const electricalSystemImages: string[] = [
-  "/assets/images/floor_plan_1.PNG",
-  "/assets/images/floor_plan_2.PNG",
-  "/assets/images/floor_plan_3.PNG",
+  "/assets/images/electrical_systems_1.PNG",
+  "/assets/images/electrical_systems_2.PNG",
+  "/assets/images/electrical_systems_3.PNG",
+  "/assets/images/electrical_systems_4.PNG",
+];
+
+export const stainedGlassImages: string[] = [
+  "/assets/images/stained_glass_1.PNG",
+  "/assets/images/stained_glass_2.PNG",
+  "/assets/images/stained_glass_3.PNG",
+];
+
+export const musicalEquipmentsImages: string[] = [
+  "/assets/images/musical_equipment_1.PNG",
+  "/assets/images/musical_equipment_2.PNG",
+];
+
+export const acousticSystemImages: string[] = [
+  "/assets/images/acoustic_stytems_1.PNG",
+  "/assets/images/acoustic_stytems_2.PNG",
+  "/assets/images/acoustic_stytems_3.PNG",
+  "/assets/images/acoustic_stytems_4.PNG",
+  "/assets/images/acoustic_stytems_5.PNG",
+  "/assets/images/acoustic_stytems_6.PNG",
+  "/assets/images/acoustic_stytems_7.PNG",
+  "/assets/images/acoustic_stytems_8.PNG",
 ];

@@ -5,7 +5,7 @@ interface Item {
 
 export const navbarItems: Item[] = [
   {
-    text: "How we Started",
+    text: "How it Started",
     link: "/home",
   },
   {
@@ -25,27 +25,27 @@ export const navbarItems: Item[] = [
 export const navbarWhereItems: Item[] = [
   {
     text: "Introduction",
-    link: "/home",
+    link: "/where_we_are_going/introduction",
   },
   {
     text: "Floor Plans & Indoor Architecture",
-    link: "/where_we_are_going",
+    link: "/where_we_are_going/floor_plans",
   },
   {
     text: "Mechanical and Plumbing Systems",
-    link: "/where_we_are_going",
+    link: "/where_we_are_going/mechanical_plumbing_systems",
   },
   {
     text: "Electrical and Lighting Systems",
-    link: "/where_we_are_going",
+    link: "/where_we_are_going/electrical_lighting",
   },
   {
     text: "Acoustics Systems",
-    link: "/where_we_are_going",
+    link: "/where_we_are_going/acoustic_systems",
   },
   {
     text: "Prospective Vendors",
-    link: "/where_we_are_going",
+    link: "/where_we_are_going/prospective_vendors",
   },
   {
     text: "The Ecclesiastic Building",
