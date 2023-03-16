@@ -47,20 +47,6 @@ const ProspectiveVendors = () => {
                 <ReadMore onClick={openModal} />
               </Box>
             </Box>
-
-            <Box
-              sx={{ mt: 10, py: 10, display: "flex", justifyContent: "center" }}
-              data-aos="fade-left"
-              data-aos-duration="1000"
-            >
-              <Carousel sx={{ width: { xs: "90%", md: "80%", lg: "55%" } }}>
-                {acousticSystemImages.map((item, index) => (
-                  <Box className={classes.img_container} key={index}>
-                    <Image alt="design_systems" src={item} fill />
-                  </Box>
-                ))}
-              </Carousel>
-            </Box>
           </div>
         </Wrapper>
       </Box>
@@ -96,6 +82,13 @@ const ProspectiveVendors = () => {
               technical teams for Catholic Churches around Italy. This includes
               the Vatican.”
             </p>
+            <Box>
+              <img
+                src="/assets/images/prospective_vendors_table.PNG"
+                alt="table"
+                style={{ maxWidth: "100%" }}
+              />
+            </Box>
           </Box>
         </Box>
       </CustomModal>
