@@ -33,7 +33,10 @@ const StMaryHall = () => {
             data-aos-delay="500"
             data-aos-duration="1000"
           >
-            <Carousel sx={{ width: { xs: "90%", md: "80%", lg: "55%" } }}>
+            <Carousel
+              navButtonsAlwaysVisible
+              sx={{ width: { xs: "90%", md: "80%", lg: "55%" } }}
+            >
               {stMaryImages.map((item, index) => (
                 <Box className={classes.img_container} key={index}>
                   <Image alt="phase_1" src={item} fill />
@@ -125,7 +128,10 @@ const StMaryHall = () => {
                 Floor Plans
               </p>
               <Box sx={{ display: "flex", justifyContent: "center" }}>
-                <Carousel sx={{ width: { xs: "90%", md: "80%", lg: "55%" } }}>
+                <Carousel
+                  navButtonsAlwaysVisible
+                  sx={{ width: { xs: "90%", md: "80%", lg: "55%" } }}
+                >
                   {floorPlanImages.map((item, index) => (
                     <Box className={classes.img_container} key={index}>
                       <Image alt="design_systems" src={item} fill />

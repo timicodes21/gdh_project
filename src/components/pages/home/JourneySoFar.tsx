@@ -1,5 +1,5 @@
 import React from "react";
-import { Box } from "@mui/material";
+import { Box, ButtonBase } from "@mui/material";
 import Wrapper from "@/components/layout/Wrapper";
 import Image from "next/image";
 import classes from "../../../styles/Home.module.css";
@@ -13,6 +13,7 @@ import {
 import ReadMore from "@/components/buttons/ReadMore";
 import { useModal } from "@/hooks/useModal";
 import CustomModal from "@/components/modals/CustomModal";
+import { FaChevronCircleLeft, FaChevronCircleRight } from "react-icons/fa";
 
 const JourneySoFar = () => {
   const { open, openModal, closeModal } = useModal();
@@ -81,7 +82,10 @@ const JourneySoFar = () => {
               data-aos-delay="500"
               data-aos-duration="1000"
             >
-              <Carousel sx={{ width: { xs: "90%", md: "80%", lg: "55%" } }}>
+              <Carousel
+                sx={{ width: { xs: "90%", md: "80%", lg: "55%" } }}
+                navButtonsAlwaysVisible
+              >
                 {stageOneImages.map((item, index) => (
                   <Box className={classes.img_container} key={index}>
                     <Image alt="phase_1" src={item} fill />
@@ -134,7 +138,10 @@ const JourneySoFar = () => {
                   justifyContent: "center",
                 }}
               >
-                <Carousel sx={{ width: { xs: "90%", md: "80%", lg: "55%" } }}>
+                <Carousel
+                  navButtonsAlwaysVisible
+                  sx={{ width: { xs: "90%", md: "80%", lg: "55%" } }}
+                >
                   {designChangesImages.map((item, index) => (
                     <Box className={classes.img_container} key={index}>
                       <Image alt="phase_2" src={item} fill />
@@ -156,7 +163,10 @@ const JourneySoFar = () => {
                 data-aos="fade-left"
                 data-aos-duration="1000"
               >
-                <Carousel sx={{ width: { xs: "90%", md: "80%", lg: "55%" } }}>
+                <Carousel
+                  navButtonsAlwaysVisible
+                  sx={{ width: { xs: "90%", md: "80%", lg: "55%" } }}
+                >
                   {stainedGlassImages.map((item, index) => (
                     <Box className={classes.img_container} key={index}>
                       <Image alt="phase_3" src={item} fill />
@@ -178,7 +188,10 @@ const JourneySoFar = () => {
                 data-aos="fade-left"
                 data-aos-duration="1000"
               >
-                <Carousel sx={{ width: { xs: "90%", md: "80%", lg: "55%" } }}>
+                <Carousel
+                  navButtonsAlwaysVisible
+                  sx={{ width: { xs: "90%", md: "80%", lg: "55%" } }}
+                >
                   {musicalEquipmentsImages.map((item, index) => (
                     <Box className={classes.img_container} key={index}>
                       <Image alt="phase_3" src={item} fill />

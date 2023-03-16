@@ -20,7 +20,7 @@ const Congregation = () => {
           </p>
 
           <Box sx={{ mt: 5 }}>
-            <Carousel animation="slide">
+            <Carousel navButtonsAlwaysVisible animation="slide">
               {congregation?.map((item, index) => (
                 <Box key={index}>
                   <ReactPlayer url={item?.url} width="100%" />

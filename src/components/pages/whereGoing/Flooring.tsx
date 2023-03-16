@@ -60,7 +60,10 @@ const Flooring = () => {
               data-aos="fade-left"
               data-aos-duration="1000"
             >
-              <Carousel sx={{ width: { xs: "90%", md: "80%", lg: "55%" } }}>
+              <Carousel
+                navButtonsAlwaysVisible
+                sx={{ width: { xs: "90%", md: "80%", lg: "55%" } }}
+              >
                 {flooringImages.map((item, index) => (
                   <Box className={classes.img_container} key={index}>
                     <Image alt="design_systems" src={item} fill />
@@ -80,7 +83,10 @@ const Flooring = () => {
               data-aos="fade-left"
               data-aos-duration="1000"
             >
-              <Carousel sx={{ width: { xs: "90%", md: "80%", lg: "55%" } }}>
+              <Carousel
+                navButtonsAlwaysVisible
+                sx={{ width: { xs: "90%", md: "80%", lg: "55%" } }}
+              >
                 {allItemsImages.map((item, index) => (
                   <Box className={classes.img_container} key={index}>
                     <Image alt="design_systems" src={item} fill />
@@ -100,7 +106,10 @@ const Flooring = () => {
               data-aos="fade-left"
               data-aos-duration="1000"
             >
-              <Carousel sx={{ width: { xs: "90%", md: "80%", lg: "55%" } }}>
+              <Carousel
+                navButtonsAlwaysVisible
+                sx={{ width: { xs: "90%", md: "80%", lg: "55%" } }}
+              >
                 {flooring2Images.map((item, index) => (
                   <Box className={classes.img_container} key={index}>
                     <Image alt="design_systems" src={item} fill />
@@ -120,7 +129,10 @@ const Flooring = () => {
               data-aos="fade-left"
               data-aos-duration="1000"
             >
-              <Carousel sx={{ width: { xs: "90%", md: "80%", lg: "55%" } }}>
+              <Carousel
+                navButtonsAlwaysVisible
+                sx={{ width: { xs: "90%", md: "80%", lg: "55%" } }}
+              >
                 {reflectionImages.map((item, index) => (
                   <Box className={classes.img_container} key={index}>
                     <Image alt="design_systems" src={item} fill />
