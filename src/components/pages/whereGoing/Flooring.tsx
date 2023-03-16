@@ -29,7 +29,7 @@ const Flooring = () => {
                 data-aos="fade-left"
                 data-aos-duration="1000"
               >
-                FLOORING BY ROMA, ITALY
+                Flooring by Roma, Italy
               </p>
             </Box>
 
@@ -73,7 +73,7 @@ const Flooring = () => {
               data-aos="fade-left"
               data-aos-duration="1000"
             >
-              ALL ITEMS OF WORKS EXECUTED BY ROMA WORK
+              All Items of Works Executed by Roma Work
             </p>
             <Box
               sx={{ py: 10, display: "flex", justifyContent: "center" }}
@@ -93,7 +93,7 @@ const Flooring = () => {
               data-aos="fade-left"
               data-aos-duration="1000"
             >
-              FLOORING BY TARKETT
+              Flooring by Tarkett
             </p>
             <Box
               sx={{ py: 10, display: "flex", justifyContent: "center" }}
@@ -113,7 +113,7 @@ const Flooring = () => {
               data-aos="fade-left"
               data-aos-duration="1000"
             >
-              REFLECTION POOL & FOUNTAIN BY ECONOPOOLS
+              Reflection Pool & Fountain by Ecnopools
             </p>
             <Box
               sx={{ py: 10, display: "flex", justifyContent: "center" }}
@@ -135,7 +135,7 @@ const Flooring = () => {
         <Box sx={{ overflowY: "scroll" }} className={classes?.scroll}>
           <Box>
             <p className="font-52 font-400 text-secondary-3 montaga">
-              FLOORING BY ROMA, ITALY
+              Flooring by Roma, Italy
             </p>
             <p className="text-secondary-4 font-32 font-300 avenuex text-justify line-150">
               <strong>THE ALTAR</strong> <br />

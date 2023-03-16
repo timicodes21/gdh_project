@@ -5,7 +5,7 @@ interface Item {
 
 export const navbarItems: Item[] = [
   {
-    text: "How it Started",
+    text: "How we Started",
     link: "/home",
   },
   {
@@ -49,6 +49,57 @@ export const navbarWhereItems: Item[] = [
   },
   {
     text: "The Ecclesiastic Building",
-    link: "/where_we_are_going",
+    link: "/where_we_are_going/ecclesiastic_building",
+  },
+];
+
+export const navbarHomeItems: Item[] = [
+  {
+    text: "Spiritual Implications",
+    link: "#spiritual_implications",
+  },
+  {
+    text: "History of the Holy order",
+    link: "#history",
+  },
+  {
+    text: "The Temporary Temple",
+    link: "#temporary_temple",
+  },
+  {
+    text: "The Grand Temple Project",
+    link: "#grand_temple",
+  },
+  {
+    text: "The Grand Temple Design Concept",
+    link: "#design_concept",
+  },
+  {
+    text: "Challenges Faced",
+    link: "#challenges_faced",
+  },
+  {
+    text: "Spiritual Importance",
+    link: "#spiritual_importance",
+  },
+  {
+    text: "Links",
+    link: "#links",
+  },
+  {
+    text: "Construction Stages",
+    link: "#construction_stages",
+  },
+  {
+    text: "Changes in Design",
+    link: "#design_changes",
+  },
+  {
+    text: "Stained Glass",
+    link: "#stained_glass",
+  },
+  {
+    text: "Musical Equipment",
+    link: "#musical_equipment",
   },
 ];

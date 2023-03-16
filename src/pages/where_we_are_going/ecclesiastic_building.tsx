@@ -1,17 +1,17 @@
 import Excited from "@/components/pages/home/Excited";
 import GrandProject from "@/components/pages/home/GrandProject";
-import StMaryHall from "@/components/pages/whereGoing/StMaryHall";
+import EcclesiasticBuilding from "@/components/pages/whereGoing/EcclesiasticBuilding";
 import { Box } from "@mui/material";
 import React from "react";
 
-const FloorPlans = () => {
+const Prospective = () => {
   return (
     <Box sx={{ pt: { xs: 3, md: 10 } }}>
       <GrandProject />
-      <StMaryHall />
+      <EcclesiasticBuilding />
       <Excited />
     </Box>
   );
 };
 
-export default FloorPlans;
+export default Prospective;

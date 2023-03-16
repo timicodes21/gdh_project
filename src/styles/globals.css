@@ -357,6 +357,10 @@ a {
   transition: display 2s ease-in-out;
 }
 
+.dropdown .dropdown_content.height_increase {
+  height: 400px;
+}
+
 .d-none {
   display: none !important;
 }
@@ -442,4 +446,27 @@ a {
 .navbar_link:hover::after {
   transform: scaleX(1);
   transform-origin: bottom left;
+}
+
+/* ANimate question mark */
+
+/* Define the keyframes */
+@keyframes up-down {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-70px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+/* Apply the animation to the element */
+.question_mark {
+  animation-name: up-down;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
 }

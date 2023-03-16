@@ -100,7 +100,7 @@ const DesignSystemsElec = () => {
         <Box sx={{ overflowY: "scroll" }} className={classes?.scroll}>
           <Box>
             <p className="font-52 font-400 text-secondary-3 montaga">
-              Mechanical and Plumbing Systems.
+              Electrical and Lighting Systems
             </p>
             <p className="text-secondary-4 font-32 font-300 avenuex text-justify line-150">
               <strong>DESIGN PHILOSOPHY & CONSIDERATION</strong> <br />

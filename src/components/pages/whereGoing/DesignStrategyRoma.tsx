@@ -1,7 +1,6 @@
 import React from "react";
 import { Box } from "@mui/material";
 import Wrapper from "@/components/layout/Wrapper";
-import Image from "next/image";
 import classes from "../../../styles/Home.module.css";
 import ReadMore from "@/components/buttons/ReadMore";
 import { useModal } from "@/hooks/useModal";
@@ -21,7 +20,7 @@ const DesignStratedyRoma = () => {
                 data-aos="fade-left"
                 data-aos-duration="1000"
               >
-                DESIGN STRATEGY BY ROMA, ITALY
+                Design Strategy by Roma, Italy
               </p>
             </Box>
 
@@ -53,7 +52,7 @@ const DesignStratedyRoma = () => {
         <Box sx={{ overflowY: "scroll" }} className={classes?.scroll}>
           <Box>
             <p className="font-52 font-400 text-secondary-3 montaga">
-              DESIGN STRATEGY BY ROMA, ITALY
+              Design Strategy by Roma, Italy
             </p>
             <p className="text-secondary-4 font-32 font-300 avenuex text-justify line-150">
               <strong>Rosso Verona Marble</strong> <br />

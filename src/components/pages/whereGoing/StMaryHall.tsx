@@ -70,13 +70,6 @@ const StMaryHall = () => {
               <p
                 className="text-secondary-4 font-32 font-300 avenuex text-justify"
                 data-aos="fade-up"
-                data-aos-duration="1000"
-              >
-                PHASE 3
-              </p>
-              <p
-                className="text-secondary-4 font-32 font-300 avenuex text-justify"
-                data-aos="fade-up"
                 data-aos-delay="500"
                 data-aos-duration="1000"
               >

@@ -11,7 +11,7 @@ const GrandTemple = () => {
   const { open, openModal, closeModal } = useModal();
   return (
     <Box sx={{ py: 5 }}>
-      <div id="why_build">
+      <div id="grand_temple">
         <Wrapper>
           <Grid container>
             <Grid item xs={12} md={5}>
@@ -29,6 +29,7 @@ const GrandTemple = () => {
                   alt="question_mark"
                   width={272.4}
                   height={373.74}
+                  className="question_mark"
                 />
               </Box>
             </Grid>
@@ -60,6 +61,7 @@ const GrandTemple = () => {
               alt="question_mark"
               width={272.4}
               height={373.74}
+              className="question_mark"
             />
             <Box>
               <p className="font-52 font-400 text-secondary-3 montaga">

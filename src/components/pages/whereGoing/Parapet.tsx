@@ -23,7 +23,7 @@ const Parapet = () => {
                 data-aos="fade-left"
                 data-aos-duration="1000"
               >
-                PARAPET, STEP PROTECTION AND RAILINGS BY ROMA, ITALY
+                Parapet, Step Protection and Railing by Roma, Italy
               </p>
             </Box>
 
@@ -68,7 +68,7 @@ const Parapet = () => {
         <Box sx={{ overflowY: "scroll" }} className={classes?.scroll}>
           <Box>
             <p className="font-52 font-400 text-secondary-3 montaga">
-              PARAPET, STEP PROTECTION AND RAILINGS BY ROMA, ITALY
+              Parapet, Step Protection and Railing by Roma, Italy
             </p>
             <p className="text-secondary-4 font-32 font-300 avenuex text-justify line-150">
               <strong>

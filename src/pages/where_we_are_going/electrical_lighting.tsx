@@ -1,3 +1,4 @@
+import Excited from "@/components/pages/home/Excited";
 import GrandProject from "@/components/pages/home/GrandProject";
 import DesignSystemsElec from "@/components/pages/whereGoing/DesignSystemsElect";
 import StMaryHall from "@/components/pages/whereGoing/StMaryHall";
@@ -9,6 +10,7 @@ const ElectricalLighting = () => {
     <Box sx={{ pt: { xs: 3, md: 10 } }}>
       <GrandProject />
       <DesignSystemsElec />
+      <Excited />
     </Box>
   );
 };

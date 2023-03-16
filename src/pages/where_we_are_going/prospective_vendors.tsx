@@ -1,3 +1,4 @@
+import Excited from "@/components/pages/home/Excited";
 import GrandProject from "@/components/pages/home/GrandProject";
 import Ceiling from "@/components/pages/whereGoing/Ceiling";
 import Columns from "@/components/pages/whereGoing/Columns";
@@ -23,7 +24,8 @@ const Prospective = () => {
       <Columns />
       <DesignStratedyRoma />
       <Flooring />
-      <EcclesiasticBuilding />
+      {/* <EcclesiasticBuilding /> */}
+      <Excited />
     </Box>
   );
 };

@@ -16,7 +16,7 @@ const WhereGoing = () => {
       <StMaryHall />
       <DesignSystemsElec />
       <AcousticDesign />
-      <Congregation />
+      {/* <Congregation /> */}
       <Excited />
     </Box>
   );

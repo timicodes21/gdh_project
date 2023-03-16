@@ -76,11 +76,11 @@ const GrandProject: NextPage<IProps> = ({ templePage }) => {
                 data-aos-duration="500"
                 data-aos-delay="500"
               >
-                {!templePage && (
+                {/* {!templePage && (
                   <BlurredBadge onClick={() => router.push("/temple")}>
                     Explore temple
                   </BlurredBadge>
-                )}
+                )} */}
                 <Box sx={{ mt: 2 }}></Box>
                 {!templePage && (
                   <BlurredBadge onClick={openModal2}>

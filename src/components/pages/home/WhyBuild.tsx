@@ -12,7 +12,7 @@ const WhyBuild = () => {
   const { open, openModal, closeModal } = useModal();
   return (
     <Box sx={{ py: 5 }}>
-      <div id="why_build">
+      <div id="history">
         <Wrapper>
           <Grid container>
             <Grid item xs={12} md={5}>
@@ -30,6 +30,7 @@ const WhyBuild = () => {
                   alt="question_mark"
                   width={272.4}
                   height={373.74}
+                  className="question_mark"
                 />
               </Box>
             </Grid>
@@ -67,6 +68,7 @@ const WhyBuild = () => {
               alt="question_mark"
               width={272.4}
               height={373.74}
+              className="question_mark"
             />
             <Box>
               <p className="font-52 font-400 text-secondary-3 montaga">
