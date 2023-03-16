@@ -3,8 +3,6 @@ import { Box } from "@mui/material";
 import Wrapper from "@/components/layout/Wrapper";
 import Image from "next/image";
 import classes from "../../../styles/Home.module.css";
-import Carousel from "react-material-ui-carousel";
-import { columnImages } from "@/data/images";
 import ReadMore from "@/components/buttons/ReadMore";
 import { useModal } from "@/hooks/useModal";
 import CustomModal from "@/components/modals/CustomModal";
@@ -91,16 +89,16 @@ const DesignStratedyRoma = () => {
               <strong>Yellow Siena Marble:</strong> <br />
               <br />
               From Siena in Tuscany comes one of the most famous and most
-              beautiful "Marbles" in Italy, appreciated since ancient times: the
-              "Giallo Siena". In fact, yellow recalls the image of gold and sun,
-              is a symbol of luxury and strength, and emblem of military
-              triumphs, coronations, royal weddings, so much so that it is
-              called "lithic gold", also for its rarity. The beauty of the
-              Yellow Marble of Siena, in addition to the high intensity of
-              yellow, is due to the veins, from ivory white to grey-blue to
-              reddish, which offer an amazing polychromatic universe, capable of
-              arousing admiration and stimulating artistic creativity.
-              Dimension: 14mm thick
+              beautiful &quot;Marbles&quot; in Italy, appreciated since ancient
+              times: the &quot;Giallo Siena&quot;. In fact, yellow recalls the
+              image of gold and sun, is a symbol of luxury and strength, and
+              emblem of military triumphs, coronations, royal weddings, so much
+              so that it is called &quot;lithic gold&quot;, also for its rarity.
+              The beauty of the Yellow Marble of Siena, in addition to the high
+              intensity of yellow, is due to the veins, from ivory white to
+              grey-blue to reddish, which offer an amazing polychromatic
+              universe, capable of arousing admiration and stimulating artistic
+              creativity. Dimension: 14mm thick
               <br />
               <br />
             </p>

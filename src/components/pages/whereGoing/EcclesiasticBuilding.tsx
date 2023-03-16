@@ -95,7 +95,8 @@ const EcclesiasticBuilding = () => {
               E01 <br /> 1. General Lobby Area . This space shall be located on
               the ground floor of the Ecclesiastic Building. It shall comprise
               of:
-              <br /> i. General Lobby/ Visitor's Lounge designed for 6 occupants
+              <br /> i. General Lobby/ Visitor&apos;s Lounge designed for 6
+              occupants
               <br /> ii. Tripod Secretarial Office which shall be adjoined to
               the General Lobby whilst having direct access to the Tripod
               Offices (located on the first floor) <br />
