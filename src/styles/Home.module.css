@@ -8,6 +8,87 @@
   align-items: flex-end;
 }
 
+.intro_background {
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.7)),
+    url(../../public/assets/images/THE_TEMPLE_1.jpg);
+  height: 100vh;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: flex-end;
+}
+
+.floor_background {
+  background: url(../../public/assets/images/THE_TEMPLE_2.jpg);
+  height: 100vh;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: flex-end;
+}
+
+.mechanical_background {
+  background: url(../../public/assets/images/THE_TEMPLE_3.jpg);
+  height: 100vh;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: flex-end;
+}
+
+.electrical_background {
+  background: url(../../public/assets/images/THE_TEMPLE_4.jpg);
+  height: 100vh;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: flex-end;
+}
+
+.acoustic_background {
+  background: url(../../public/assets/images/THE_TEMPLE_5.jpg);
+  height: 100vh;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: flex-end;
+}
+
+.acoustic_background {
+  background: url(../../public/assets/images/THE_TEMPLE_5.jpg);
+  height: 100vh;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: flex-end;
+}
+
+.prospective_background {
+  background: url(../../public/assets/images/THE_TEMPLE_6.jpg);
+  height: 100vh;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: flex-end;
+}
+
+.ecc_background {
+  background: url(../../public/assets/images/THE_TEMPLE_7.jpg);
+  height: 100vh;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: flex-end;
+}
+
 .shadow_bg_1 {
   background: url(../../public/assets/images/shadow_1.png);
   background-position: center;

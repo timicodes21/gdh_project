@@ -2,12 +2,15 @@ import React from "react";
 import { Box } from "@mui/material";
 import Image from "next/image";
 import { FaLongArrowAltRight } from "react-icons/fa";
+import { AiFillPauseCircle, AiFillPlayCircle } from "react-icons/ai";
 
 interface IProps {
   onClick: () => void;
+  onPlay?: () => void;
+  isPlaying?: boolean;
 }
 
-const ReadMore: React.FC<IProps> = ({ onClick }) => {
+const ReadMore: React.FC<IProps> = ({ onClick, onPlay, isPlaying }) => {
   return (
     <>
       <Box
@@ -16,17 +19,29 @@ const ReadMore: React.FC<IProps> = ({ onClick }) => {
           justifyContent: "end",
         }}
         className="pointer"
-        onClick={onClick}
       >
-        <Image
+        {isPlaying ? (
+          <AiFillPauseCircle
+            onClick={onPlay}
+            style={{ color: "#667085", fontSize: "32px" }}
+          />
+        ) : (
+          <AiFillPlayCircle
+            onClick={onPlay}
+            style={{ color: "#667085", fontSize: "32px" }}
+          />
+        )}
+        {/* <Image
           src="/assets/icons/play_icon.svg"
-          alt="question_mark"
+          alt="play icon"
           width={23}
           height={23}
-        />
+          onClick={onPlay}
+        /> */}
         <p
-          className="text-secondary-4 font-20 font-400 avenuex"
+          className="text-secondary-4 font-20 font-400 avenuex pointer"
           style={{ margin: "0 10px" }}
+          onClick={onClick}
         >
           Read more
         </p>

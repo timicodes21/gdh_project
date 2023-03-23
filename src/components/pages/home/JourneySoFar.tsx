@@ -83,8 +83,16 @@ const JourneySoFar = () => {
               data-aos-duration="1000"
             >
               <Carousel
-                sx={{ width: { xs: "90%", md: "80%", lg: "55%" } }}
+                sx={{
+                  width: {
+                    xs: "90%",
+                    md: "80%",
+                    lg: "75%",
+                  },
+                  height: { lg: "80vh" },
+                }}
                 navButtonsAlwaysVisible
+                indicators
               >
                 {stageOneImages.map((item, index) => (
                   <Box className={classes.img_container} key={index}>
@@ -140,7 +148,10 @@ const JourneySoFar = () => {
               >
                 <Carousel
                   navButtonsAlwaysVisible
-                  sx={{ width: { xs: "90%", md: "80%", lg: "55%" } }}
+                  sx={{
+                    width: { xs: "90%", md: "80%", lg: "75%" },
+                    height: { lg: "80vh" },
+                  }}
                 >
                   {designChangesImages.map((item, index) => (
                     <Box className={classes.img_container} key={index}>
@@ -165,7 +176,10 @@ const JourneySoFar = () => {
               >
                 <Carousel
                   navButtonsAlwaysVisible
-                  sx={{ width: { xs: "90%", md: "80%", lg: "55%" } }}
+                  sx={{
+                    width: { xs: "90%", md: "80%", lg: "75%" },
+                    height: { lg: "80vh" },
+                  }}
                 >
                   {stainedGlassImages.map((item, index) => (
                     <Box className={classes.img_container} key={index}>
@@ -190,7 +204,10 @@ const JourneySoFar = () => {
               >
                 <Carousel
                   navButtonsAlwaysVisible
-                  sx={{ width: { xs: "90%", md: "80%", lg: "55%" } }}
+                  sx={{
+                    width: { xs: "90%", md: "80%", lg: "75%" },
+                    height: { lg: "80vh" },
+                  }}
                 >
                   {musicalEquipmentsImages.map((item, index) => (
                     <Box className={classes.img_container} key={index}>

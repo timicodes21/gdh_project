@@ -87,7 +87,10 @@ const DesignSystemsElec = () => {
             >
               <Carousel
                 navButtonsAlwaysVisible
-                sx={{ width: { xs: "90%", md: "80%", lg: "55%" } }}
+                sx={{
+                  width: { xs: "90%", md: "80%", lg: "75%" },
+                  height: { lg: "80vh" },
+                }}
               >
                 {electricalSystemImages.map((item, index) => (
                   <Box className={classes.img_container} key={index}>

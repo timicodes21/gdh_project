@@ -56,7 +56,8 @@ const AcousticDesign = () => {
               <Carousel
                 navButtonsAlwaysVisible
                 sx={{
-                  width: { xs: "90%", md: "80%", lg: "55%" },
+                  width: { xs: "90%", md: "80%", lg: "75%" },
+                  height: { lg: "80vh" },
                 }}
               >
                 {acousticSystemImages.map((item, index) => (

@@ -62,7 +62,10 @@ const Flooring = () => {
             >
               <Carousel
                 navButtonsAlwaysVisible
-                sx={{ width: { xs: "90%", md: "80%", lg: "55%" } }}
+                sx={{
+                  width: { xs: "90%", md: "80%", lg: "75%" },
+                  height: { lg: "80vh" },
+                }}
               >
                 {flooringImages.map((item, index) => (
                   <Box className={classes.img_container} key={index}>
@@ -85,7 +88,10 @@ const Flooring = () => {
             >
               <Carousel
                 navButtonsAlwaysVisible
-                sx={{ width: { xs: "90%", md: "80%", lg: "55%" } }}
+                sx={{
+                  width: { xs: "90%", md: "80%", lg: "75%" },
+                  height: { lg: "80vh" },
+                }}
               >
                 {allItemsImages.map((item, index) => (
                   <Box className={classes.img_container} key={index}>
@@ -108,7 +114,10 @@ const Flooring = () => {
             >
               <Carousel
                 navButtonsAlwaysVisible
-                sx={{ width: { xs: "90%", md: "80%", lg: "55%" } }}
+                sx={{
+                  width: { xs: "90%", md: "80%", lg: "75%" },
+                  height: { lg: "80vh" },
+                }}
               >
                 {flooring2Images.map((item, index) => (
                   <Box className={classes.img_container} key={index}>
@@ -131,7 +140,10 @@ const Flooring = () => {
             >
               <Carousel
                 navButtonsAlwaysVisible
-                sx={{ width: { xs: "90%", md: "80%", lg: "55%" } }}
+                sx={{
+                  width: { xs: "90%", md: "80%", lg: "75%" },
+                  height: { lg: "80vh" },
+                }}
               >
                 {reflectionImages.map((item, index) => (
                   <Box className={classes.img_container} key={index}>
