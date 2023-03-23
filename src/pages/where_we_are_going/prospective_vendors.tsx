@@ -1,5 +1,6 @@
 import Excited from "@/components/pages/home/Excited";
 import GrandProject from "@/components/pages/home/GrandProject";
+import ProspectiveIntro from "@/components/pages/whereGoing/backgrounds/ProspectiveIntro";
 import Ceiling from "@/components/pages/whereGoing/Ceiling";
 import Columns from "@/components/pages/whereGoing/Columns";
 import DesignStratedyRoma from "@/components/pages/whereGoing/DesignStrategyRoma";
@@ -15,7 +16,7 @@ import React from "react";
 const Prospective = () => {
   return (
     <Box sx={{ pt: { xs: 3, md: 10 } }}>
-      <GrandProject />
+      <ProspectiveIntro />
       <ProspectiveVendors />
       <Ceiling />
       <UnderCeiling />

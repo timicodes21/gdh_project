@@ -20,7 +20,8 @@
 }
 
 .floor_background {
-  background: url(../../public/assets/images/THE_TEMPLE_2.jpg);
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.7)),
+    url(../../public/assets/images/THE_TEMPLE_2.jpg);
   height: 100vh;
   background-position: center;
   background-size: cover;
@@ -30,7 +31,8 @@
 }
 
 .mechanical_background {
-  background: url(../../public/assets/images/THE_TEMPLE_3.jpg);
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.7)),
+    url(../../public/assets/images/THE_TEMPLE_3.jpg);
   height: 100vh;
   background-position: center;
   background-size: cover;
@@ -40,7 +42,8 @@
 }
 
 .electrical_background {
-  background: url(../../public/assets/images/THE_TEMPLE_4.jpg);
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.7)),
+    url(../../public/assets/images/THE_TEMPLE_4.jpg);
   height: 100vh;
   background-position: center;
   background-size: cover;
@@ -50,17 +53,8 @@
 }
 
 .acoustic_background {
-  background: url(../../public/assets/images/THE_TEMPLE_5.jpg);
-  height: 100vh;
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
-  display: flex;
-  align-items: flex-end;
-}
-
-.acoustic_background {
-  background: url(../../public/assets/images/THE_TEMPLE_5.jpg);
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.7)),
+    url(../../public/assets/images/THE_TEMPLE_5.jpg);
   height: 100vh;
   background-position: center;
   background-size: cover;
@@ -70,7 +64,8 @@
 }
 
 .prospective_background {
-  background: url(../../public/assets/images/THE_TEMPLE_6.jpg);
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.7)),
+    url(../../public/assets/images/THE_TEMPLE_6.jpg);
   height: 100vh;
   background-position: center;
   background-size: cover;
@@ -80,7 +75,8 @@
 }
 
 .ecc_background {
-  background: url(../../public/assets/images/THE_TEMPLE_7.jpg);
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.7)),
+    url(../../public/assets/images/THE_TEMPLE_7.jpg);
   height: 100vh;
   background-position: center;
   background-size: cover;

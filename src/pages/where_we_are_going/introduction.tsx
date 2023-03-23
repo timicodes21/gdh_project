@@ -1,6 +1,5 @@
 import Excited from "@/components/pages/home/Excited";
-import GrandProject from "@/components/pages/home/GrandProject";
-import BackgroundIntro from "@/components/pages/whereGoing/BackgroundIntro";
+import BackgroundIntro from "@/components/pages/whereGoing/backgrounds/BackgroundIntro";
 import Introduction from "@/components/pages/whereGoing/Introduction";
 import { Box } from "@mui/material";
 import React from "react";

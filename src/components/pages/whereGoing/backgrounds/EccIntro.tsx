@@ -11,13 +11,13 @@ import { useRouter } from "next/router";
 import React from "react";
 import { BsChevronLeft } from "react-icons/bs";
 import ReactPlayer from "react-player";
-import classes from "../../../styles/Home.module.css";
+import classes from "../../../../styles/Home.module.css";
 
 interface IProps {
   templePage?: boolean;
 }
 
-const BackgroundIntro: NextPage<IProps> = ({ templePage }) => {
+const EccIntro: NextPage<IProps> = ({ templePage }) => {
   const { open, openModal, closeModal } = useModal();
   const {
     open: open2,
@@ -32,7 +32,7 @@ const BackgroundIntro: NextPage<IProps> = ({ templePage }) => {
           className="font-24 font-800 pointer"
           onClick={() => router.back()}
         />
-        <Box className={classes.intro_background} sx={{ mt: 2 }}>
+        <Box className={classes.ecc_background} sx={{ mt: 2 }}>
           <Box
             sx={{
               display: "flex",
@@ -110,4 +110,4 @@ const BackgroundIntro: NextPage<IProps> = ({ templePage }) => {
   );
 };
 
-export default BackgroundIntro;
+export default EccIntro;
