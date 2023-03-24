@@ -7,9 +7,13 @@ import ReadMore from "@/components/buttons/ReadMore";
 import { useModal } from "@/hooks/useModal";
 import CustomModal from "@/components/modals/CustomModal";
 import classes from "../../../styles/Home.module.css";
+import { usePlayAudio } from "@/hooks/usePlayAudio";
+import { introductionText } from "@/data/texts";
 
 const WhyBuild = () => {
   const { open, openModal, closeModal } = useModal();
+
+  const { playAudio, pauseAudio, isPlaying } = usePlayAudio(introductionText);
 
   const ref = useRef<HTMLDivElement>(null);
 
@@ -77,7 +81,12 @@ const WhyBuild = () => {
                 christened in a divine message of 16th September 1941, and the
                 divine structure was called the Cogent Arrangement.
               </p>
-              <ReadMore onClick={openModal} />
+              <ReadMore
+                onClick={openModal}
+                onPlay={playAudio}
+                onPause={pauseAudio}
+                isPlaying={isPlaying}
+              />
             </Grid>
           </Grid>
         </Wrapper>
