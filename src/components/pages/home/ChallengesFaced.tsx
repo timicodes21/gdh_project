@@ -26,13 +26,15 @@ const ChallengesFaced = () => {
         ref?.current?.classList.add("animate");
       }
     });
-
-    observer.observe(ref?.current);
+    if (ref?.current) {
+      observer.observe(ref?.current);
+    }
 
     return () => {
-      setIntersecting(false);
       ref?.current?.classList.remove("animate");
-      observer.unobserve(ref?.current);
+      if (ref?.current) {
+        observer.unobserve(ref?.current);
+      }
     };
   }, []);
 

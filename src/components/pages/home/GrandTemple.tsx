@@ -23,11 +23,15 @@ const GrandTemple = () => {
       }
     });
 
-    observer.observe(ref?.current);
+    if (ref?.current) {
+      observer.observe(ref?.current);
+    }
 
     return () => {
       ref?.current?.classList.remove("animate");
-      observer.unobserve(ref?.current);
+      if (ref?.current) {
+        observer.unobserve(ref?.current);
+      }
     };
   }, []);
 
