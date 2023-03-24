@@ -11,26 +11,27 @@ import classes from "../../../styles/Home.module.css";
 const WhyBuild = () => {
   const { open, openModal, closeModal } = useModal();
 
-  const ref = useRef(null);
+  const ref = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     const observer = new IntersectionObserver((entries) => {
       const [entry] = entries;
       console.log("entry intersecting", entry.isIntersecting);
       if (entry.isIntersecting) {
-        ref.current.classList.add("animate");
+        ref?.current?.classList.add("animate");
       }
     });
 
-    observer.observe(ref.current);
+    observer.observe(ref?.current);
 
     return () => {
-      observer.unobserve(ref.current);
+      ref?.current?.classList.remove("animate");
+      observer.unobserve(ref?.current);
     };
   }, []);
 
   return (
-    <div ref={ref} id="history" className="slanted-container">
+    <div id="history" ref={ref} className="slanted-container">
       <Box sx={{ py: 5 }}>
         <Wrapper>
           <Grid container>

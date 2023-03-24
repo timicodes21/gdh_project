@@ -31,6 +31,7 @@ const JourneySoFar = () => {
     observer.observe(ref?.current);
 
     return () => {
+      ref?.current?.classList.remove("animate");
       observer.unobserve(ref?.current);
     };
   }, []);

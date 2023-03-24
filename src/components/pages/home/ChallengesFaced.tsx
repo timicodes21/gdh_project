@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useRef, useEffect, useState } from "react";
 import { Box, Grid } from "@mui/material";
 import Image from "next/image";
 import Wrapper from "@/components/layout/Wrapper";
@@ -9,9 +9,31 @@ import classes from "../../../styles/Home.module.css";
 
 const ChallengesFaced = () => {
   const { open, openModal, closeModal } = useModal();
+  const [interSecting, setIntersecting] = useState(false);
+  const ref = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver((entries) => {
+      const [entry] = entries;
+      console.log("entry intersecting", entry.isIntersecting);
+      if (entry.isIntersecting) {
+        setIntersecting(true);
+        ref?.current?.classList.add("animate");
+      }
+    });
+
+    observer.observe(ref?.current);
+
+    return () => {
+      setIntersecting(false);
+      ref?.current?.classList.remove("animate");
+      observer.unobserve(ref?.current);
+    };
+  }, []);
+
   return (
-    <Box sx={{ py: 5 }}>
-      <div id="challenges_faced">
+    <div id="challenges_faced" ref={ref} className="slanted-container">
+      <Box sx={{ py: 5 }}>
         <Wrapper>
           <Grid container>
             <Grid item xs={12} md={5}>
@@ -92,8 +114,8 @@ const ChallengesFaced = () => {
             </Box>
           </Box>
         </CustomModal>
-      </div>
-    </Box>
+      </Box>
+    </div>
   );
 };
 
