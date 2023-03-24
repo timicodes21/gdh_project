@@ -17,25 +17,23 @@ import CustomModal from "@/components/modals/CustomModal";
 const JourneySoFar = () => {
   const { open, openModal, closeModal } = useModal();
 
-  const ref = useRef(null);
+  const ref = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     const observer = new IntersectionObserver((entries) => {
       const [entry] = entries;
       console.log("entry intersecting", entry.isIntersecting);
       if (entry.isIntersecting) {
-        ref.current.classList.add("animate");
+        ref?.current?.classList.add("animate");
       }
     });
 
-    observer.observe(ref.current);
+    observer.observe(ref?.current);
 
     return () => {
-      observer.unobserve(ref.current);
+      observer.unobserve(ref?.current);
     };
   }, []);
-
-  console.log("ref", ref);
 
   return (
     <>
