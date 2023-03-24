@@ -6,6 +6,8 @@ import ReadMore from "@/components/buttons/ReadMore";
 import { useModal } from "@/hooks/useModal";
 import CustomModal from "@/components/modals/CustomModal";
 import classes from "../../../styles/Home.module.css";
+import { usePlayAudio } from "@/hooks/usePlayAudio";
+import { grandTempleText } from "@/data/texts";
 
 const GrandTemple = () => {
   const { open, openModal, closeModal } = useModal();
@@ -28,6 +30,8 @@ const GrandTemple = () => {
       observer.unobserve(ref?.current);
     };
   }, []);
+
+  const { playAudio, pauseAudio, isPlaying } = usePlayAudio(grandTempleText);
 
   return (
     <div id="grand_temple" ref={ref} className="slanted-container">
@@ -70,7 +74,12 @@ const GrandTemple = () => {
                 first architectural concept of the Grand Temple, showing the
                 Holy of Holies and the body of the Temple
               </p>
-              <ReadMore onClick={openModal} />
+              <ReadMore
+                onClick={openModal}
+                isPlaying={isPlaying}
+                onPlay={playAudio}
+                onPause={pauseAudio}
+              />
             </Grid>
           </Grid>
         </Wrapper>

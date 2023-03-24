@@ -6,9 +6,15 @@ import ReadMore from "@/components/buttons/ReadMore";
 import Image from "next/image";
 import { useModal } from "@/hooks/useModal";
 import CustomModal from "@/components/modals/CustomModal";
+import { usePlayAudio } from "@/hooks/usePlayAudio";
+import { spiritualImportanceText } from "@/data/texts";
 
 const SpiritualImportance = () => {
   const { open, openModal, closeModal } = useModal();
+  const { playAudio, pauseAudio, isPlaying } = usePlayAudio(
+    spiritualImportanceText
+  );
+
   return (
     <Box sx={{ py: 5 }}>
       <div id="spiritual_importance">
@@ -71,7 +77,12 @@ const SpiritualImportance = () => {
               <Grid item xs={12} md={2}></Grid>
             </Grid>
             <Box sx={{ display: "flex", justifyContent: "end" }}>
-              <ReadMore onClick={openModal} />
+              <ReadMore
+                onClick={openModal}
+                isPlaying={isPlaying}
+                onPlay={playAudio}
+                onPause={pauseAudio}
+              />
             </Box>
           </Box>
         </Wrapper>

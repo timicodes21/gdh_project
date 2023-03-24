@@ -6,9 +6,14 @@ import ReadMore from "@/components/buttons/ReadMore";
 import Image from "next/image";
 import { useModal } from "@/hooks/useModal";
 import CustomModal from "@/components/modals/CustomModal";
+import { usePlayAudio } from "@/hooks/usePlayAudio";
+import { linksText } from "@/data/texts";
 
 const LinksAndConnections = () => {
   const { open, openModal, closeModal } = useModal();
+
+  const { playAudio, pauseAudio, isPlaying } = usePlayAudio(linksText);
+
   return (
     <Box sx={{ py: 5 }}>
       <div id="links">
@@ -53,7 +58,12 @@ const LinksAndConnections = () => {
             </Grid>
 
             <Box sx={{ display: "flex", justifyContent: "end" }}>
-              <ReadMore onClick={openModal} />
+              <ReadMore
+                onClick={openModal}
+                isPlaying={isPlaying}
+                onPlay={playAudio}
+                onPause={pauseAudio}
+              />
             </Box>
           </Box>
         </Wrapper>

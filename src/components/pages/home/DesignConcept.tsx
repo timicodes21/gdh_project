@@ -6,9 +6,12 @@ import ReadMore from "@/components/buttons/ReadMore";
 import { useModal } from "@/hooks/useModal";
 import CustomModal from "@/components/modals/CustomModal";
 import classes from "../../../styles/Home.module.css";
+import { usePlayAudio } from "@/hooks/usePlayAudio";
+import { designConceptText } from "@/data/texts";
 
 const DesignConcept = () => {
   const { open, openModal, closeModal } = useModal();
+  const { playAudio, pauseAudio, isPlaying } = usePlayAudio(designConceptText);
   return (
     <Box sx={{ py: 5 }}>
       <div id="design_concept">
@@ -34,7 +37,12 @@ const DesignConcept = () => {
                 while the Body also supports the Soul which projects towards
                 heaven.
               </p>
-              <ReadMore onClick={openModal} />
+              <ReadMore
+                onClick={openModal}
+                isPlaying={isPlaying}
+                onPlay={playAudio}
+                onPause={pauseAudio}
+              />
             </Grid>
             <Grid item xs={12} md={6}>
               <Box

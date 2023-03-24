@@ -6,9 +6,14 @@ import ReadMore from "@/components/buttons/ReadMore";
 import { useModal } from "@/hooks/useModal";
 import CustomModal from "@/components/modals/CustomModal";
 import classes from "../../../styles/Home.module.css";
+import { usePlayAudio } from "@/hooks/usePlayAudio";
+import { challengesText } from "@/data/texts";
 
 const ChallengesFaced = () => {
   const { open, openModal, closeModal } = useModal();
+
+  const { playAudio, pauseAudio, isPlaying } = usePlayAudio(challengesText);
+
   const [interSecting, setIntersecting] = useState(false);
   const ref = useRef<HTMLDivElement>(null);
 
@@ -71,7 +76,12 @@ const ChallengesFaced = () => {
                 implications of having the Grand Temple built on earth, on the
                 Yoruba soil and in our midst
               </p>
-              <ReadMore onClick={openModal} />
+              <ReadMore
+                onClick={openModal}
+                isPlaying={isPlaying}
+                onPlay={playAudio}
+                onPause={pauseAudio}
+              />
             </Grid>
           </Grid>
         </Wrapper>
