@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState, useRef } from "react";
 import { Box, ButtonBase } from "@mui/material";
 import Wrapper from "@/components/layout/Wrapper";
 import Image from "next/image";
@@ -13,14 +13,33 @@ import {
 import ReadMore from "@/components/buttons/ReadMore";
 import { useModal } from "@/hooks/useModal";
 import CustomModal from "@/components/modals/CustomModal";
-import { FaChevronCircleLeft, FaChevronCircleRight } from "react-icons/fa";
 
 const JourneySoFar = () => {
   const { open, openModal, closeModal } = useModal();
 
+  const ref = useRef(null);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver((entries) => {
+      const [entry] = entries;
+      console.log("entry intersecting", entry.isIntersecting);
+      if (entry.isIntersecting) {
+        ref.current.classList.add("animate");
+      }
+    });
+
+    observer.observe(ref.current);
+
+    return () => {
+      observer.unobserve(ref.current);
+    };
+  }, []);
+
+  console.log("ref", ref);
+
   return (
     <>
-      <div id="construction_stages">
+      <div ref={ref} id="construction_stages" className="slanted-container">
         <Box sx={{ py: 5 }}>
           <Wrapper>
             <p

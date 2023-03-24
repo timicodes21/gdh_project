@@ -1,5 +1,10 @@
 export const stageOneImages: string[] = [
-  // "/assets/images/phase_1.png",
+  "/assets/images/phase_1_5.jpg",
+  "/assets/images/phase_1_6.jpg",
+  "/assets/images/phase_1_7.jpg",
+  "/assets/images/phase_1_8.jpg",
+  "/assets/images/phase_1_9.jpg",
+  "/assets/images/phase_1_10.jpg",
   "/assets/images/phase_1_1.PNG",
   "/assets/images/phase_1_2.PNG",
   "/assets/images/phase_1_3.PNG",

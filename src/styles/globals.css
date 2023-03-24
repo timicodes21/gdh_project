@@ -470,3 +470,52 @@ a {
   animation-iteration-count: infinite;
   animation-timing-function: ease-in-out;
 }
+
+/* .slanted-container {
+  position: relative;
+  background: linear-gradient(-10deg, red 50%, #f2f2f2 50%);
+  overflow: hidden;
+}
+
+.slanted-container::before {
+  content: "";
+  position: absolute;
+  top: -10%;
+  left: -10%;
+  width: 120%;
+  height: 100%;
+  background: inherit;
+  transform: rotate(-1deg);
+  z-index: -1;
+} */
+
+.slanted-container {
+  position: relative;
+  overflow: hidden;
+}
+
+.slanted-container::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  background-color: #f6f6f6;
+  transform: skewY(5deg);
+  transform-origin: top left;
+  transition: transform 1.5s ease 1s;
+}
+
+.slanted-container.animate::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  background-color: #f6f6f6;
+  transform: skewY(0deg);
+  transform-origin: top left;
+  transition: transform 1.5s ease 1s;
+}

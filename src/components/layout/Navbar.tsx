@@ -16,8 +16,6 @@ import Link from "next/link";
 const Navbar = () => {
   const router = useRouter();
 
-  console.log("router query", router.pathname);
-
   const {
     show,
     toggleNav,

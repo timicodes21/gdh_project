@@ -9,24 +9,24 @@ export const usePlayAudio = (text: string) => {
   console.log("isPlaying", isPlaying);
 
   // useEffect(() => {
-  //     if(isPlaying){
-  //          window.speechSynthesis.speak(msg);
-  //     } else{
-  //          window.speechSynthesis.pause();
-  //     }
-  // }, [isPlaying])
+  // if (isPlaying) {
+  //   window.speechSynthesis.speak(msg);
+  // } else {
+  //   window.speechSynthesis.pause();
+  // }
+  // }, [isPlaying]);
 
   const playAudio = () => {
     // isPlaying
     //   ? window.speechSynthesis.resume()
     //   : window.speechSynthesis.speak(msg);
     window.speechSynthesis.speak(msg);
-    setIsPlaying(true);
+    // setIsPlaying(true);
   };
 
   const pauseAudio = () => {
-    setIsPlaying(false);
-    window.speechSynthesis.pause();
+    // setIsPlaying(false);
+    // window.speechSynthesis.pause();
   };
 
   return { playAudio, pauseAudio, isPlaying };

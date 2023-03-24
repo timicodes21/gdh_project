@@ -82,7 +82,8 @@ const SpiritualImplications = () => {
             <Box sx={{ display: "flex", justifyContent: "end" }}>
               <ReadMore
                 onClick={openModal}
-                onPlay={isPlaying ? pauseAudio : playAudio}
+                onPlay={playAudio}
+                onPause={pauseAudio}
                 isPlaying={isPlaying}
               />
             </Box>

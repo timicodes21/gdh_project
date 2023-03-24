@@ -2,15 +2,25 @@ import React from "react";
 import { Box } from "@mui/material";
 import Image from "next/image";
 import { FaLongArrowAltRight } from "react-icons/fa";
-import { AiFillPauseCircle, AiFillPlayCircle } from "react-icons/ai";
+import {
+  AiFillPauseCircle,
+  AiFillPlayCircle,
+  AiOutlinePause,
+} from "react-icons/ai";
 
 interface IProps {
   onClick: () => void;
   onPlay?: () => void;
+  onPause?: () => void;
   isPlaying?: boolean;
 }
 
-const ReadMore: React.FC<IProps> = ({ onClick, onPlay, isPlaying }) => {
+const ReadMore: React.FC<IProps> = ({
+  onClick,
+  onPlay,
+  isPlaying,
+  onPause,
+}) => {
   return (
     <>
       <Box
@@ -22,7 +32,7 @@ const ReadMore: React.FC<IProps> = ({ onClick, onPlay, isPlaying }) => {
       >
         {isPlaying ? (
           <AiFillPauseCircle
-            onClick={onPlay}
+            onClick={onPause}
             style={{ color: "#667085", fontSize: "32px" }}
           />
         ) : (
