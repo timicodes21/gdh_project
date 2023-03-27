@@ -1,13 +1,13 @@
-import React, { useRef, useEffect, useState } from "react";
-import { Box, Grid } from "@mui/material";
-import Image from "next/image";
-import Wrapper from "@/components/layout/Wrapper";
-import ReadMore from "@/components/buttons/ReadMore";
-import { useModal } from "@/hooks/useModal";
-import CustomModal from "@/components/modals/CustomModal";
-import classes from "../../../styles/Home.module.css";
-import { usePlayAudio } from "@/hooks/usePlayAudio";
-import { challengesText } from "@/data/texts";
+import React, { useRef, useEffect, useState } from 'react';
+import { Box, Grid } from '@mui/material';
+import Image from 'next/image';
+import Wrapper from '@/components/layout/Wrapper';
+import ReadMore from '@/components/buttons/ReadMore';
+import { useModal } from '@/hooks/useModal';
+import CustomModal from '@/components/modals/CustomModal';
+import classes from '../../../styles/Home.module.css';
+import { usePlayAudio } from '@/hooks/usePlayAudio';
+import { challengesText } from '@/data/texts';
 
 const ChallengesFaced = () => {
   const { open, openModal, closeModal } = useModal();
@@ -20,10 +20,10 @@ const ChallengesFaced = () => {
   useEffect(() => {
     const observer = new IntersectionObserver((entries) => {
       const [entry] = entries;
-      console.log("entry intersecting", entry.isIntersecting);
+      console.log('entry intersecting', entry.isIntersecting);
       if (entry.isIntersecting) {
         setIntersecting(true);
-        ref?.current?.classList.add("animate");
+        ref?.current?.classList.add('animate');
       }
     });
     if (ref?.current) {
@@ -31,7 +31,7 @@ const ChallengesFaced = () => {
     }
 
     return () => {
-      ref?.current?.classList.remove("animate");
+      ref?.current?.classList.remove('animate');
       if (ref?.current) {
         observer.unobserve(ref?.current);
       }
@@ -39,18 +39,18 @@ const ChallengesFaced = () => {
   }, []);
 
   return (
-    <div id="challenges_faced" ref={ref} className="slanted-container">
+    <div id="challenges_faced" ref={ref} className="slanted-container2">
       <Box sx={{ py: 5 }}>
         <Wrapper>
           <Grid container>
             <Grid item xs={12} md={5}>
               <Box
                 sx={{
-                  position: "relative",
-                  display: "flex",
-                  flexDirection: "column",
-                  justifyContent: "center",
-                  height: "80vh",
+                  position: 'relative',
+                  display: 'flex',
+                  flexDirection: 'column',
+                  justifyContent: 'center',
+                  height: '80vh',
                 }}
               >
                 <Image
@@ -70,10 +70,10 @@ const ChallengesFaced = () => {
               data-aos-delay="500"
               data-aos-duration="1000"
             >
-              <p className="font-52 font-400 text-secondary-3 montaga">
+              <p className="font-52 font-400 text-white montaga">
                 Challenges Faced
               </p>
-              <p className="text-secondary-4 font-32 font-300 text-justify avenuex line-150">
+              <p className="text-white font-32 font-300 text-justify avenuex line-150">
                 It is understandable that being human, we may not know the great
                 implications of having the Grand Temple built on earth, on the
                 Yoruba soil and in our midst
@@ -83,12 +83,13 @@ const ChallengesFaced = () => {
                 isPlaying={isPlaying}
                 onPlay={playAudio}
                 onPause={pauseAudio}
+                btnColor
               />
             </Grid>
           </Grid>
         </Wrapper>
         <CustomModal open={open} closeModal={closeModal}>
-          <Box sx={{ overflowY: "scroll" }} className={classes?.scroll}>
+          <Box sx={{ overflowY: 'scroll' }} className={classes?.scroll}>
             <Image
               src="/assets/icons/question_mark.svg"
               alt="question_mark"

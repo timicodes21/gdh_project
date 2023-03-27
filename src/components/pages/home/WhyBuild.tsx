@@ -1,14 +1,14 @@
-import React, { useEffect, useRef } from "react";
-import { Box, Grid } from "@mui/material";
-import Image from "next/image";
-import Wrapper from "@/components/layout/Wrapper";
-import { FaLongArrowAltRight } from "react-icons/fa";
-import ReadMore from "@/components/buttons/ReadMore";
-import { useModal } from "@/hooks/useModal";
-import CustomModal from "@/components/modals/CustomModal";
-import classes from "../../../styles/Home.module.css";
-import { usePlayAudio } from "@/hooks/usePlayAudio";
-import { introductionText } from "@/data/texts";
+import React, { useEffect, useRef } from 'react';
+import { Box, Grid } from '@mui/material';
+import Image from 'next/image';
+import Wrapper from '@/components/layout/Wrapper';
+import { FaLongArrowAltRight } from 'react-icons/fa';
+import ReadMore from '@/components/buttons/ReadMore';
+import { useModal } from '@/hooks/useModal';
+import CustomModal from '@/components/modals/CustomModal';
+import classes from '../../../styles/Home.module.css';
+import { usePlayAudio } from '@/hooks/usePlayAudio';
+import { introductionText } from '@/data/texts';
 
 const WhyBuild = () => {
   const { open, openModal, closeModal } = useModal();
@@ -20,9 +20,9 @@ const WhyBuild = () => {
   useEffect(() => {
     const observer = new IntersectionObserver((entries) => {
       const [entry] = entries;
-      console.log("entry intersecting", entry.isIntersecting);
+      console.log('entry intersecting', entry.isIntersecting);
       if (entry.isIntersecting) {
-        ref?.current?.classList.add("animate");
+        ref?.current?.classList.add('animate');
       }
     });
 
@@ -31,7 +31,7 @@ const WhyBuild = () => {
     }
 
     return () => {
-      ref?.current?.classList.remove("animate");
+      ref?.current?.classList.remove('animate');
       if (ref?.current) {
         observer.unobserve(ref?.current);
       }
@@ -39,18 +39,18 @@ const WhyBuild = () => {
   }, []);
 
   return (
-    <div id="history" ref={ref} className="slanted-container">
+    <div id="history" ref={ref} className="slanted-container2">
       <Box sx={{ py: 5 }}>
         <Wrapper>
           <Grid container>
             <Grid item xs={12} md={5}>
               <Box
                 sx={{
-                  position: "relative",
-                  display: "flex",
-                  flexDirection: "column",
-                  justifyContent: "center",
-                  height: "80vh",
+                  position: 'relative',
+                  display: 'flex',
+                  flexDirection: 'column',
+                  justifyContent: 'center',
+                  height: '80vh',
                 }}
               >
                 <Image
@@ -70,11 +70,11 @@ const WhyBuild = () => {
               data-aos-delay="500"
               data-aos-duration="1000"
             >
-              <p className="font-52 font-400 text-secondary-3 montaga">
+              <p className="font-52 font-400 text-white montaga">
                 {/* Why build a temple?{" "} */}
                 Introduction
               </p>
-              <p className="text-secondary-4 font-32 font-300 text-justify avenuex line-150">
+              <p className="text-white font-32 font-300 text-justify avenuex line-150">
                 {/* The Great Divine Holy Order of the Third Era was established in
                 1941 with the goal of building a Grand Temple according to
                 God&apos;s specified dimensions. The organization started in
@@ -90,12 +90,13 @@ const WhyBuild = () => {
                 onPlay={playAudio}
                 onPause={pauseAudio}
                 isPlaying={isPlaying}
+                btnColor
               />
             </Grid>
           </Grid>
         </Wrapper>
         <CustomModal open={open} closeModal={closeModal}>
-          <Box sx={{ overflowY: "scroll" }} className={classes?.scroll}>
+          <Box sx={{ overflowY: 'scroll' }} className={classes?.scroll}>
             <Image
               src="/assets/icons/question_mark.svg"
               alt="question_mark"
