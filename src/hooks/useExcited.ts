@@ -1,12 +1,12 @@
-import { useState, useCallback } from "react";
+import { useState, useCallback } from 'react';
 
 export const useExcited = () => {
-  const [value, setValue] = useState("1010101010110");
+  const [value, setValue] = useState('');
   const [copied, setCopied] = useState(false);
 
   function scrollToTop() {
     if (window !== undefined) {
-      window.scrollTo({ top: 0, behavior: "smooth" });
+      window.scrollTo({ top: 0, behavior: 'smooth' });
     }
   }
 

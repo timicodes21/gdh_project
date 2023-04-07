@@ -1,15 +1,15 @@
-import React, { useEffect, useRef } from "react";
-import { Box, Grid } from "@mui/material";
-import Image from "next/image";
-import Wrapper from "@/components/layout/Wrapper";
-import { FaLongArrowAltRight } from "react-icons/fa";
-import ReadMore from "@/components/buttons/ReadMore";
-import { useModal } from "@/hooks/useModal";
-import CustomModal from "@/components/modals/CustomModal";
-import classes from "../../../styles/Home.module.css";
-import { usePlayAudio, usePlayRecording } from "@/hooks/usePlayAudio";
-import { introductionText } from "@/data/texts";
-import ReactAudioPlayer from "react-audio-player";
+import React, { useEffect, useRef } from 'react';
+import { Box, Grid } from '@mui/material';
+import Image from 'next/image';
+import Wrapper from '@/components/layout/Wrapper';
+import { FaLongArrowAltRight } from 'react-icons/fa';
+import ReadMore from '@/components/buttons/ReadMore';
+import { useModal } from '@/hooks/useModal';
+import CustomModal from '@/components/modals/CustomModal';
+import classes from '../../../styles/Home.module.css';
+import { usePlayAudio, usePlayRecording } from '@/hooks/usePlayAudio';
+import { introductionText } from '@/data/texts';
+import ReactAudioPlayer from 'react-audio-player';
 
 const WhyBuild = () => {
   const { open, openModal, closeModal } = useModal();
@@ -22,9 +22,9 @@ const WhyBuild = () => {
   useEffect(() => {
     const observer = new IntersectionObserver((entries) => {
       const [entry] = entries;
-      console.log("entry intersecting", entry.isIntersecting);
+      console.log('entry intersecting', entry.isIntersecting);
       if (entry.isIntersecting) {
-        ref?.current?.classList.add("animate");
+        ref?.current?.classList.add('animate');
       }
     });
 
@@ -33,7 +33,7 @@ const WhyBuild = () => {
     }
 
     return () => {
-      ref?.current?.classList.remove("animate");
+      ref?.current?.classList.remove('animate');
       if (ref?.current) {
         observer.unobserve(ref?.current);
       }
@@ -58,9 +58,9 @@ const WhyBuild = () => {
 
   return (
     <div id="history" ref={ref} className="slanted-container2">
-      <Box sx={{ display: "none" }}>
+      <Box sx={{ display: 'none' }}>
         <ReactAudioPlayer
-          src="/assets/audios/Introduction 2.mp3"
+          src="/assets/audios/Introduction.mp3"
           autoPlay={false}
           loop={false}
           controls={false}
@@ -74,11 +74,11 @@ const WhyBuild = () => {
             <Grid item xs={12} md={5}>
               <Box
                 sx={{
-                  position: "relative",
-                  display: "flex",
-                  flexDirection: "column",
-                  justifyContent: "center",
-                  height: "80vh",
+                  position: 'relative',
+                  display: 'flex',
+                  flexDirection: 'column',
+                  justifyContent: 'center',
+                  height: '80vh',
                 }}
               >
                 <Image
@@ -124,14 +124,14 @@ const WhyBuild = () => {
           </Grid>
         </Wrapper>
         <CustomModal open={open} closeModal={closeModal}>
-          <Box sx={{ overflowY: "scroll" }} className={classes?.scroll}>
-            <Image
+          <Box sx={{ overflowY: 'scroll' }} className={classes?.scroll}>
+            {/* <Image
               src="/assets/icons/question_mark.svg"
               alt="question_mark"
               width={272.4}
               height={373.74}
               className="question_mark"
-            />
+            /> */}
             <Box>
               <p className="font-52 font-400 text-secondary-3 montaga">
                 {/* Why build a temple?{" "} */}Introduction

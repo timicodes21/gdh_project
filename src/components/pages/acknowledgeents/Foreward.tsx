@@ -1,25 +1,51 @@
-import React from "react";
-import { Box, Grid } from "@mui/material";
-import Wrapper from "@/components/layout/Wrapper";
-import classes from "../../../styles/Home.module.css";
-import ReadMore from "@/components/buttons/ReadMore";
-import Image from "next/image";
-import { useModal } from "@/hooks/useModal";
-import CustomModal from "@/components/modals/CustomModal";
-import { usePlayAudio } from "@/hooks/usePlayAudio";
-import { tempoaryTempleText } from "@/data/texts";
+import React, { useRef } from 'react';
+import { Box, Grid } from '@mui/material';
+import Wrapper from '@/components/layout/Wrapper';
+import classes from '../../../styles/Home.module.css';
+import ReadMore from '@/components/buttons/ReadMore';
+import Image from 'next/image';
+import { useModal } from '@/hooks/useModal';
+import CustomModal from '@/components/modals/CustomModal';
+import ReactAudioPlayer from 'react-audio-player';
+import { usePlayRecording } from '@/hooks/usePlayAudio';
+import { tempoaryTempleText } from '@/data/texts';
 
 const Foreward = () => {
   const { open, openModal, closeModal } = useModal();
 
-  const { playAudio, pauseAudio, isPlaying } = usePlayAudio(tempoaryTempleText);
+  const { playRecording, pauseRecording, isPlaying, setIsPlaying } =
+    usePlayRecording();
+
+  const audioRef = useRef<HTMLAudioElement>(null);
+
+  function handleButtonClick() {
+    setIsPlaying(true);
+    if (audioRef.current) {
+      audioRef.current?.audioEl.current.play();
+    }
+  }
+
+  function handlePauseButtonClick() {
+    setIsPlaying(false);
+    if (audioRef.current) {
+      audioRef.current?.audioEl.current.pause();
+    }
+  }
 
   return (
     <Box sx={{ py: 5 }}>
+      <ReactAudioPlayer
+        src="/assets/audios/foreward.mp3"
+        autoPlay={false}
+        loop={false}
+        controls={false}
+        ref={audioRef}
+        onEnded={() => setIsPlaying(false)}
+      />
       <div id="temporary_temple">
         <Wrapper>
-          <Box sx={{ position: "relative" }}>
-            <Box sx={{ position: "absolute", right: 0, top: 0 }}>
+          <Box sx={{ position: 'relative' }}>
+            <Box sx={{ position: 'absolute', right: 0, top: 0 }}>
               <Image
                 src="/assets/icons/exclamation_icon.svg"
                 alt="question_mark"
@@ -36,7 +62,7 @@ const Foreward = () => {
             </p>
             <Grid container>
               <Grid item xs={12} md={2}></Grid>
-              <Grid item xs={12} md={8}>
+              {/* <Grid item xs={12} md={8}>
                 <Box
                   className={classes.shadow_bg_1}
                   sx={{ py: { xs: 2, md: 5 }, px: { xs: 2, md: 10 } }}
@@ -51,7 +77,7 @@ const Foreward = () => {
                     continue to do
                   </p>
                 </Box>
-              </Grid>
+              </Grid> */}
               <Grid item xs={12} md={2}></Grid>
             </Grid>
             <Grid container sx={{ mt: { xs: 5, md: 10 } }}>
@@ -73,28 +99,44 @@ const Foreward = () => {
                     are and a road map to get to our desired objective I.e. the
                     completion of the "GDRAND TEMPLE PROJECT " without
                     compromising on the quality of both materials and
-                    workmanship required
+                    workmanship required... <br />
+                    <p
+                      style={{
+                        fontWeight: 'extra-bold',
+                        marginBottom: '0',
+                      }}
+                    >
+                      Elder Olufunbi Adeniyi-Taiwo
+                    </p>
+                    <p
+                      style={{
+                        fontWeight: 'extra-bold',
+                        margin: '0',
+                      }}
+                    >
+                      Great Divine Rabbi
+                    </p>
                   </p>
                 </Box>
               </Grid>
               <Grid item xs={12} md={2}></Grid>
             </Grid>
-            <Box sx={{ display: "flex", justifyContent: "end" }}>
+            <Box sx={{ display: 'flex', justifyContent: 'end' }}>
               <ReadMore
                 onClick={openModal}
                 isPlaying={isPlaying}
-                onPlay={playAudio}
-                onPause={pauseAudio}
+                onPlay={handleButtonClick}
+                onPause={handlePauseButtonClick}
               />
             </Box>
           </Box>
         </Wrapper>
         <CustomModal open={open} closeModal={closeModal}>
-          <Box sx={{ overflowY: "scroll" }} className={classes?.scroll}>
+          <Box sx={{ overflowY: 'scroll' }} className={classes?.scroll}>
             <Box>
               <p className="font-52 font-400 text-secondary-3 montaga">
                 {/* Importance of the temple */}
-                The Tempoary Temple
+                Foreward
               </p>
               <p className="text-secondary-4 font-32 font-300 avenuex text-justify line-150">
                 To God be the Glory for great things He has done and will
@@ -111,7 +153,7 @@ const Foreward = () => {
                 to provide needed information on how we started, where we are
                 and a road map to get to our desired objective I.e. the
                 completion of the "GDRAND TEMPLE PROJECT " without compromising
-                on the quality of both materials and workmanship required.{" "}
+                on the quality of both materials and workmanship required.{' '}
                 <br />
                 <br />
                 The prospectus explains in detail and describes with pictorials
@@ -131,8 +173,34 @@ const Foreward = () => {
                 my knowledge it has not been withdrawn. <br />
                 <br />
                 May we continue to be richly blessed, as we heed this clarion
-                call, to complete what we have affirmed that we will do. Thank
-                you.
+                call, to complete what we have affirmed that we will do.
+                <br /> <br />
+                Thank you.
+                <br /> <br />
+                <p
+                  style={{
+                    fontWeight: 'extra-bold',
+                    margin: '0',
+                  }}
+                >
+                  Elder Olufunbi Adeniyi-Taiwo
+                </p>
+                <p
+                  style={{
+                    fontWeight: 'extra-bold',
+                    margin: '0',
+                  }}
+                >
+                  Great Divine Rabbi
+                </p>
+                <p
+                  style={{
+                    fontWeight: 'extra-bold',
+                    margin: '0',
+                  }}
+                >
+                  March 2023.
+                </p>
               </p>
             </Box>
           </Box>

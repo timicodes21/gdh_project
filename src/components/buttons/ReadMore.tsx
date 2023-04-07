@@ -14,6 +14,7 @@ interface IProps {
   onPause?: () => void;
   isPlaying?: boolean;
   btnColor?: boolean;
+  noPlay?: boolean; // if true, don't show play button
 }
 
 const ReadMore: React.FC<IProps> = ({
@@ -22,6 +23,7 @@ const ReadMore: React.FC<IProps> = ({
   isPlaying,
   onPause,
   btnColor,
+  noPlay,
 }) => {
   return (
     <>
@@ -32,24 +34,28 @@ const ReadMore: React.FC<IProps> = ({
         }}
         className="pointer"
       >
-        {isPlaying ? (
-          <AiFillPauseCircle
-            onClick={onPause}
-            style={
-              btnColor
-                ? { color: '#ffffff', fontSize: '32px' }
-                : { color: '#667085', fontSize: '32px' }
-            }
-          />
-        ) : (
-          <AiFillPlayCircle
-            onClick={onPlay}
-            style={
-              btnColor
-                ? { color: '#ffffff', fontSize: '32px' }
-                : { color: '#667085', fontSize: '32px' }
-            }
-          />
+        {!noPlay && (
+          <>
+            {isPlaying ? (
+              <AiFillPauseCircle
+                onClick={onPause}
+                style={
+                  btnColor
+                    ? { color: '#ffffff', fontSize: '32px' }
+                    : { color: '#667085', fontSize: '32px' }
+                }
+              />
+            ) : (
+              <AiFillPlayCircle
+                onClick={onPlay}
+                style={
+                  btnColor
+                    ? { color: '#ffffff', fontSize: '32px' }
+                    : { color: '#667085', fontSize: '32px' }
+                }
+              />
+            )}
+          </>
         )}
         {/* <Image
           src="/assets/icons/play_icon.svg"

@@ -1,9 +1,9 @@
-import BlueBadge from "@/components/badges/BlueBadge";
-import Wrapper from "@/components/layout/Wrapper";
-import { useExcited } from "@/hooks/useExcited";
-import { Box, Grid } from "@mui/material";
-import React from "react";
-import { FiHelpCircle } from "react-icons/fi";
+import BlueBadge from '@/components/badges/BlueBadge';
+import Wrapper from '@/components/layout/Wrapper';
+import { useExcited } from '@/hooks/useExcited';
+import { Box, Grid } from '@mui/material';
+import React from 'react';
+import { FiHelpCircle } from 'react-icons/fi';
 
 interface IProps {
   templePage?: boolean;
@@ -22,8 +22,8 @@ const Excited: React.FC<IProps> = ({ templePage }) => {
             data-aos-duration="1000"
           >
             {templePage
-              ? "Excited by this section?"
-              : "Excited with what you have seen so far?"}
+              ? 'Excited by this section?'
+              : 'Excited with what you have seen so far?'}
           </p>
           <Box sx={{ px: { xs: 1, md: 5, lg: 10 } }}>
             <p
@@ -39,13 +39,18 @@ const Excited: React.FC<IProps> = ({ templePage }) => {
           </Box>
           <Grid container spacing={4}>
             <Grid item xs={12} md={4}>
-              <BlueBadge onCopy={() => {}} />
+              <BlueBadge
+                text1="Bank Name"
+                text2="
+                Guaranty Trust Bank
+              "
+              />
             </Grid>
             <Grid item xs={12} md={4}>
-              <BlueBadge onCopy={() => {}} />
+              <BlueBadge text1="Account Name" text2="GDHOTE" />
             </Grid>
             <Grid item xs={12} md={4}>
-              <BlueBadge onCopy={() => {}} />
+              <BlueBadge text1="Account Number" text2="0007981969" />
             </Grid>
           </Grid>
           {/* <Box
@@ -70,7 +75,7 @@ const Excited: React.FC<IProps> = ({ templePage }) => {
             </span>
           </Box> */}
           {!templePage && (
-            <Box sx={{ my: 10, display: "flex", justifyContent: "center" }}>
+            <Box sx={{ my: 10, display: 'flex', justifyContent: 'center' }}>
               <p
                 className="pointer font-24 font-400 text-secondary-4 satoshi"
                 onClick={scrollToTop}

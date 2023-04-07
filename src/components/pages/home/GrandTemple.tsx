@@ -1,25 +1,26 @@
-import React, { useEffect, useRef } from "react";
-import { Box, Grid } from "@mui/material";
-import Image from "next/image";
-import Wrapper from "@/components/layout/Wrapper";
-import ReadMore from "@/components/buttons/ReadMore";
-import { useModal } from "@/hooks/useModal";
-import CustomModal from "@/components/modals/CustomModal";
-import classes from "../../../styles/Home.module.css";
-import { usePlayAudio } from "@/hooks/usePlayAudio";
-import { grandTempleText } from "@/data/texts";
-
+import React, { useEffect, useRef } from 'react';
+import { Box, Grid } from '@mui/material';
+import Image from 'next/image';
+import Wrapper from '@/components/layout/Wrapper';
+import ReadMore from '@/components/buttons/ReadMore';
+import { useModal } from '@/hooks/useModal';
+import CustomModal from '@/components/modals/CustomModal';
+import classes from '../../../styles/Home.module.css';
+import { usePlayAudio, usePlayRecording } from '@/hooks/usePlayAudio';
+import { grandTempleText } from '@/data/texts';
+import ReactAudioPlayer from 'react-audio-player';
 const GrandTemple = () => {
   const { open, openModal, closeModal } = useModal();
-
+  const { playRecording, pauseRecording, isPlaying, setIsPlaying } =
+    usePlayRecording();
   const ref = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     const observer = new IntersectionObserver((entries) => {
       const [entry] = entries;
-      console.log("entry intersecting", entry.isIntersecting);
+      console.log('entry intersecting', entry.isIntersecting);
       if (entry.isIntersecting) {
-        ref?.current?.classList.add("animate");
+        ref?.current?.classList.add('animate');
       }
     });
 
@@ -28,28 +29,53 @@ const GrandTemple = () => {
     }
 
     return () => {
-      ref?.current?.classList.remove("animate");
+      ref?.current?.classList.remove('animate');
       if (ref?.current) {
         observer.unobserve(ref?.current);
       }
     };
   }, []);
 
-  const { playAudio, pauseAudio, isPlaying } = usePlayAudio(grandTempleText);
+  const audioRef = useRef<HTMLAudioElement>(null);
+
+  function handleButtonClick() {
+    setIsPlaying(true);
+    if (audioRef.current) {
+      // @ts-ignore
+      audioRef.current?.audioEl.current.play();
+    }
+  }
+
+  function handlePauseButtonClick() {
+    setIsPlaying(false);
+    if (audioRef.current) {
+      // @ts-ignore
+      audioRef.current?.audioEl.current.pause();
+    }
+  }
 
   return (
     <div id="grand_temple" ref={ref} className="slanted-container">
       <Box sx={{ py: 5 }}>
+        <ReactAudioPlayer
+          src="/assets/audios/The Grand Temple Project.mp3"
+          autoPlay={false}
+          loop={false}
+          controls={false}
+          // @ts-ignore
+          ref={audioRef}
+          onEnded={() => setIsPlaying(false)}
+        />
         <Wrapper>
           <Grid container>
             <Grid item xs={12} md={5}>
               <Box
                 sx={{
-                  position: "relative",
-                  display: "flex",
-                  flexDirection: "column",
-                  justifyContent: "center",
-                  height: "80vh",
+                  position: 'relative',
+                  display: 'flex',
+                  flexDirection: 'column',
+                  justifyContent: 'center',
+                  height: '80vh',
                 }}
               >
                 <Image
@@ -81,14 +107,14 @@ const GrandTemple = () => {
               <ReadMore
                 onClick={openModal}
                 isPlaying={isPlaying}
-                onPlay={playAudio}
-                onPause={pauseAudio}
+                onPlay={handleButtonClick}
+                onPause={handlePauseButtonClick}
               />
             </Grid>
           </Grid>
         </Wrapper>
         <CustomModal open={open} closeModal={closeModal}>
-          <Box sx={{ overflowY: "scroll" }} className={classes?.scroll}>
+          <Box sx={{ overflowY: 'scroll' }} className={classes?.scroll}>
             <Image
               src="/assets/icons/question_mark.svg"
               alt="question_mark"

@@ -1,19 +1,47 @@
-import React from "react";
-import { Box, Grid } from "@mui/material";
-import Image from "next/image";
-import Wrapper from "@/components/layout/Wrapper";
-import ReadMore from "@/components/buttons/ReadMore";
-import { useModal } from "@/hooks/useModal";
-import CustomModal from "@/components/modals/CustomModal";
-import classes from "../../../styles/Home.module.css";
-import { usePlayAudio } from "@/hooks/usePlayAudio";
-import { designConceptText } from "@/data/texts";
-
+import React, { useRef } from 'react';
+import { Box, Grid } from '@mui/material';
+import Image from 'next/image';
+import Wrapper from '@/components/layout/Wrapper';
+import ReadMore from '@/components/buttons/ReadMore';
+import { useModal } from '@/hooks/useModal';
+import CustomModal from '@/components/modals/CustomModal';
+import classes from '../../../styles/Home.module.css';
+import { usePlayAudio, usePlayRecording } from '@/hooks/usePlayAudio';
+import { designConceptText } from '@/data/texts';
+import ReactAudioPlayer from 'react-audio-player';
 const DesignConcept = () => {
   const { open, openModal, closeModal } = useModal();
-  const { playAudio, pauseAudio, isPlaying } = usePlayAudio(designConceptText);
+  const { playRecording, pauseRecording, isPlaying, setIsPlaying } =
+    usePlayRecording();
+
+  const audioRef = useRef<HTMLAudioElement>(null);
+
+  function handleButtonClick() {
+    setIsPlaying(true);
+    if (audioRef.current) {
+      // @ts-ignore
+      audioRef.current?.audioEl.current.play();
+    }
+  }
+
+  function handlePauseButtonClick() {
+    setIsPlaying(false);
+    if (audioRef.current) {
+      // @ts-ignore
+      audioRef.current?.audioEl.current.pause();
+    }
+  }
   return (
     <Box sx={{ py: 5 }}>
+      <ReactAudioPlayer
+        src="/assets/audios/Design Concept.mp3"
+        autoPlay={false}
+        loop={false}
+        controls={false}
+        // @ts-ignore
+        ref={audioRef}
+        onEnded={() => setIsPlaying(false)}
+      />
       <div id="design_concept">
         <Wrapper>
           <Grid container spacing={3}>
@@ -40,39 +68,32 @@ const DesignConcept = () => {
               <ReadMore
                 onClick={openModal}
                 isPlaying={isPlaying}
-                onPlay={playAudio}
-                onPause={pauseAudio}
+                onPlay={handleButtonClick}
+                onPause={handlePauseButtonClick}
               />
             </Grid>
             <Grid item xs={12} md={6}>
               <Box
                 sx={{
-                  position: "relative",
-                  display: "flex",
-                  flexDirection: "column",
-                  justifyContent: "flex-end",
-                  alignItems: "center",
+                  position: 'relative',
+                  display: 'flex',
+                  flexDirection: 'column',
+                  justifyContent: 'flex-end',
+                  alignItems: 'center',
                   mt: 10,
                 }}
               >
                 <img
                   src="/assets/images/stages_table.PNG"
                   alt="question_mark"
-                  style={{ height: "auto", maxWidth: "100%" }}
+                  style={{ height: 'auto', maxWidth: '100%' }}
                 />
               </Box>
             </Grid>
           </Grid>
         </Wrapper>
         <CustomModal open={open} closeModal={closeModal}>
-          <Box sx={{ overflowY: "scroll" }} className={classes?.scroll}>
-            <Image
-              src="/assets/icons/question_mark.svg"
-              alt="question_mark"
-              width={272.4}
-              height={373.74}
-              className="question_mark"
-            />
+          <Box sx={{ overflowY: 'scroll' }} className={classes?.scroll}>
             <Box>
               <p className="font-52 font-400 text-secondary-3 montaga">
                 Design Concept

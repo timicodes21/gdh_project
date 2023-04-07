@@ -25,6 +25,7 @@ const Navbar = () => {
     toggleLanguageModal,
     languageText,
     changeLanguage,
+    downloadProspectus,
   } = useNavbar();
 
   return (
@@ -144,13 +145,12 @@ const Navbar = () => {
           <Box
             sx={{ display: { xs: 'none', lg: 'flex' }, alignItems: 'center' }}
           >
-            {/* <TransparentButton
-              onClick={toggleLanguageModal}
-              dropdown
+            <TransparentButton
+              onClick={() => downloadProspectus()}
               size="small"
             >
-              {languageText}
-            </TransparentButton> */}
+              Download Prospectus
+            </TransparentButton>
             <Box sx={{ mx: 1 }}></Box>
             <a href="#excited">
               <BlueButton onClick={() => {}} arrow size="small">
@@ -254,7 +254,7 @@ const Navbar = () => {
                 </Link>
                 <Box className="dropdown_content" sx={{ p: 2 }}>
                   {navbarWhereItems.map((item, index) => (
-                    <Box key={index} sx={{ mb: 2 }}>
+                    <Box key={index} sx={{ mb: 0 }}>
                       <a
                         href={item.link}
                         className={
@@ -271,9 +271,9 @@ const Navbar = () => {
               </Box>
             </Box>
             <Box sx={{ display: 'flex', flexDirection: 'column', mt: 3 }}>
-              <TransparentButton onClick={toggleLanguageModal} dropdown>
+              {/* <TransparentButton onClick={toggleLanguageModal} dropdown>
                 {languageText}
-              </TransparentButton>
+              </TransparentButton> */}
               <Box sx={{ mt: 1 }}></Box>
               <a href="#excited">
                 <BlueButton onClick={() => {}} arrow width="100%">

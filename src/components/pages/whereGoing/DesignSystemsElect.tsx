@@ -1,18 +1,18 @@
-import React from "react";
-import { Box } from "@mui/material";
-import Wrapper from "@/components/layout/Wrapper";
-import Image from "next/image";
-import classes from "../../../styles/Home.module.css";
-import Carousel from "react-material-ui-carousel";
+import React from 'react';
+import { Box } from '@mui/material';
+import Wrapper from '@/components/layout/Wrapper';
+import Image from 'next/image';
+import classes from '../../../styles/Home.module.css';
+import Carousel from 'react-material-ui-carousel';
 import {
   designSystemsImages,
   electricalSystemImages,
   floorPlanImages,
   stMaryImages,
-} from "@/data/images";
-import ReadMore from "@/components/buttons/ReadMore";
-import { useModal } from "@/hooks/useModal";
-import CustomModal from "@/components/modals/CustomModal";
+} from '@/data/images';
+import ReadMore from '@/components/buttons/ReadMore';
+import { useModal } from '@/hooks/useModal';
+import CustomModal from '@/components/modals/CustomModal';
 
 const DesignSystemsElec = () => {
   const { open, openModal, closeModal } = useModal();
@@ -40,8 +40,8 @@ const DesignSystemsElec = () => {
             </Box>
             <Box
               sx={{
-                display: { xs: "block", lg: "flex" },
-                justifyContent: "space-between",
+                display: { xs: 'block', lg: 'flex' },
+                justifyContent: 'space-between',
                 px: { xs: 2, md: 10 },
               }}
             >
@@ -66,11 +66,11 @@ const DesignSystemsElec = () => {
               </p>
               <Box
                 sx={{
-                  display: "flex",
-                  justifyContent: "flex-end",
+                  display: 'flex',
+                  justifyContent: 'flex-end',
                 }}
               >
-                <ReadMore onClick={openModal} />
+                <ReadMore onClick={openModal} noPlay />
               </Box>
             </Box>
 
@@ -79,8 +79,8 @@ const DesignSystemsElec = () => {
                 mt: 10,
                 py: 10,
 
-                display: "flex",
-                justifyContent: "center",
+                display: 'flex',
+                justifyContent: 'center',
               }}
               data-aos="fade-left"
               data-aos-duration="1000"
@@ -88,8 +88,8 @@ const DesignSystemsElec = () => {
               <Carousel
                 navButtonsAlwaysVisible
                 sx={{
-                  width: { xs: "90%", md: "80%", lg: "75%" },
-                  height: { lg: "80vh" },
+                  width: { xs: '90%', md: '80%', lg: '75%' },
+                  height: { lg: '80vh' },
                 }}
               >
                 {electricalSystemImages.map((item, index) => (
@@ -103,7 +103,7 @@ const DesignSystemsElec = () => {
         </Wrapper>
       </Box>
       <CustomModal open={open} closeModal={closeModal}>
-        <Box sx={{ overflowY: "scroll" }} className={classes?.scroll}>
+        <Box sx={{ overflowY: 'scroll' }} className={classes?.scroll}>
           <Box>
             <p className="font-52 font-400 text-secondary-3 montaga">
               Electrical and Lighting Systems
@@ -200,7 +200,7 @@ const DesignSystemsElec = () => {
               interconnected and operate in parallel to handle larger loads.
               Using a series of small units instead of a single generator is
               known as parallel operation <br />
-              <br /> Below are the Advantages of generator synchronization:{" "}
+              <br /> Below are the Advantages of generator synchronization:{' '}
               <br />
               <br /> Reliability: With multiple generators, parallel operation
               is much more reliable than single-unit generators. In a

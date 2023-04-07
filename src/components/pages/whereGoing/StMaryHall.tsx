@@ -1,17 +1,17 @@
-import React from "react";
-import { Box } from "@mui/material";
-import Wrapper from "@/components/layout/Wrapper";
-import Image from "next/image";
-import classes from "../../../styles/Home.module.css";
-import Carousel from "react-material-ui-carousel";
+import React from 'react';
+import { Box } from '@mui/material';
+import Wrapper from '@/components/layout/Wrapper';
+import Image from 'next/image';
+import classes from '../../../styles/Home.module.css';
+import Carousel from 'react-material-ui-carousel';
 import {
   designSystemsImages,
   floorPlanImages,
   stMaryImages,
-} from "@/data/images";
-import ReadMore from "@/components/buttons/ReadMore";
-import { useModal } from "@/hooks/useModal";
-import CustomModal from "@/components/modals/CustomModal";
+} from '@/data/images';
+import ReadMore from '@/components/buttons/ReadMore';
+import { useModal } from '@/hooks/useModal';
+import CustomModal from '@/components/modals/CustomModal';
 
 const StMaryHall = () => {
   const { open, openModal, closeModal } = useModal();
@@ -25,10 +25,10 @@ const StMaryHall = () => {
             data-aos="fade-up-right"
             data-aos-duration="1000"
           >
-            St Mary&apos;s Hall
+            Floor Plan
           </p>
           <Box
-            sx={{ mt: 10, display: "flex", justifyContent: "center" }}
+            sx={{ mt: 10, display: 'flex', justifyContent: 'center' }}
             data-aos="fade-left"
             data-aos-delay="500"
             data-aos-duration="1000"
@@ -36,8 +36,8 @@ const StMaryHall = () => {
             <Carousel
               navButtonsAlwaysVisible
               sx={{
-                width: { xs: "90%", md: "80%", lg: "75%" },
-                height: { lg: "80vh" },
+                width: { xs: '90%', md: '80%', lg: '75%' },
+                height: { lg: '80vh' },
               }}
             >
               {stMaryImages.map((item, index) => (
@@ -67,8 +67,8 @@ const StMaryHall = () => {
             </Box>
             <Box
               sx={{
-                display: { xs: "block", lg: "flex" },
-                justifyContent: "space-between",
+                display: { xs: 'block', lg: 'flex' },
+                justifyContent: 'space-between',
                 px: { xs: 2, md: 10 },
                 mt: 10,
               }}
@@ -96,16 +96,16 @@ const StMaryHall = () => {
               </p>
               <Box
                 sx={{
-                  display: "flex",
-                  justifyContent: "flex-end",
+                  display: 'flex',
+                  justifyContent: 'flex-end',
                 }}
               >
-                <ReadMore onClick={openModal} />
+                <ReadMore onClick={openModal} noPlay />
               </Box>
             </Box>
-            {/* 
-            <Box
-              sx={{ mt: 10, py: 10, borderBottom: "0.5px solid #98A2B3" }}
+
+            {/* <Box
+              sx={{ mt: 10, py: 10, borderBottom: '0.5px solid #98A2B3' }}
               data-aos="fade-left"
               data-aos-duration="1000"
             >
@@ -119,7 +119,7 @@ const StMaryHall = () => {
             </Box> */}
 
             <Box
-              sx={{ mt: 10, py: 10, borderBottom: "0.5px solid #98A2B3" }}
+              sx={{ mt: 10, py: 10, borderBottom: '0.5px solid #98A2B3' }}
               data-aos="fade-left"
               data-aos-duration="1000"
             >
@@ -128,14 +128,14 @@ const StMaryHall = () => {
                 data-aos="fade-up-left"
                 data-aos-duration="1000"
               >
-                Floor Plans
+                Costing
               </p>
-              <Box sx={{ display: "flex", justifyContent: "center" }}>
+              <Box sx={{ display: 'flex', justifyContent: 'center' }}>
                 <Carousel
                   navButtonsAlwaysVisible
                   sx={{
-                    width: { xs: "90%", md: "80%", lg: "75%" },
-                    height: { lg: "80vh" },
+                    width: { xs: '90%', md: '80%', lg: '75%' },
+                    height: { lg: '80vh' },
                   }}
                 >
                   {floorPlanImages.map((item, index) => (
@@ -150,7 +150,7 @@ const StMaryHall = () => {
         </Wrapper>
       </Box>
       <CustomModal open={open} closeModal={closeModal}>
-        <Box sx={{ overflowY: "scroll" }} className={classes?.scroll}>
+        <Box sx={{ overflowY: 'scroll' }} className={classes?.scroll}>
           <Box>
             <p className="font-52 font-400 text-secondary-3 montaga">
               Mechanical and Plumbing Systems.
@@ -184,7 +184,7 @@ const StMaryHall = () => {
               <strong>
                 Water Supply, Treatment & Storage Systems This setup comprises
                 of the water supply system
-              </strong>{" "}
+              </strong>{' '}
               <br />
               <br />
               This setup comprises of the water supply system being a borehole

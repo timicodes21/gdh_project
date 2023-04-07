@@ -1,10 +1,10 @@
-import React from "react";
-import { Box } from "@mui/material";
-import Wrapper from "@/components/layout/Wrapper";
-import classes from "../../../styles/Home.module.css";
-import ReadMore from "@/components/buttons/ReadMore";
-import { useModal } from "@/hooks/useModal";
-import CustomModal from "@/components/modals/CustomModal";
+import React from 'react';
+import { Box } from '@mui/material';
+import Wrapper from '@/components/layout/Wrapper';
+import classes from '../../../styles/Home.module.css';
+import ReadMore from '@/components/buttons/ReadMore';
+import { useModal } from '@/hooks/useModal';
+import CustomModal from '@/components/modals/CustomModal';
 
 const DesignStratedyRoma = () => {
   const { open, openModal, closeModal } = useModal();
@@ -38,18 +38,18 @@ const DesignStratedyRoma = () => {
               </p>
               <Box
                 sx={{
-                  display: "flex",
-                  justifyContent: "flex-end",
+                  display: 'flex',
+                  justifyContent: 'flex-end',
                 }}
               >
-                <ReadMore onClick={openModal} />
+                <ReadMore onClick={openModal} noPlay />
               </Box>
             </Box>
           </div>
         </Wrapper>
       </Box>
       <CustomModal open={open} closeModal={closeModal}>
-        <Box sx={{ overflowY: "scroll" }} className={classes?.scroll}>
+        <Box sx={{ overflowY: 'scroll' }} className={classes?.scroll}>
           <Box>
             <p className="font-52 font-400 text-secondary-3 montaga">
               Design Strategy by Roma, Italy

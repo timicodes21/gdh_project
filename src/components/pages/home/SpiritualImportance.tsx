@@ -1,26 +1,52 @@
-import React from "react";
-import { Box, Grid } from "@mui/material";
-import Wrapper from "@/components/layout/Wrapper";
-import classes from "../../../styles/Home.module.css";
-import ReadMore from "@/components/buttons/ReadMore";
-import Image from "next/image";
-import { useModal } from "@/hooks/useModal";
-import CustomModal from "@/components/modals/CustomModal";
-import { usePlayAudio } from "@/hooks/usePlayAudio";
-import { spiritualImportanceText } from "@/data/texts";
-
+import React, { useRef } from 'react';
+import { Box, Grid } from '@mui/material';
+import Wrapper from '@/components/layout/Wrapper';
+import classes from '../../../styles/Home.module.css';
+import ReadMore from '@/components/buttons/ReadMore';
+import Image from 'next/image';
+import { useModal } from '@/hooks/useModal';
+import CustomModal from '@/components/modals/CustomModal';
+import { usePlayAudio, usePlayRecording } from '@/hooks/usePlayAudio';
+import { spiritualImportanceText } from '@/data/texts';
+import ReactAudioPlayer from 'react-audio-player';
 const SpiritualImportance = () => {
   const { open, openModal, closeModal } = useModal();
-  const { playAudio, pauseAudio, isPlaying } = usePlayAudio(
-    spiritualImportanceText
-  );
+  const { playRecording, pauseRecording, isPlaying, setIsPlaying } =
+    usePlayRecording();
+
+  const audioRef = useRef<HTMLAudioElement>(null);
+
+  function handleButtonClick() {
+    setIsPlaying(true);
+    if (audioRef.current) {
+      // @ts-ignore
+      audioRef.current?.audioEl.current.play();
+    }
+  }
+
+  function handlePauseButtonClick() {
+    setIsPlaying(false);
+    if (audioRef.current) {
+      // @ts-ignore
+      audioRef.current?.audioEl.current.pause();
+    }
+  }
 
   return (
     <Box sx={{ py: 5 }}>
+      <ReactAudioPlayer
+        src="/assets/audios/Spiritual Importance.mp3"
+        autoPlay={false}
+        loop={false}
+        controls={false}
+        // @ts-ignore
+        ref={audioRef}
+        onEnded={() => setIsPlaying(false)}
+      />
       <div id="spiritual_importance">
         <Wrapper>
-          <Box sx={{ position: "relative" }}>
-            <Box sx={{ position: "absolute", right: 0, top: 0 }}>
+          <Box sx={{ position: 'relative' }}>
+            <Box sx={{ position: 'absolute', right: 0, top: 0 }}>
               <Image
                 src="/assets/icons/exclamation_icon.svg"
                 alt="question_mark"
@@ -76,18 +102,18 @@ const SpiritualImportance = () => {
               </Grid>
               <Grid item xs={12} md={2}></Grid>
             </Grid>
-            <Box sx={{ display: "flex", justifyContent: "end" }}>
+            <Box sx={{ display: 'flex', justifyContent: 'end' }}>
               <ReadMore
                 onClick={openModal}
                 isPlaying={isPlaying}
-                onPlay={playAudio}
-                onPause={pauseAudio}
+                onPlay={handleButtonClick}
+                onPause={handlePauseButtonClick}
               />
             </Box>
           </Box>
         </Wrapper>
         <CustomModal open={open} closeModal={closeModal}>
-          <Box sx={{ overflowY: "scroll" }} className={classes?.scroll}>
+          <Box sx={{ overflowY: 'scroll' }} className={classes?.scroll}>
             <Box>
               <p className="font-52 font-400 text-secondary-3 montaga">
                 Spiritual Importance of This Building To Mishenites, The Yoruba
@@ -100,8 +126,8 @@ const SpiritualImportance = () => {
                 it shields you away from all warranted and unwarranted attacks
                 and accusations of all enemies visible and invisible, since you
                 practically “live” with Him here on earth; it gives you the
-                grace to seek and to fin immediately, the love and favour of the
-                Almighty; it confirms to you the authority of God over all
+                grace to seek and to find immediately, the love and favour of
+                the Almighty; it confirms to you the authority of God over all
                 things, which He has given unto you. Above all, it makes you a
                 joint heir rulers of the entire universe. This is a great
                 opportunity and unquantified importance of the building and

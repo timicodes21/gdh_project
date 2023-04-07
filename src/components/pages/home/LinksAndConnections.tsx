@@ -1,31 +1,57 @@
-import React from "react";
-import { Box, Grid } from "@mui/material";
-import Wrapper from "@/components/layout/Wrapper";
-import classes from "../../../styles/Home.module.css";
-import ReadMore from "@/components/buttons/ReadMore";
-import Image from "next/image";
-import { useModal } from "@/hooks/useModal";
-import CustomModal from "@/components/modals/CustomModal";
-import { usePlayAudio } from "@/hooks/usePlayAudio";
-import { linksText } from "@/data/texts";
-
+import React, { useRef } from 'react';
+import { Box, Grid } from '@mui/material';
+import Wrapper from '@/components/layout/Wrapper';
+import classes from '../../../styles/Home.module.css';
+import ReadMore from '@/components/buttons/ReadMore';
+import Image from 'next/image';
+import { useModal } from '@/hooks/useModal';
+import CustomModal from '@/components/modals/CustomModal';
+import { usePlayAudio, usePlayRecording } from '@/hooks/usePlayAudio';
+import { linksText } from '@/data/texts';
+import ReactAudioPlayer from 'react-audio-player';
 const LinksAndConnections = () => {
   const { open, openModal, closeModal } = useModal();
+  const { playRecording, pauseRecording, isPlaying, setIsPlaying } =
+    usePlayRecording();
+  const audioRef = useRef<HTMLAudioElement>(null);
 
-  const { playAudio, pauseAudio, isPlaying } = usePlayAudio(linksText);
+  function handleButtonClick() {
+    setIsPlaying(true);
+    if (audioRef.current) {
+      // @ts-ignore
+      audioRef.current?.audioEl.current.play();
+    }
+  }
+
+  function handlePauseButtonClick() {
+    setIsPlaying(false);
+    if (audioRef.current) {
+      // @ts-ignore
+      audioRef.current?.audioEl.current.pause();
+    }
+  }
 
   return (
     <Box sx={{ py: 5 }}>
+      <ReactAudioPlayer
+        src="/assets/audios/links.mp3"
+        autoPlay={false}
+        loop={false}
+        controls={false}
+        // @ts-ignore
+        ref={audioRef}
+        onEnded={() => setIsPlaying(false)}
+      />
       <div id="links">
         <Wrapper>
-          <Box sx={{ position: "relative" }}>
-            <Box sx={{ position: "absolute", right: 0, top: 0 }}>
-              <Image
+          <Box sx={{ position: 'relative' }}>
+            <Box sx={{ position: 'absolute', right: 0, top: 0 }}>
+              {/* <Image
                 src="/assets/icons/question_mark.svg"
                 alt="question_mark"
                 width={400}
                 height={373}
-              />
+              /> */}
             </Box>
             <p
               className="text-secondary-3 font-52 font-400 montaga text-center"
@@ -57,18 +83,18 @@ const LinksAndConnections = () => {
               <Grid item xs={12} md={2}></Grid>
             </Grid>
 
-            <Box sx={{ display: "flex", justifyContent: "end" }}>
+            <Box sx={{ display: 'flex', justifyContent: 'end' }}>
               <ReadMore
                 onClick={openModal}
                 isPlaying={isPlaying}
-                onPlay={playAudio}
-                onPause={pauseAudio}
+                onPlay={handleButtonClick}
+                onPause={handlePauseButtonClick}
               />
             </Box>
           </Box>
         </Wrapper>
         <CustomModal open={open} closeModal={closeModal}>
-          <Box sx={{ overflowY: "scroll" }} className={classes?.scroll}>
+          <Box sx={{ overflowY: 'scroll' }} className={classes?.scroll}>
             <Box>
               <p className="font-52 font-400 text-secondary-3 montaga">
                 What are the Links or Connections to the Completion of The Grand
@@ -94,7 +120,7 @@ const LinksAndConnections = () => {
                 desire to see to its completion.” King Solomon. <br />
                 <br />
                 <strong>
-                  {" "}
+                  {' '}
                   MISHENITES BUILD FOR THE LORD. THIS WE SHALL DO
                 </strong>
               </p>

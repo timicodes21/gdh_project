@@ -1,13 +1,13 @@
-import React from "react";
-import { Box } from "@mui/material";
-import Wrapper from "@/components/layout/Wrapper";
-import Image from "next/image";
-import classes from "../../../styles/Home.module.css";
-import Carousel from "react-material-ui-carousel";
-import { acousticSystemImages, electricalSystemImages } from "@/data/images";
-import ReadMore from "@/components/buttons/ReadMore";
-import { useModal } from "@/hooks/useModal";
-import CustomModal from "@/components/modals/CustomModal";
+import React from 'react';
+import { Box } from '@mui/material';
+import Wrapper from '@/components/layout/Wrapper';
+import Image from 'next/image';
+import classes from '../../../styles/Home.module.css';
+import Carousel from 'react-material-ui-carousel';
+import { acousticSystemImages, electricalSystemImages } from '@/data/images';
+import ReadMore from '@/components/buttons/ReadMore';
+import { useModal } from '@/hooks/useModal';
+import CustomModal from '@/components/modals/CustomModal';
 
 const ProspectiveVendors = () => {
   const { open, openModal, closeModal } = useModal();
@@ -40,18 +40,18 @@ const ProspectiveVendors = () => {
               </p>
               <Box
                 sx={{
-                  display: "flex",
-                  justifyContent: "flex-end",
+                  display: 'flex',
+                  justifyContent: 'flex-end',
                 }}
               >
-                <ReadMore onClick={openModal} />
+                <ReadMore onClick={openModal} noPlay />
               </Box>
             </Box>
           </div>
         </Wrapper>
       </Box>
       <CustomModal open={open} closeModal={closeModal}>
-        <Box sx={{ overflowY: "scroll" }} className={classes?.scroll}>
+        <Box sx={{ overflowY: 'scroll' }} className={classes?.scroll}>
           <Box>
             <p className="font-52 font-400 text-secondary-3 montaga">
               Prospective Vendors
@@ -86,7 +86,7 @@ const ProspectiveVendors = () => {
               <img
                 src="/assets/images/prospective_vendors_table.PNG"
                 alt="table"
-                style={{ maxWidth: "100%" }}
+                style={{ maxWidth: '100%' }}
               />
             </Box>
           </Box>

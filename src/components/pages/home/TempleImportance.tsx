@@ -1,25 +1,52 @@
-import React from "react";
-import { Box, Grid } from "@mui/material";
-import Wrapper from "@/components/layout/Wrapper";
-import classes from "../../../styles/Home.module.css";
-import ReadMore from "@/components/buttons/ReadMore";
-import Image from "next/image";
-import { useModal } from "@/hooks/useModal";
-import CustomModal from "@/components/modals/CustomModal";
-import { usePlayAudio } from "@/hooks/usePlayAudio";
-import { tempoaryTempleText } from "@/data/texts";
+import React, { useRef } from 'react';
+import { Box, Grid } from '@mui/material';
+import Wrapper from '@/components/layout/Wrapper';
+import classes from '../../../styles/Home.module.css';
+import ReadMore from '@/components/buttons/ReadMore';
+import Image from 'next/image';
+import { useModal } from '@/hooks/useModal';
+import CustomModal from '@/components/modals/CustomModal';
+import { usePlayAudio, usePlayRecording } from '@/hooks/usePlayAudio';
+import { tempoaryTempleText } from '@/data/texts';
+import ReactAudioPlayer from 'react-audio-player';
 
 const TempleImportance = () => {
   const { open, openModal, closeModal } = useModal();
 
-  const { playAudio, pauseAudio, isPlaying } = usePlayAudio(tempoaryTempleText);
+  const { playRecording, pauseRecording, isPlaying, setIsPlaying } =
+    usePlayRecording();
+  const audioRef = useRef<HTMLAudioElement>(null);
 
+  function handleButtonClick() {
+    setIsPlaying(true);
+    if (audioRef.current) {
+      // @ts-ignore
+      audioRef.current?.audioEl.current.play();
+    }
+  }
+
+  function handlePauseButtonClick() {
+    setIsPlaying(false);
+    if (audioRef.current) {
+      // @ts-ignore
+      audioRef.current?.audioEl.current.pause();
+    }
+  }
   return (
     <Box sx={{ py: 5 }}>
+      <ReactAudioPlayer
+        src="/assets/audios/Temp Building.mp3"
+        autoPlay={false}
+        loop={false}
+        controls={false}
+        // @ts-ignore
+        ref={audioRef}
+        onEnded={() => setIsPlaying(false)}
+      />
       <div id="temporary_temple">
         <Wrapper>
-          <Box sx={{ position: "relative" }}>
-            <Box sx={{ position: "absolute", right: 0, top: 0 }}>
+          <Box sx={{ position: 'relative' }}>
+            <Box sx={{ position: 'absolute', right: 0, top: 0 }}>
               <Image
                 src="/assets/icons/exclamation_icon.svg"
                 alt="question_mark"
@@ -81,18 +108,18 @@ const TempleImportance = () => {
               </Grid>
               <Grid item xs={12} md={2}></Grid>
             </Grid>
-            <Box sx={{ display: "flex", justifyContent: "end" }}>
+            <Box sx={{ display: 'flex', justifyContent: 'end' }}>
               <ReadMore
                 onClick={openModal}
                 isPlaying={isPlaying}
-                onPlay={playAudio}
-                onPause={pauseAudio}
+                onPlay={handleButtonClick}
+                onPause={handlePauseButtonClick}
               />
             </Box>
           </Box>
         </Wrapper>
         <CustomModal open={open} closeModal={closeModal}>
-          <Box sx={{ overflowY: "scroll" }} className={classes?.scroll}>
+          <Box sx={{ overflowY: 'scroll' }} className={classes?.scroll}>
             <Box>
               <p className="font-52 font-400 text-secondary-3 montaga">
                 {/* Importance of the temple */}
@@ -132,7 +159,7 @@ const TempleImportance = () => {
                 This is the present Temple we are using now; it is a three floor
                 building. Holy Order of Saint Mary chapel is on the ground
                 floor, the sanctuary and the body of the Temple is on the first
-                floor, and the prayer chambers and others on the second floor.{" "}
+                floor, and the prayer chambers and others on the second floor.{' '}
                 <br />
                 <br /> Still the command and intention of God to build a Grand
                 Temple for Him, with His specifications is yet to be fulfilled

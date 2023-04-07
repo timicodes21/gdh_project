@@ -1,17 +1,17 @@
-import React from "react";
-import { Box } from "@mui/material";
-import Wrapper from "@/components/layout/Wrapper";
-import Image from "next/image";
-import classes from "../../../styles/Home.module.css";
-import Carousel from "react-material-ui-carousel";
+import React from 'react';
+import { Box } from '@mui/material';
+import Wrapper from '@/components/layout/Wrapper';
+import Image from 'next/image';
+import classes from '../../../styles/Home.module.css';
+import Carousel from 'react-material-ui-carousel';
 import {
   acousticSystemImages,
   ceilingImages,
   electricalSystemImages,
-} from "@/data/images";
-import ReadMore from "@/components/buttons/ReadMore";
-import { useModal } from "@/hooks/useModal";
-import CustomModal from "@/components/modals/CustomModal";
+} from '@/data/images';
+import ReadMore from '@/components/buttons/ReadMore';
+import { useModal } from '@/hooks/useModal';
+import CustomModal from '@/components/modals/CustomModal';
 
 const Ceiling = () => {
   const { open, openModal, closeModal } = useModal();
@@ -43,24 +43,24 @@ const Ceiling = () => {
               </p>
               <Box
                 sx={{
-                  display: "flex",
-                  justifyContent: "flex-end",
+                  display: 'flex',
+                  justifyContent: 'flex-end',
                 }}
               >
-                <ReadMore onClick={openModal} />
+                <ReadMore onClick={openModal} noPlay />
               </Box>
             </Box>
 
             <Box
-              sx={{ mt: 10, py: 10, display: "flex", justifyContent: "center" }}
+              sx={{ mt: 10, py: 10, display: 'flex', justifyContent: 'center' }}
               data-aos="fade-left"
               data-aos-duration="1000"
             >
               <Carousel
                 navButtonsAlwaysVisible
                 sx={{
-                  width: { xs: "90%", md: "80%", lg: "75%" },
-                  height: { lg: "80vh" },
+                  width: { xs: '90%', md: '80%', lg: '75%' },
+                  height: { lg: '80vh' },
                 }}
               >
                 {ceilingImages.map((item, index) => (
@@ -74,7 +74,7 @@ const Ceiling = () => {
         </Wrapper>
       </Box>
       <CustomModal open={open} closeModal={closeModal}>
-        <Box sx={{ overflowY: "scroll" }} className={classes?.scroll}>
+        <Box sx={{ overflowY: 'scroll' }} className={classes?.scroll}>
           <Box>
             <p className="font-52 font-400 text-secondary-3 montaga">Ceiling</p>
             <p className="text-secondary-4 font-32 font-300 avenuex text-justify line-150">
