@@ -48,7 +48,7 @@ const Excited: React.FC<IProps> = ({ templePage }) => {
               <BlueBadge onCopy={() => {}} />
             </Grid>
           </Grid>
-          <Box
+          {/* <Box
             sx={{
               p: 1,
               display: "flex",
@@ -68,7 +68,7 @@ const Excited: React.FC<IProps> = ({ templePage }) => {
               Use section name as the description when making a transfer towards
               this section
             </span>
-          </Box>
+          </Box> */}
           {!templePage && (
             <Box sx={{ my: 10, display: "flex", justifyContent: "center" }}>
               <p

@@ -53,7 +53,7 @@ const GrandTemple = () => {
                 }}
               >
                 <Image
-                  src="/assets/icons/question_mark.svg"
+                  src="/assets/icons/exclamation_icon.svg"
                   alt="question_mark"
                   width={272.4}
                   height={373.74}

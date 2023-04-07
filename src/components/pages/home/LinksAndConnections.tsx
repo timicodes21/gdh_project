@@ -21,9 +21,9 @@ const LinksAndConnections = () => {
           <Box sx={{ position: "relative" }}>
             <Box sx={{ position: "absolute", right: 0, top: 0 }}>
               <Image
-                src="/assets/icons/exclamation_icon.svg"
+                src="/assets/icons/question_mark.svg"
                 alt="question_mark"
-                width={110}
+                width={400}
                 height={373}
               />
             </Box>
@@ -69,12 +69,6 @@ const LinksAndConnections = () => {
         </Wrapper>
         <CustomModal open={open} closeModal={closeModal}>
           <Box sx={{ overflowY: "scroll" }} className={classes?.scroll}>
-            <Image
-              src="/assets/icons/exclamation_icon.svg"
-              alt="question_mark"
-              width={110}
-              height={373.74}
-            />
             <Box>
               <p className="font-52 font-400 text-secondary-3 montaga">
                 What are the Links or Connections to the Completion of The Grand

@@ -17,8 +17,8 @@ const home = () => {
   return (
     <Box sx={{ pt: { xs: 3, md: 10 } }}>
       <GrandProject />
-      <SpiritualImplications />
       <WhyBuild />
+      <SpiritualImplications />
       <TempleImportance />
       <GrandTemple />
       <DesignConcept />

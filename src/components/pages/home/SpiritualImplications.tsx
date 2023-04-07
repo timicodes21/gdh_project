@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useRef } from "react";
 import { Box, Grid } from "@mui/material";
 import Wrapper from "@/components/layout/Wrapper";
 import classes from "../../../styles/Home.module.css";
@@ -6,26 +6,51 @@ import ReadMore from "@/components/buttons/ReadMore";
 import Image from "next/image";
 import { useModal } from "@/hooks/useModal";
 import CustomModal from "@/components/modals/CustomModal";
-import { usePlayAudio } from "@/hooks/usePlayAudio";
+import { usePlayAudio, usePlayRecording } from "@/hooks/usePlayAudio";
 import { spiritalImplicationsText } from "@/data/texts";
+import ReactAudioPlayer from "react-audio-player";
 
 const SpiritualImplications = () => {
   const { open, openModal, closeModal } = useModal();
 
-  const { playAudio, pauseAudio, isPlaying } = usePlayAudio(
-    spiritalImplicationsText
-  );
+  const { playRecording, pauseRecording, isPlaying, setIsPlaying } =
+    usePlayRecording();
+
+  const audioRef = useRef<HTMLAudioElement>(null);
+
+  function handleButtonClick() {
+    setIsPlaying(true);
+    if (audioRef.current) {
+      audioRef.current?.audioEl.current.play();
+    }
+  }
+
+  function handlePauseButtonClick() {
+    setIsPlaying(false);
+    if (audioRef.current) {
+      audioRef.current?.audioEl.current.pause();
+    }
+  }
 
   return (
     <Box sx={{ py: 5 }}>
+      <ReactAudioPlayer
+        src="/assets/audios/Spiritual implications.mp3"
+        autoPlay={false}
+        loop={false}
+        controls={false}
+        ref={audioRef}
+        onEnded={() => setIsPlaying(false)}
+      />
+
       <div id="spiritual_implications">
         <Wrapper>
           <Box sx={{ position: "relative" }}>
             <Box sx={{ position: "absolute", right: 0, top: 0 }}>
               <Image
-                src="/assets/icons/exclamation_icon.svg"
+                src="/assets/icons/question_mark.svg"
                 alt="question_mark"
-                width={110}
+                width={300}
                 height={373}
               />
             </Box>
@@ -82,8 +107,8 @@ const SpiritualImplications = () => {
             <Box sx={{ display: "flex", justifyContent: "end" }}>
               <ReadMore
                 onClick={openModal}
-                onPlay={playAudio}
-                onPause={pauseAudio}
+                onPlay={handleButtonClick}
+                onPause={handlePauseButtonClick}
                 isPlaying={isPlaying}
               />
             </Box>
@@ -91,12 +116,6 @@ const SpiritualImplications = () => {
         </Wrapper>
         <CustomModal open={open} closeModal={closeModal}>
           <Box sx={{ overflowY: "scroll" }} className={classes?.scroll}>
-            <Image
-              src="/assets/icons/exclamation_icon.svg"
-              alt="question_mark"
-              width={110}
-              height={373.74}
-            />
             <Box>
               <p className="font-52 font-400 text-secondary-3 montaga">
                 What are the Spiritual Implications of Completing the Grand

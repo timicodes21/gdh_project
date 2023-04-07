@@ -1,13 +1,13 @@
-import React, { useRef, useEffect, useState } from 'react';
-import { Box, Grid } from '@mui/material';
-import Image from 'next/image';
-import Wrapper from '@/components/layout/Wrapper';
-import ReadMore from '@/components/buttons/ReadMore';
-import { useModal } from '@/hooks/useModal';
-import CustomModal from '@/components/modals/CustomModal';
-import classes from '../../../styles/Home.module.css';
-import { usePlayAudio } from '@/hooks/usePlayAudio';
-import { challengesText } from '@/data/texts';
+import React, { useRef, useEffect, useState } from "react";
+import { Box, Grid } from "@mui/material";
+import Image from "next/image";
+import Wrapper from "@/components/layout/Wrapper";
+import ReadMore from "@/components/buttons/ReadMore";
+import { useModal } from "@/hooks/useModal";
+import CustomModal from "@/components/modals/CustomModal";
+import classes from "../../../styles/Home.module.css";
+import { usePlayAudio } from "@/hooks/usePlayAudio";
+import { challengesText } from "@/data/texts";
 
 const ChallengesFaced = () => {
   const { open, openModal, closeModal } = useModal();
@@ -20,10 +20,10 @@ const ChallengesFaced = () => {
   useEffect(() => {
     const observer = new IntersectionObserver((entries) => {
       const [entry] = entries;
-      console.log('entry intersecting', entry.isIntersecting);
+      console.log("entry intersecting", entry.isIntersecting);
       if (entry.isIntersecting) {
         setIntersecting(true);
-        ref?.current?.classList.add('animate');
+        ref?.current?.classList.add("animate");
       }
     });
     if (ref?.current) {
@@ -31,7 +31,7 @@ const ChallengesFaced = () => {
     }
 
     return () => {
-      ref?.current?.classList.remove('animate');
+      ref?.current?.classList.remove("animate");
       if (ref?.current) {
         observer.unobserve(ref?.current);
       }
@@ -46,15 +46,15 @@ const ChallengesFaced = () => {
             <Grid item xs={12} md={5}>
               <Box
                 sx={{
-                  position: 'relative',
-                  display: 'flex',
-                  flexDirection: 'column',
-                  justifyContent: 'center',
-                  height: '80vh',
+                  position: "relative",
+                  display: "flex",
+                  flexDirection: "column",
+                  justifyContent: "center",
+                  height: "80vh",
                 }}
               >
                 <Image
-                  src="/assets/icons/question_mark.svg"
+                  src="/assets/icons/exclamation_icon.svg"
                   alt="question_mark"
                   width={272.4}
                   height={373.74}
@@ -89,7 +89,7 @@ const ChallengesFaced = () => {
           </Grid>
         </Wrapper>
         <CustomModal open={open} closeModal={closeModal}>
-          <Box sx={{ overflowY: 'scroll' }} className={classes?.scroll}>
+          <Box sx={{ overflowY: "scroll" }} className={classes?.scroll}>
             <Image
               src="/assets/icons/question_mark.svg"
               alt="question_mark"

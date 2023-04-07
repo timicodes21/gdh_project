@@ -69,6 +69,18 @@ const Navbar = () => {
             </Box>
 
             <Box sx={{ display: { xs: "none", lg: "flex" } }}>
+              <Box sx={{ ml: 2 }}>
+                <Link
+                  href="/acknowledgements"
+                  className={
+                    router.pathname.includes("/acknowledgements")
+                      ? "navbar_link_active"
+                      : "navbar_link"
+                  }
+                >
+                  Acknowledgements
+                </Link>
+              </Box>
               <Box sx={{ ml: 2 }} className="dropdown">
                 <Link
                   href="/home"
@@ -132,13 +144,13 @@ const Navbar = () => {
           <Box
             sx={{ display: { xs: "none", lg: "flex" }, alignItems: "center" }}
           >
-            <TransparentButton
+            {/* <TransparentButton
               onClick={toggleLanguageModal}
               dropdown
               size="small"
             >
               {languageText}
-            </TransparentButton>
+            </TransparentButton> */}
             <Box sx={{ mx: 1 }}></Box>
             <a href="#excited">
               <BlueButton onClick={() => {}} arrow size="small">
@@ -187,6 +199,18 @@ const Navbar = () => {
                 mt: 2,
               }}
             >
+              <Box sx={{ ml: 2, mt: { xs: 2, md: 3 } }}>
+                <Link
+                  href="/acknowledgements"
+                  className={
+                    router.pathname.includes("/acknowledgements")
+                      ? "navbar_link_active"
+                      : "navbar_link"
+                  }
+                >
+                  Acknowledgements
+                </Link>
+              </Box>
               <Box sx={{ ml: 2, mt: { xs: 2, md: 3 } }} className="dropdown">
                 <Link
                   href="/home"
@@ -247,9 +271,9 @@ const Navbar = () => {
               </Box>
             </Box>
             <Box sx={{ display: "flex", flexDirection: "column", mt: 3 }}>
-              <TransparentButton onClick={toggleLanguageModal} dropdown>
+              {/* <TransparentButton onClick={toggleLanguageModal} dropdown>
                 {languageText}
-              </TransparentButton>
+              </TransparentButton> */}
               <Box sx={{ mt: 1 }}></Box>
               <a href="#excited">
                 <BlueButton onClick={() => {}} arrow width="100%">
