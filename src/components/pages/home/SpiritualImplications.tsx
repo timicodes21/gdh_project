@@ -1,14 +1,14 @@
-import React, { useRef } from "react";
-import { Box, Grid } from "@mui/material";
-import Wrapper from "@/components/layout/Wrapper";
-import classes from "../../../styles/Home.module.css";
-import ReadMore from "@/components/buttons/ReadMore";
-import Image from "next/image";
-import { useModal } from "@/hooks/useModal";
-import CustomModal from "@/components/modals/CustomModal";
-import { usePlayAudio, usePlayRecording } from "@/hooks/usePlayAudio";
-import { spiritalImplicationsText } from "@/data/texts";
-import ReactAudioPlayer from "react-audio-player";
+import React, { useRef } from 'react';
+import { Box, Grid } from '@mui/material';
+import Wrapper from '@/components/layout/Wrapper';
+import classes from '../../../styles/Home.module.css';
+import ReadMore from '@/components/buttons/ReadMore';
+import Image from 'next/image';
+import { useModal } from '@/hooks/useModal';
+import CustomModal from '@/components/modals/CustomModal';
+import { usePlayAudio, usePlayRecording } from '@/hooks/usePlayAudio';
+import { spiritalImplicationsText } from '@/data/texts';
+import ReactAudioPlayer from 'react-audio-player';
 
 const SpiritualImplications = () => {
   const { open, openModal, closeModal } = useModal();
@@ -21,6 +21,7 @@ const SpiritualImplications = () => {
   function handleButtonClick() {
     setIsPlaying(true);
     if (audioRef.current) {
+      // @ts-ignore
       audioRef.current?.audioEl.current.play();
     }
   }
@@ -28,6 +29,7 @@ const SpiritualImplications = () => {
   function handlePauseButtonClick() {
     setIsPlaying(false);
     if (audioRef.current) {
+      // @ts-ignore
       audioRef.current?.audioEl.current.pause();
     }
   }
@@ -39,14 +41,15 @@ const SpiritualImplications = () => {
         autoPlay={false}
         loop={false}
         controls={false}
+        // @ts-ignore
         ref={audioRef}
         onEnded={() => setIsPlaying(false)}
       />
 
       <div id="spiritual_implications">
         <Wrapper>
-          <Box sx={{ position: "relative" }}>
-            <Box sx={{ position: "absolute", right: 0, top: 0 }}>
+          <Box sx={{ position: 'relative' }}>
+            <Box sx={{ position: 'absolute', right: 0, top: 0 }}>
               <Image
                 src="/assets/icons/question_mark.svg"
                 alt="question_mark"
@@ -104,7 +107,7 @@ const SpiritualImplications = () => {
               </Grid>
               <Grid item xs={12} md={2}></Grid>
             </Grid>
-            <Box sx={{ display: "flex", justifyContent: "end" }}>
+            <Box sx={{ display: 'flex', justifyContent: 'end' }}>
               <ReadMore
                 onClick={openModal}
                 onPlay={handleButtonClick}
@@ -115,7 +118,7 @@ const SpiritualImplications = () => {
           </Box>
         </Wrapper>
         <CustomModal open={open} closeModal={closeModal}>
-          <Box sx={{ overflowY: "scroll" }} className={classes?.scroll}>
+          <Box sx={{ overflowY: 'scroll' }} className={classes?.scroll}>
             <Box>
               <p className="font-52 font-400 text-secondary-3 montaga">
                 What are the Spiritual Implications of Completing the Grand

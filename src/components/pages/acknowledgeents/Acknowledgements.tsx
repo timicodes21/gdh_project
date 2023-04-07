@@ -24,6 +24,7 @@ const Acknowledgements = () => {
   function handleButtonClick() {
     setIsPlaying(true);
     if (audioRef.current) {
+      // @ts-ignore
       audioRef.current?.audioEl.current.play();
     }
   }
@@ -31,27 +32,30 @@ const Acknowledgements = () => {
   function handlePauseButtonClick() {
     setIsPlaying(false);
     if (audioRef.current) {
+      // @ts-ignore
       audioRef.current?.audioEl.current.pause();
     }
   }
 
   useEffect(() => {
+    const node = ref?.current;
     const observer = new IntersectionObserver((entries) => {
       const [entry] = entries;
       console.log('entry intersecting', entry.isIntersecting);
       if (entry.isIntersecting) {
-        ref?.current?.classList.add('animate');
+        node?.classList.add('animate');
       }
     });
 
-    if (ref?.current) {
-      observer.observe(ref?.current);
+    if (node) {
+      observer.observe(node);
     }
 
     return () => {
-      ref?.current?.classList.remove('animate');
-      if (ref?.current) {
-        observer.unobserve(ref?.current);
+      node?.classList.remove('animate');
+      if (node) {
+        // @ts-ignore
+        observer.unobserve(node);
       }
     };
   }, []);
@@ -63,6 +67,7 @@ const Acknowledgements = () => {
         autoPlay={false}
         loop={false}
         controls={false}
+        // @ts-ignore
         ref={audioRef}
         onEnded={() => setIsPlaying(false)}
       />
@@ -103,7 +108,7 @@ const Acknowledgements = () => {
                 A Promise made. <br />
                 A Promise kept. <br />
                 A Promise fulfilled. <br /> <br />
-                The name of the God of Mishen be praised for counting us all
+                {`The name of the God of Mishen be praised for counting us all
                 worthy to be of service in the ongoing building of the Grand
                 Temple - the Father's exhalted abode here on earth. To me, this
                 is the height of God's love and to any of his mortal children,
@@ -111,7 +116,8 @@ const Acknowledgements = () => {
                 a good part of this historical monument at this point of our
                 sojourn here in the physical. The edifice that stands today is
                 in any clime, a great feat of architecture, engineering,
-                construction prowess and human resilience... <br /> <br />
+                construction prowess and human resilience...`}{' '}
+                <br /> <br />
                 <p
                   style={{
                     fontWeight: 'extra-bold',
@@ -156,7 +162,7 @@ const Acknowledgements = () => {
                 A Promise made. <br />
                 A Promise kept. <br />
                 A Promise fulfilled. <br /> <br />
-                The name of the God of Mishen be praised for counting us all
+                {` The name of the God of Mishen be praised for counting us all
                 worthy to be of service in the ongoing building of the Grand
                 Temple - the Father's exhalted abode here on earth. To me, this
                 is the height of God's love and to any of his mortal children,
@@ -164,7 +170,8 @@ const Acknowledgements = () => {
                 a good part of this historical monument at this point of our
                 sojourn here in the physical. The edifice that stands today is
                 in any clime, a great feat of architecture, engineering,
-                construction prowess and human resilience. <br />
+                construction prowess and human resilience.`}{' '}
+                <br />
                 <br />
                 To everyone that has been part of this great journey till now, I
                 extend my heart-felt gratitude. To the GDRabbi, the GDP&HP and

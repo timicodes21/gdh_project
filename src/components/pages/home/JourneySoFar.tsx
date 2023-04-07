@@ -1,18 +1,18 @@
-import React, { useEffect, useState, useRef } from "react";
-import { Box, ButtonBase } from "@mui/material";
-import Wrapper from "@/components/layout/Wrapper";
-import Image from "next/image";
-import classes from "../../../styles/Home.module.css";
-import Carousel from "react-material-ui-carousel";
+import React, { useEffect, useState, useRef } from 'react';
+import { Box, ButtonBase } from '@mui/material';
+import Wrapper from '@/components/layout/Wrapper';
+import Image from 'next/image';
+import classes from '../../../styles/Home.module.css';
+import Carousel from 'react-material-ui-carousel';
 import {
   designChangesImages,
   musicalEquipmentsImages,
   stageOneImages,
   stainedGlassImages,
-} from "@/data/images";
-import ReadMore from "@/components/buttons/ReadMore";
-import { useModal } from "@/hooks/useModal";
-import CustomModal from "@/components/modals/CustomModal";
+} from '@/data/images';
+import ReadMore from '@/components/buttons/ReadMore';
+import { useModal } from '@/hooks/useModal';
+import CustomModal from '@/components/modals/CustomModal';
 
 const JourneySoFar = () => {
   const { open, openModal, closeModal } = useModal();
@@ -20,22 +20,24 @@ const JourneySoFar = () => {
   const ref = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
+    const node = ref?.current;
     const observer = new IntersectionObserver((entries) => {
       const [entry] = entries;
-      console.log("entry intersecting", entry.isIntersecting);
+      console.log('entry intersecting', entry.isIntersecting);
       if (entry.isIntersecting) {
-        ref?.current?.classList.add("animate");
+        node?.classList.add('animate');
       }
     });
 
-    if (ref?.current) {
-      observer.observe(ref?.current);
+    if (node) {
+      observer.observe(node);
     }
 
     return () => {
-      ref?.current?.classList.remove("animate");
-      if (ref?.current) {
-        observer.unobserve(ref?.current);
+      node?.classList.remove('animate');
+      if (node) {
+        // @ts-ignore
+        observer.unobserve(node);
       }
     };
   }, []);
@@ -54,8 +56,8 @@ const JourneySoFar = () => {
             </p>
             <Box
               sx={{
-                display: { xs: "block", lg: "flex" },
-                justifyContent: "space-between",
+                display: { xs: 'block', lg: 'flex' },
+                justifyContent: 'space-between',
                 px: { xs: 2, md: 10 },
               }}
             >
@@ -99,7 +101,7 @@ const JourneySoFar = () => {
               </p>
             </Box>
             <Box
-              sx={{ mt: 10, display: "flex", justifyContent: "center" }}
+              sx={{ mt: 10, display: 'flex', justifyContent: 'center' }}
               data-aos="fade-left"
               data-aos-delay="500"
               data-aos-duration="1000"
@@ -107,11 +109,11 @@ const JourneySoFar = () => {
               <Carousel
                 sx={{
                   width: {
-                    xs: "90%",
-                    md: "80%",
-                    lg: "75%",
+                    xs: '90%',
+                    md: '80%',
+                    lg: '75%',
                   },
-                  height: { lg: "80vh" },
+                  height: { lg: '80vh' },
                 }}
                 navButtonsAlwaysVisible
                 indicators
@@ -126,7 +128,7 @@ const JourneySoFar = () => {
             <div id="design_changes">
               <Box
                 sx={{
-                  display: { xs: "block", lg: "flex" },
+                  display: { xs: 'block', lg: 'flex' },
 
                   px: { xs: 2, md: 10 },
                   mt: 10,
@@ -157,22 +159,22 @@ const JourneySoFar = () => {
                   concrete staircase.
                 </p>
               </Box>
-              <Box sx={{ display: "flex", justifyContent: "end" }}>
+              <Box sx={{ display: 'flex', justifyContent: 'end' }}>
                 <ReadMore onClick={openModal} />
               </Box>
               <Box
                 sx={{
                   mt: 10,
                   py: 10,
-                  display: "flex",
-                  justifyContent: "center",
+                  display: 'flex',
+                  justifyContent: 'center',
                 }}
               >
                 <Carousel
                   navButtonsAlwaysVisible
                   sx={{
-                    width: { xs: "90%", md: "80%", lg: "75%" },
-                    height: { lg: "80vh" },
+                    width: { xs: '90%', md: '80%', lg: '75%' },
+                    height: { lg: '80vh' },
                   }}
                 >
                   {designChangesImages.map((item, index) => (
@@ -192,15 +194,15 @@ const JourneySoFar = () => {
                 Stained Glass
               </p>
               <Box
-                sx={{ display: "flex", justifyContent: "center", mb: 10 }}
+                sx={{ display: 'flex', justifyContent: 'center', mb: 10 }}
                 data-aos="fade-left"
                 data-aos-duration="1000"
               >
                 <Carousel
                   navButtonsAlwaysVisible
                   sx={{
-                    width: { xs: "90%", md: "80%", lg: "75%" },
-                    height: { lg: "80vh" },
+                    width: { xs: '90%', md: '80%', lg: '75%' },
+                    height: { lg: '80vh' },
                   }}
                 >
                   {stainedGlassImages.map((item, index) => (
@@ -220,15 +222,15 @@ const JourneySoFar = () => {
                 Musical Equipment
               </p>
               <Box
-                sx={{ display: "flex", justifyContent: "center", mb: 10 }}
+                sx={{ display: 'flex', justifyContent: 'center', mb: 10 }}
                 data-aos="fade-left"
                 data-aos-duration="1000"
               >
                 <Carousel
                   navButtonsAlwaysVisible
                   sx={{
-                    width: { xs: "90%", md: "80%", lg: "75%" },
-                    height: { lg: "80vh" },
+                    width: { xs: '90%', md: '80%', lg: '75%' },
+                    height: { lg: '80vh' },
                   }}
                 >
                   {musicalEquipmentsImages.map((item, index) => (
@@ -242,7 +244,7 @@ const JourneySoFar = () => {
           </Wrapper>
         </Box>
         <CustomModal open={open} closeModal={closeModal}>
-          <Box sx={{ overflowY: "scroll" }} className={classes?.scroll}>
+          <Box sx={{ overflowY: 'scroll' }} className={classes?.scroll}>
             <Box>
               <p className="font-52 font-400 text-secondary-3 montaga">
                 Changes in Design During Construction

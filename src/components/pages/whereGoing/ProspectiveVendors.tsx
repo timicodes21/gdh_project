@@ -83,7 +83,7 @@ const ProspectiveVendors = () => {
               the Vatican.”
             </p>
             <Box>
-              <img
+              <Image
                 src="/assets/images/prospective_vendors_table.PNG"
                 alt="table"
                 style={{ maxWidth: '100%' }}

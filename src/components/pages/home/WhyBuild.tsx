@@ -20,22 +20,24 @@ const WhyBuild = () => {
   const ref = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
+    const node = ref?.current;
     const observer = new IntersectionObserver((entries) => {
       const [entry] = entries;
       console.log('entry intersecting', entry.isIntersecting);
       if (entry.isIntersecting) {
-        ref?.current?.classList.add('animate');
+        node?.classList.add('animate');
       }
     });
 
-    if (ref?.current) {
-      observer.observe(ref?.current);
+    if (node) {
+      observer.observe(node);
     }
 
     return () => {
-      ref?.current?.classList.remove('animate');
-      if (ref?.current) {
-        observer.unobserve(ref?.current);
+      node?.classList.remove('animate');
+      if (node) {
+        // @ts-ignore
+        observer.unobserve(node);
       }
     };
   }, []);
@@ -45,6 +47,7 @@ const WhyBuild = () => {
   function handleButtonClick() {
     setIsPlaying(true);
     if (audioRef.current) {
+      // @ts-ignore
       audioRef.current?.audioEl.current.play();
     }
   }
@@ -52,6 +55,7 @@ const WhyBuild = () => {
   function handlePauseButtonClick() {
     setIsPlaying(false);
     if (audioRef.current) {
+      // @ts-ignore
       audioRef.current?.audioEl.current.pause();
     }
   }
@@ -64,6 +68,7 @@ const WhyBuild = () => {
           autoPlay={false}
           loop={false}
           controls={false}
+          // @ts-ignore
           ref={audioRef}
           onEnded={() => setIsPlaying(false)}
         />
