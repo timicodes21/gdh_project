@@ -9,6 +9,7 @@ import classes from '../../../styles/Home.module.css';
 import { usePlayAudio, usePlayRecording } from '@/hooks/usePlayAudio';
 import { designConceptText } from '@/data/texts';
 import ReactAudioPlayer from 'react-audio-player';
+
 const DesignConcept = () => {
   const { open, openModal, closeModal } = useModal();
   const { playRecording, pauseRecording, isPlaying, setIsPlaying } =
@@ -83,10 +84,13 @@ const DesignConcept = () => {
                   mt: 10,
                 }}
               >
-                <img
+                <Image
                   src="/assets/images/stages_table.PNG"
                   alt="question_mark"
-                  style={{ height: 'auto', maxWidth: '100%' }}
+                  width={800}
+                  height={400}
+                  layout="responsive"
+                  objectFit="contain"
                 />
               </Box>
             </Grid>
