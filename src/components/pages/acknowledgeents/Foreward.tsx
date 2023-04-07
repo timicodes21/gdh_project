@@ -21,6 +21,7 @@ const Foreward = () => {
   function handleButtonClick() {
     setIsPlaying(true);
     if (audioRef.current) {
+      // @ts-ignore
       audioRef.current?.audioEl.current.play();
     }
   }
@@ -28,6 +29,7 @@ const Foreward = () => {
   function handlePauseButtonClick() {
     setIsPlaying(false);
     if (audioRef.current) {
+      // @ts-ignore
       audioRef.current?.audioEl.current.pause();
     }
   }
@@ -39,6 +41,7 @@ const Foreward = () => {
         autoPlay={false}
         loop={false}
         controls={false}
+        // @ts-ignore
         ref={audioRef}
         onEnded={() => setIsPlaying(false)}
       />
@@ -93,13 +96,14 @@ const Foreward = () => {
                     data-aos-delay="500"
                     data-aos-duration="1000"
                   >
-                    A full account of the roles played by various actors would
-                    have been too much for the purpose of this publication which
-                    is to provide needed information on how we started, where we
-                    are and a road map to get to our desired objective I.e. the
-                    completion of the "GDRAND TEMPLE PROJECT " without
-                    compromising on the quality of both materials and
-                    workmanship required... <br />
+                    {` A full account of the roles played by various actors would
+                      have been too much for the purpose of this publication which
+                      is to provide needed information on how we started, where we
+                      are and a road map to get to our desired objective I.e. the
+                      completion of the "GDRAND TEMPLE PROJECT " without
+                      compromising on the quality of both materials and
+                      workmanship required...`}{' '}
+                    <br />
                     <p
                       style={{
                         fontWeight: 'extra-bold',
@@ -143,26 +147,29 @@ const Foreward = () => {
                 continue to do.
                 <br />
                 <br />
-                This prospectus is a bold attempt to provide an historical
+                {` This prospectus is a bold attempt to provide an historical
                 background on how the Grand Temple came to be, to acknowledge
                 God's providence, to show the endowment to those assigned for a
                 purpose and their dogged commitment to get the project off the
-                ground. <br />
-                <br />A full account of the roles played by various actors would
+                ground.`}{' '}
+                <br />
+                <br />
+                {`A full account of the roles played by various actors would
                 have been too much for the purpose of this publication which is
                 to provide needed information on how we started, where we are
                 and a road map to get to our desired objective I.e. the
                 completion of the "GDRAND TEMPLE PROJECT " without compromising
-                on the quality of both materials and workmanship required.{' '}
+                on the quality of both materials and workmanship required`}
+                . <br />
                 <br />
-                <br />
-                The prospectus explains in detail and describes with pictorials
+                {` The prospectus explains in detail and describes with pictorials
                 for easy understanding of the various stages needed to complete
                 the project and the attendant budgeted costs. It is reminding us
                 not to relent but to show increased commitment towards the
                 completion of the "GRAND TEMPLE PROJECT ". Those before us did
                 their best and this can be testified to, should we then do any
-                less. <br />
+                less.`}{' '}
+                <br />
                 <br />I do encourage that we not only read this document which
                 has provided all material information about the Grand Temple
                 Project but to have meaningful discussions amongst us on how to
