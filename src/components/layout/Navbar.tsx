@@ -69,6 +69,18 @@ const Navbar = () => {
             </Box>
 
             <Box sx={{ display: { xs: 'none', lg: 'flex' } }}>
+              <Box sx={{ ml: 2 }}>
+                <Link
+                  href="/acknowledgements"
+                  className={
+                    router.pathname.includes('/acknowledgements')
+                      ? 'navbar_link_active'
+                      : 'navbar_link'
+                  }
+                >
+                  Acknowledgements
+                </Link>
+              </Box>
               <Box sx={{ ml: 2 }} className="dropdown">
                 <Link
                   href="/home"
@@ -187,6 +199,18 @@ const Navbar = () => {
                 mt: 2,
               }}
             >
+              <Box sx={{ ml: 2, mt: { xs: 2, md: 3 } }}>
+                <Link
+                  href="/acknowledgements"
+                  className={
+                    router.pathname.includes('/acknowledgements')
+                      ? 'navbar_link_active'
+                      : 'navbar_link'
+                  }
+                >
+                  Acknowledgements
+                </Link>
+              </Box>
               <Box sx={{ ml: 2, mt: { xs: 2, md: 3 } }} className="dropdown">
                 <Link
                   href="/home"

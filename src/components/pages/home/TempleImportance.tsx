@@ -93,12 +93,6 @@ const TempleImportance = () => {
         </Wrapper>
         <CustomModal open={open} closeModal={closeModal}>
           <Box sx={{ overflowY: "scroll" }} className={classes?.scroll}>
-            <Image
-              src="/assets/icons/exclamation_icon.svg"
-              alt="question_mark"
-              width={110}
-              height={373.74}
-            />
             <Box>
               <p className="font-52 font-400 text-secondary-3 montaga">
                 {/* Importance of the temple */}

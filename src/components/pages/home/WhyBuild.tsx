@@ -1,28 +1,30 @@
-import React, { useEffect, useRef } from 'react';
-import { Box, Grid } from '@mui/material';
-import Image from 'next/image';
-import Wrapper from '@/components/layout/Wrapper';
-import { FaLongArrowAltRight } from 'react-icons/fa';
-import ReadMore from '@/components/buttons/ReadMore';
-import { useModal } from '@/hooks/useModal';
-import CustomModal from '@/components/modals/CustomModal';
-import classes from '../../../styles/Home.module.css';
-import { usePlayAudio } from '@/hooks/usePlayAudio';
-import { introductionText } from '@/data/texts';
+import React, { useEffect, useRef } from "react";
+import { Box, Grid } from "@mui/material";
+import Image from "next/image";
+import Wrapper from "@/components/layout/Wrapper";
+import { FaLongArrowAltRight } from "react-icons/fa";
+import ReadMore from "@/components/buttons/ReadMore";
+import { useModal } from "@/hooks/useModal";
+import CustomModal from "@/components/modals/CustomModal";
+import classes from "../../../styles/Home.module.css";
+import { usePlayAudio, usePlayRecording } from "@/hooks/usePlayAudio";
+import { introductionText } from "@/data/texts";
+import ReactAudioPlayer from "react-audio-player";
 
 const WhyBuild = () => {
   const { open, openModal, closeModal } = useModal();
 
-  const { playAudio, pauseAudio, isPlaying } = usePlayAudio(introductionText);
+  const { playRecording, pauseRecording, isPlaying, setIsPlaying } =
+    usePlayRecording();
 
   const ref = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     const observer = new IntersectionObserver((entries) => {
       const [entry] = entries;
-      console.log('entry intersecting', entry.isIntersecting);
+      console.log("entry intersecting", entry.isIntersecting);
       if (entry.isIntersecting) {
-        ref?.current?.classList.add('animate');
+        ref?.current?.classList.add("animate");
       }
     });
 
@@ -31,31 +33,57 @@ const WhyBuild = () => {
     }
 
     return () => {
-      ref?.current?.classList.remove('animate');
+      ref?.current?.classList.remove("animate");
       if (ref?.current) {
         observer.unobserve(ref?.current);
       }
     };
   }, []);
 
+  const audioRef = useRef<HTMLAudioElement>(null);
+
+  function handleButtonClick() {
+    setIsPlaying(true);
+    if (audioRef.current) {
+      audioRef.current?.audioEl.current.play();
+    }
+  }
+
+  function handlePauseButtonClick() {
+    setIsPlaying(false);
+    if (audioRef.current) {
+      audioRef.current?.audioEl.current.pause();
+    }
+  }
+
   return (
     <div id="history" ref={ref} className="slanted-container2">
+      <Box sx={{ display: "none" }}>
+        <ReactAudioPlayer
+          src="/assets/audios/Introduction 2.mp3"
+          autoPlay={false}
+          loop={false}
+          controls={false}
+          ref={audioRef}
+          onEnded={() => setIsPlaying(false)}
+        />
+      </Box>
       <Box sx={{ py: 5 }}>
         <Wrapper>
           <Grid container>
             <Grid item xs={12} md={5}>
               <Box
                 sx={{
-                  position: 'relative',
-                  display: 'flex',
-                  flexDirection: 'column',
-                  justifyContent: 'center',
-                  height: '80vh',
+                  position: "relative",
+                  display: "flex",
+                  flexDirection: "column",
+                  justifyContent: "center",
+                  height: "80vh",
                 }}
               >
                 <Image
-                  src="/assets/icons/question_mark.svg"
-                  alt="question_mark"
+                  src="/assets/icons/exclamation_icon.svg"
+                  alt="exclamation_icon"
                   width={272.4}
                   height={373.74}
                   className="question_mark"
@@ -87,8 +115,8 @@ const WhyBuild = () => {
               </p>
               <ReadMore
                 onClick={openModal}
-                onPlay={playAudio}
-                onPause={pauseAudio}
+                onPlay={handleButtonClick}
+                onPause={handlePauseButtonClick}
                 isPlaying={isPlaying}
                 btnColor
               />
@@ -96,7 +124,7 @@ const WhyBuild = () => {
           </Grid>
         </Wrapper>
         <CustomModal open={open} closeModal={closeModal}>
-          <Box sx={{ overflowY: 'scroll' }} className={classes?.scroll}>
+          <Box sx={{ overflowY: "scroll" }} className={classes?.scroll}>
             <Image
               src="/assets/icons/question_mark.svg"
               alt="question_mark"

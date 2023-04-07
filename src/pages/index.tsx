@@ -17,12 +17,12 @@ export default function Home() {
   useEffect(() => {
     setTimeout(() => {
       videoRef?.current?.play();
-    }, 5000);
+    }, 1000);
   }, []);
 
   return (
     <>
-      <video muted loop id="myVideo" ref={videoRef}>
+      <video loop id="myVideo" ref={videoRef}>
         <source src="/assets/videos/background.mp4" type="video/mp4"></source>
       </video>
       <Box sx={authStyles.container}>

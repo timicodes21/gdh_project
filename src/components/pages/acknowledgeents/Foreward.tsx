@@ -7,17 +7,16 @@ import Image from "next/image";
 import { useModal } from "@/hooks/useModal";
 import CustomModal from "@/components/modals/CustomModal";
 import { usePlayAudio } from "@/hooks/usePlayAudio";
-import { spiritualImportanceText } from "@/data/texts";
+import { tempoaryTempleText } from "@/data/texts";
 
-const SpiritualImportance = () => {
+const Foreward = () => {
   const { open, openModal, closeModal } = useModal();
-  const { playAudio, pauseAudio, isPlaying } = usePlayAudio(
-    spiritualImportanceText
-  );
+
+  const { playAudio, pauseAudio, isPlaying } = usePlayAudio(tempoaryTempleText);
 
   return (
     <Box sx={{ py: 5 }}>
-      <div id="spiritual_importance">
+      <div id="temporary_temple">
         <Wrapper>
           <Box sx={{ position: "relative" }}>
             <Box sx={{ position: "absolute", right: 0, top: 0 }}>
@@ -33,8 +32,7 @@ const SpiritualImportance = () => {
               data-aos="fade-up"
               data-aos-duration="1000"
             >
-              Spiritual Importance of This Building To Mishenites, The Yoruba
-              Race and The World
+              Foreward
             </p>
             <Grid container>
               <Grid item xs={12} md={2}></Grid>
@@ -49,8 +47,8 @@ const SpiritualImportance = () => {
                     data-aos-delay="500"
                     data-aos-duration="1000"
                   >
-                    That this building is situated on the Yoruba soil is great
-                    privilege to the race, indicating that where God dwells
+                    To God be the Glory for great things He has done and will
+                    continue to do
                   </p>
                 </Box>
               </Grid>
@@ -69,8 +67,13 @@ const SpiritualImportance = () => {
                     data-aos-delay="500"
                     data-aos-duration="1000"
                   >
-                    He is the Creator of all and when He comes to dwell amongst
-                    you His people, from there He rule over the entire universe
+                    A full account of the roles played by various actors would
+                    have been too much for the purpose of this publication which
+                    is to provide needed information on how we started, where we
+                    are and a road map to get to our desired objective I.e. the
+                    completion of the "GDRAND TEMPLE PROJECT " without
+                    compromising on the quality of both materials and
+                    workmanship required
                   </p>
                 </Box>
               </Grid>
@@ -90,42 +93,46 @@ const SpiritualImportance = () => {
           <Box sx={{ overflowY: "scroll" }} className={classes?.scroll}>
             <Box>
               <p className="font-52 font-400 text-secondary-3 montaga">
-                Spiritual Importance of This Building To Mishenites, The Yoruba
-                Race and The World
+                {/* Importance of the temple */}
+                The Tempoary Temple
               </p>
               <p className="text-secondary-4 font-32 font-300 avenuex text-justify line-150">
-                “The Grand Temple is the abode of God. Being His abode, it
-                affords you as members of the Holy Order, the closest companion
-                and interaction with the Creator of the heavens and the earth;
-                it shields you away from all warranted and unwarranted attacks
-                and accusations of all enemies visible and invisible, since you
-                practically “live” with Him here on earth; it gives you the
-                grace to seek and to fin immediately, the love and favour of the
-                Almighty; it confirms to you the authority of God over all
-                things, which He has given unto you. Above all, it makes you a
-                joint heir rulers of the entire universe. This is a great
-                opportunity and unquantified importance of the building and
-                usage of this divine edifice when completed. <br />
+                To God be the Glory for great things He has done and will
+                continue to do.
                 <br />
-                That this building is situated on the Yoruba soil is great
-                privilege to the race, indicating that where God dwells, the
-                rays emanating from the Temple will keep at bay all wicked plans
-                and intentions of everyone that opposes His will; whereGod
-                dwells, the people of the area cannot lack any good thing; where
-                God dwells, His Kingdom, yea His desired reign shall supersede
-                over the land. These are great blessings for the race and her
-                people. <br />
                 <br />
-                He is the Creator of all and when He comes to dwell amongst you
-                His people, from there He rule over the entire universe, from
-                there, your prayers for all races and colour shall receive His
-                divine blessings; from that seat of power and authority, His
-                Kingdom shall be firmly grounded for all to know Him and do His
-                will, thereby making the world a better place for all to live
-                in. <br />
+                This prospectus is a bold attempt to provide an historical
+                background on how the Grand Temple came to be, to acknowledge
+                God's providence, to show the endowment to those assigned for a
+                purpose and their dogged commitment to get the project off the
+                ground. <br />
+                <br />A full account of the roles played by various actors would
+                have been too much for the purpose of this publication which is
+                to provide needed information on how we started, where we are
+                and a road map to get to our desired objective I.e. the
+                completion of the "GDRAND TEMPLE PROJECT " without compromising
+                on the quality of both materials and workmanship required.{" "}
                 <br />
-                His Kingdom on earth shall have it’s right of place to fulfil
-                His divine intentions for humanity. Gabriel.” Anael.
+                <br />
+                The prospectus explains in detail and describes with pictorials
+                for easy understanding of the various stages needed to complete
+                the project and the attendant budgeted costs. It is reminding us
+                not to relent but to show increased commitment towards the
+                completion of the "GRAND TEMPLE PROJECT ". Those before us did
+                their best and this can be testified to, should we then do any
+                less. <br />
+                <br />I do encourage that we not only read this document which
+                has provided all material information about the Grand Temple
+                Project but to have meaningful discussions amongst us on how to
+                fund each stage towards completion. <br />
+                <br />I remind us once again that those whom God calls, He
+                empowers. We all have been richly blessed to fund the project
+                without resorting to any public fund raising and to the best of
+                my knowledge it has not been withdrawn. <br />
+                <br />
+                May we continue to be richly blessed, as we heed this clarion
+                call, to complete what we have affirmed that we will do. Thank
+                you.
               </p>
             </Box>
           </Box>
@@ -135,4 +142,4 @@ const SpiritualImportance = () => {
   );
 };
 
-export default SpiritualImportance;
+export default Foreward;

@@ -152,3 +152,8 @@ export const eccleImages: string[] = [
   "/assets/images/eccle_6.PNG",
   "/assets/images/eccle_7.PNG",
 ];
+
+export const costingImages: string[] = [
+  "/assets/images/costing_1.PNG",
+  "/assets/images/costing_2.PNG",
+];

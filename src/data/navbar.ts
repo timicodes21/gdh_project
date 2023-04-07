@@ -51,6 +51,10 @@ export const navbarWhereItems: Item[] = [
     text: "The Ecclesiastic Building",
     link: "/where_we_are_going/ecclesiastic_building",
   },
+  {
+    text: "Costings",
+    link: "/where_we_are_going/costings",
+  },
 ];
 
 export const navbarHomeItems: Item[] = [

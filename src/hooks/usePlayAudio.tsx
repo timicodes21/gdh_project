@@ -16,3 +16,12 @@ export const usePlayAudio = (text: string) => {
 
   return { playAudio, pauseAudio, isPlaying };
 };
+
+export const usePlayRecording = () => {
+  const [isPlaying, setIsPlaying] = useState(false);
+
+  const playRecording = () => setIsPlaying(true);
+  const pauseRecording = () => setIsPlaying(false);
+
+  return { isPlaying, setIsPlaying, playRecording, pauseRecording };
+};
