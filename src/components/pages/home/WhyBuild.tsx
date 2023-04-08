@@ -76,7 +76,7 @@ const WhyBuild = () => {
       <Box sx={{ py: 5 }}>
         <Wrapper>
           <Grid container>
-            <Grid item xs={12} md={5}>
+            <Grid item xs={12} md={5} className="dis-none">
               <Box
                 sx={{
                   position: 'relative',

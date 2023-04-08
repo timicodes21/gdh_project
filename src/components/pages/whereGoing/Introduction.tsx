@@ -47,14 +47,14 @@ const Introduction = () => {
       <div id="why_build">
         <Wrapper>
           <Grid container>
-            <Grid item xs={12} md={5}>
+            <Grid item xs={12} md={5} className="dis-none">
               <Box
                 sx={{
                   position: 'relative',
                   display: 'flex',
                   flexDirection: 'column',
                   justifyContent: 'center',
-                  height: '80vh',
+                  height: 'auto',
                 }}
               >
                 <Image

@@ -27,9 +27,9 @@ export default function App({ Component, pageProps }: AppProps) {
   useEffect(() => {
     setIsSSR(false);
     AOS.init({
-      easing: 'ease-out-cubic',
-      once: true,
-      offset: 50,
+      // easing: 'ease-out-cubic',
+      // once: false,
+      // offset: 50,
     });
   }, []);
 
@@ -45,8 +45,6 @@ export default function App({ Component, pageProps }: AppProps) {
         <Toaster />
         {pathname !== '/' &&
           localStorage.getItem('access_token') === 'granted' && <Navbar />}
-        {/* <Component {...pageProps} /> */}
-        {/* if pathname is not "/", check the local storage for access_token === 'granted, if present render the component, else redirect to login page */}
         {pathname !== '/' &&
         localStorage.getItem('access_token') === 'granted' ? (
           <Component {...pageProps} />

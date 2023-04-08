@@ -8,7 +8,7 @@ import EccIntro from '@/components/pages/whereGoing/backgrounds/EccIntro';
 
 const Acknowledgement = () => {
   return (
-    <Box sx={{ pt: { xs: 3, md: 10 } }}>
+    <Box>
       {/* <GrandProject /> */}
       <EccIntro />
       <Acknowledgements />

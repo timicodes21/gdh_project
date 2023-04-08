@@ -45,7 +45,7 @@ const JourneySoFar = () => {
   return (
     <>
       <div ref={ref} id="construction_stages" className="slanted-container">
-        <Box sx={{ py: 5 }}>
+        <Box>
           <Wrapper>
             <p
               className="text-secondary-3 font-52 font-400 montaga text-center"
@@ -102,9 +102,9 @@ const JourneySoFar = () => {
             </Box>
             <Box
               sx={{ mt: 10, display: 'flex', justifyContent: 'center' }}
-              data-aos="fade-left"
-              data-aos-delay="500"
-              data-aos-duration="1000"
+              // data-aos="fade-left"
+              // data-aos-delay="500"
+              // data-aos-duration="1000"
             >
               <Carousel
                 sx={{

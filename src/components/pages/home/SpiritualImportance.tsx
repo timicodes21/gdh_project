@@ -33,7 +33,7 @@ const SpiritualImportance = () => {
   }
 
   return (
-    <Box sx={{ py: 5 }}>
+    <Box>
       <ReactAudioPlayer
         src="/assets/audios/Spiritual Importance.mp3"
         autoPlay={false}

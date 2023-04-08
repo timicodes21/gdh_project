@@ -74,7 +74,7 @@ const Acknowledgements = () => {
       <Box sx={{ py: 5 }}>
         <Wrapper>
           <Grid container>
-            <Grid item xs={12} md={5}>
+            <Grid item xs={12} md={5} className="dis-none">
               <Box
                 sx={{
                   position: 'relative',
@@ -114,9 +114,7 @@ const Acknowledgements = () => {
                 is the height of God's love and to any of his mortal children,
                 that is beloved, we are all privileged and counted worthy to be
                 a good part of this historical monument at this point of our
-                sojourn here in the physical. The edifice that stands today is
-                in any clime, a great feat of architecture, engineering,
-                construction prowess and human resilience...`}{' '}
+                sojourn here in the physical...`}{' '}
                 <br /> <br />
                 <p
                   style={{

@@ -69,10 +69,10 @@ const ChallengesFaced = () => {
         ref={audioRef}
         onEnded={() => setIsPlaying(false)}
       />
-      <Box sx={{ py: 5 }}>
+      <Box>
         <Wrapper>
           <Grid container>
-            <Grid item xs={12} md={5}>
+            <Grid item xs={12} md={5} className="dis-none">
               <Box
                 sx={{
                   position: 'relative',

@@ -33,7 +33,7 @@ const DesignConcept = () => {
     }
   }
   return (
-    <Box sx={{ py: 5 }}>
+    <Box>
       <ReactAudioPlayer
         src="/assets/audios/Design Concept.mp3"
         autoPlay={false}

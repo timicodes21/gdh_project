@@ -1,6 +1,6 @@
-import { Container } from "@mui/material";
-import { NextPage } from "next";
-import React, { ReactNode } from "react";
+import { Container } from '@mui/material';
+import { NextPage } from 'next';
+import React, { ReactNode } from 'react';
 
 interface IProps {
   children: ReactNode;

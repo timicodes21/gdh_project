@@ -37,31 +37,15 @@ export default function Home() {
       return;
     }
     setLoading(true); // set loading to true
-    try {
-      const response = await usersHttpClient.post('/status', body);
-      const {
-        status,
-        data: { message, responseData },
-      } = response;
-      if (status === 200) {
-        localStorage.setItem('access_token', 'granted');
-        toast.success(message);
-        router.push(`/home`);
-        setLoading(false); // set loading to false
-      }
-    } catch (err: any) {
+    if (process.env.NEXT_PUBLIC_USERS_API_BASE_URL === passcode) {
+      localStorage.setItem('access_token', 'granted');
+      toast.success('Login Successful');
+      router.push(`/home`);
       setLoading(false); // set loading to false
-      console.log('error', err);
-      err?.response?.data?.message
-        ? toast.error(err?.response?.data?.message)
-        : toast.error('An Error Occured, Please try again later');
-      return 'An error occured';
+    } else {
+      setLoading(false); // set loading to false
+      toast.error('Invalid Passcode');
     }
-  };
-
-  // create a fuction that will clear the local storage whne the user close the tab or browser
-  const clearLocalStorage = () => {
-    localStorage.clear();
   };
 
   return (

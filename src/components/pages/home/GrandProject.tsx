@@ -26,7 +26,7 @@ const GrandProject: NextPage<IProps> = ({ templePage }) => {
   } = useModal();
   const router = useRouter();
   return (
-    <Box sx={{ py: 5 }}>
+    <Box>
       <Wrapper>
         <BsChevronLeft
           className="font-24 font-800 pointer"

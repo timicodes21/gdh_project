@@ -32,7 +32,7 @@ const LinksAndConnections = () => {
   }
 
   return (
-    <Box sx={{ py: 5 }}>
+    <Box>
       <ReactAudioPlayer
         src="/assets/audios/links.mp3"
         autoPlay={false}
