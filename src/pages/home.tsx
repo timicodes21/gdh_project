@@ -30,7 +30,7 @@ const home = () => {
       <SpiritualImportance />
       <LinksAndConnections />
       <JourneySoFar />
-      <Congregation />
+      {/* <Congregation /> */}
       <Excited />
     </Box>
   );
