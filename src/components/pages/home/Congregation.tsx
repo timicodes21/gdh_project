@@ -1,9 +1,9 @@
-import Wrapper from "@/components/layout/Wrapper";
-import { congregation } from "@/data/temple";
-import { Box } from "@mui/material";
-import React from "react";
-import Carousel from "react-material-ui-carousel";
-import ReactPlayer from "react-player/youtube";
+import Wrapper from '@/components/layout/Wrapper';
+import { congregation } from '@/data/temple';
+import { Box } from '@mui/material';
+import React from 'react';
+import Carousel from 'react-material-ui-carousel';
+import ReactPlayer from 'react-player/youtube';
 
 const Congregation = () => {
   return (
@@ -20,14 +20,14 @@ const Congregation = () => {
           </p>
 
           <Box sx={{ mt: 5 }}>
-            <Carousel navButtonsAlwaysVisible animation="slide">
+            <Carousel navButtonsAlwaysVisible interval={60000}>
               {congregation?.map((item, index) => (
                 <Box key={index}>
                   <ReactPlayer url={item?.url} width="100%" />
                   <Box>
                     <span className="font-32 font-400 avenuex">
                       {item?.name}
-                    </span>{" "}
+                    </span>{' '}
                     <br />
                     <span className="font-32 font-400 avenuex">
                       {item?.occupation}
