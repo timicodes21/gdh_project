@@ -4,7 +4,6 @@ import GrandProject from "@/components/pages/home/GrandProject";
 import WhyBuild from "@/components/pages/home/WhyBuild";
 import TempleImportance from "@/components/pages/home/TempleImportance";
 import JourneySoFar from "@/components/pages/home/JourneySoFar";
-import Congregation from "@/components/pages/home/Congregation";
 import Excited from "@/components/pages/home/Excited";
 import GrandTemple from "@/components/pages/home/GrandTemple";
 import DesignConcept from "@/components/pages/home/DesignConcept";
@@ -30,7 +29,7 @@ const home = () => {
       <SpiritualImportance />
       <LinksAndConnections />
       <JourneySoFar />
-      {/* <Congregation /> */}
+
       <Excited />
     </Box>
   );
