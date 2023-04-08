@@ -13,11 +13,7 @@ body {
   padding: 0 !important;
   margin: 0 !important;
   box-sizing: border-box;
-<<<<<<< HEAD
   overflow-x: hidden;
-=======
-  overflow-x: hidden !important;
->>>>>>> 09d09b1ea8182ce16f8ef5b1867e45c6348a8091
 }
 
 .montaga {
