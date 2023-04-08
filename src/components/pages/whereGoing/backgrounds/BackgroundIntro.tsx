@@ -82,11 +82,11 @@ const BackgroundIntro: NextPage<IProps> = ({ templePage }) => {
                   </BlurredBadge>
                 )} */}
                 <Box sx={{ mt: 2 }}></Box>
-                {!templePage && (
+                {/* {!templePage && (
                   <BlurredBadge onClick={openModal2}>
                     See whats new
                   </BlurredBadge>
-                )}
+                )} */}
               </Grid>
             </Grid>
           </Box>
