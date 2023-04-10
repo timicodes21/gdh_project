@@ -44,7 +44,14 @@ const JourneySoFar = () => {
 
   return (
     <>
-      <div ref={ref} id="construction_stages" className="slanted-container">
+      <div
+        ref={ref}
+        id="construction_stages"
+        className="slanted-container"
+        style={{
+          margin: '2rem auto',
+        }}
+      >
         <Box>
           <Wrapper>
             <p

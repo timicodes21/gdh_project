@@ -36,6 +36,7 @@ const DesignConcept = () => {
     <Box>
       <ReactAudioPlayer
         src="/assets/audios/Design Concept.mp3"
+        title="Design Concept"
         autoPlay={false}
         loop={false}
         controls={false}

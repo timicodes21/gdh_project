@@ -36,6 +36,7 @@ const TempleImportance = () => {
     <Box>
       <ReactAudioPlayer
         src="/assets/audios/Temp Building.mp3"
+        title="Temporay Temple"
         autoPlay={false}
         loop={false}
         controls={false}

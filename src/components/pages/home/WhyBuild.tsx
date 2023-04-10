@@ -65,6 +65,7 @@ const WhyBuild = () => {
       <Box sx={{ display: 'none' }}>
         <ReactAudioPlayer
           src="/assets/audios/Introduction.mp3"
+          title="Introduction"
           autoPlay={false}
           loop={false}
           controls={false}

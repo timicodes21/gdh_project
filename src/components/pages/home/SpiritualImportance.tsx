@@ -36,6 +36,7 @@ const SpiritualImportance = () => {
     <Box>
       <ReactAudioPlayer
         src="/assets/audios/Spiritual Importance.mp3"
+        title="Spiritual Importance"
         autoPlay={false}
         loop={false}
         controls={false}

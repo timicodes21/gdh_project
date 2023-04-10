@@ -1,17 +1,17 @@
-import BlurredBadge from "@/components/buttons/BlurredBadge";
-import ReadMore from "@/components/buttons/ReadMore";
-import Wrapper from "@/components/layout/Wrapper";
-import CustomModal from "@/components/modals/CustomModal";
-import VideoModal from "@/components/modals/VideoModal";
-import { useModal } from "@/hooks/useModal";
-import { Box, Grid } from "@mui/material";
-import { NextPage } from "next";
-import Image from "next/image";
-import { useRouter } from "next/router";
-import React from "react";
-import { BsChevronLeft } from "react-icons/bs";
-import ReactPlayer from "react-player";
-import classes from "../../../../styles/Home.module.css";
+import BlurredBadge from '@/components/buttons/BlurredBadge';
+import ReadMore from '@/components/buttons/ReadMore';
+import Wrapper from '@/components/layout/Wrapper';
+import CustomModal from '@/components/modals/CustomModal';
+import VideoModal from '@/components/modals/VideoModal';
+import { useModal } from '@/hooks/useModal';
+import { Box, Grid } from '@mui/material';
+import { NextPage } from 'next';
+import Image from 'next/image';
+import { useRouter } from 'next/router';
+import React from 'react';
+import { BsChevronLeft } from 'react-icons/bs';
+import ReactPlayer from 'react-player';
+import classes from '../../../../styles/Home.module.css';
 
 interface IProps {
   templePage?: boolean;
@@ -27,7 +27,7 @@ const FloorIntro: NextPage<IProps> = ({ templePage }) => {
   const router = useRouter();
   return (
     <Box sx={{ py: 5 }}>
-      <Wrapper>
+      <Wrapper noPadding>
         <BsChevronLeft
           className="font-24 font-800 pointer"
           onClick={() => router.back()}
@@ -35,25 +35,25 @@ const FloorIntro: NextPage<IProps> = ({ templePage }) => {
         <Box className={classes.floor_background} sx={{ mt: 2 }}>
           <Box
             sx={{
-              display: "flex",
-              alignItems: "flex-end",
+              display: 'flex',
+              alignItems: 'flex-end',
             }}
           >
-            <Grid container sx={{ px: 5, pb: 3 }}>
+            <Grid container sx={{ px: 1, pb: 3 }}>
               <Grid
                 item
                 xs={12}
                 md={templePage ? 12 : 6}
                 sx={{
-                  display: "flex",
-                  flexDirection: "column",
-                  justifyContent: "flex-end",
+                  display: 'flex',
+                  flexDirection: 'column',
+                  justifyContent: 'flex-end',
                 }}
                 data-aos="fade-down"
                 data-aos-duration="500"
               >
                 <span className="font-64 font-400 montaga text-white">
-                  The Grand Temple {templePage ? "" : "project"}
+                  The Grand Temple {templePage ? '' : 'project'}
                 </span>
                 <br />
                 <span className="font-18 font-400 text-white avenir">
@@ -66,10 +66,10 @@ const FloorIntro: NextPage<IProps> = ({ templePage }) => {
                 xs={12}
                 md={6}
                 sx={{
-                  display: "flex",
-                  flexDirection: "column",
-                  justifyContent: { xs: "flex-start", lg: "flex-end" },
-                  alignItems: { xs: "flex-start", lg: "flex-end" },
+                  display: 'flex',
+                  flexDirection: 'column',
+                  justifyContent: { xs: 'flex-start', lg: 'flex-end' },
+                  alignItems: { xs: 'flex-start', lg: 'flex-end' },
                   mt: { xs: 3, lg: 0 },
                 }}
                 data-aos="fade-down"

@@ -59,9 +59,17 @@ const ChallengesFaced = () => {
   }, []);
 
   return (
-    <div id="challenges_faced" ref={ref} className="slanted-container2">
+    <div
+      id="challenges_faced"
+      ref={ref}
+      className="slanted-container2"
+      style={{
+        margin: '2rem auto',
+      }}
+    >
       <ReactAudioPlayer
         src="/assets/audios/Challenges Faced.mp3"
+        title="Challenges Faced"
         autoPlay={false}
         loop={false}
         controls={false}
@@ -69,7 +77,11 @@ const ChallengesFaced = () => {
         ref={audioRef}
         onEnded={() => setIsPlaying(false)}
       />
-      <Box>
+      <Box
+        sx={{
+          py: '1rem',
+        }}
+      >
         <Wrapper>
           <Grid container>
             <Grid item xs={12} md={5} className="dis-none">

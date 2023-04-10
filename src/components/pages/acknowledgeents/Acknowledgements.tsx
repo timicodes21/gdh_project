@@ -64,6 +64,7 @@ const Acknowledgements = () => {
     <div id="history" ref={ref} className="slanted-container2">
       <ReactAudioPlayer
         src="/assets/audios/acknowledgement.mp3"
+        title="acknowledgement"
         autoPlay={false}
         loop={false}
         controls={false}

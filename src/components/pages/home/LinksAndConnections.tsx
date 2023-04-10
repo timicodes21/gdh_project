@@ -35,6 +35,7 @@ const LinksAndConnections = () => {
     <Box>
       <ReactAudioPlayer
         src="/assets/audios/links.mp3"
+        title="Links to the Completion of the Grand Temple"
         autoPlay={false}
         loop={false}
         controls={false}

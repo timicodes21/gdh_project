@@ -37,6 +37,7 @@ const Introduction = () => {
     <Box sx={{ py: 5 }}>
       <ReactAudioPlayer
         src="/assets/audios/introduction 2.mp3"
+        title="introduction"
         autoPlay={false}
         loop={false}
         controls={false}

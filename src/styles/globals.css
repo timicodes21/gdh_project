@@ -350,15 +350,15 @@ a {
 
 .dropdown .dropdown_content {
   position: absolute;
-
   background: #fff !important;
   width: 300px;
-  height: auto;
+  /* height: auto; */
   box-shadow: 0px 2px 6px 1px rgba(0, 0, 0, 0.18);
   /* height: 0; */
   display: none;
   overflow: hidden;
   transition: display 2s ease-in-out;
+  z-index: 100;
 }
 
 .dropdown .dropdown_content.height_increase {
@@ -500,7 +500,7 @@ a {
   top: 0;
   left: 0;
   right: 0;
-  height: 80%;
+  height: 100%;
   background-color: #f6f6f6;
   transform: skewY(0deg);
   transform-origin: top left;

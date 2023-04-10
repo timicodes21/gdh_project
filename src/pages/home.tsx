@@ -16,9 +16,9 @@ import Congregation from '@/components/pages/home/Congregation';
 const home = () => {
   return (
     <Box
-      style={{
-        padding: '1rem',
-      }}
+    // style={{
+    //   padding: '1rem',
+    // }}
     >
       <GrandProject />
       <SpiritualImplications />

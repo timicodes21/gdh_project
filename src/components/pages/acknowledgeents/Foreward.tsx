@@ -38,6 +38,7 @@ const Foreward = () => {
     <Box sx={{ py: 5 }}>
       <ReactAudioPlayer
         src="/assets/audios/foreward.mp3"
+        title="foreward"
         autoPlay={false}
         loop={false}
         controls={false}
@@ -63,32 +64,12 @@ const Foreward = () => {
             >
               Foreward
             </p>
-            <Grid container>
-              <Grid item xs={12} md={2}></Grid>
-              {/* <Grid item xs={12} md={8}>
-                <Box
-                  className={classes.shadow_bg_1}
-                  sx={{ py: { xs: 2, md: 5 }, px: { xs: 2, md: 10 } }}
-                >
-                  <p
-                    className="text-secondary-4 font-32 font-300 avenuex text-justify"
-                    data-aos="fade-right"
-                    data-aos-delay="500"
-                    data-aos-duration="1000"
-                  >
-                    To God be the Glory for great things He has done and will
-                    continue to do
-                  </p>
-                </Box>
-              </Grid> */}
-              <Grid item xs={12} md={2}></Grid>
-            </Grid>
-            <Grid container sx={{ mt: { xs: 5, md: 10 } }}>
+            <Grid container sx={{ mt: { xs: 5, md: 5 } }}>
               <Grid item xs={12} md={2}></Grid>
               <Grid item xs={12} md={8}>
                 <Box
-                  className={classes.shadow_bg_2}
-                  sx={{ py: { xs: 2, md: 5 }, px: { xs: 2, md: 10 } }}
+                // className={classes.shadow_bg_2}
+                // sx={{ py: { xs: 2, md: 5 }, px: { xs: 2, md: 10 } }}
                 >
                   <p
                     className="text-secondary-4 font-32 font-300 avenuex text-justify"

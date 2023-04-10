@@ -57,10 +57,18 @@ const GrandTemple = () => {
   }
 
   return (
-    <div id="grand_temple" ref={ref} className="slanted-container">
+    <div
+      id="grand_temple"
+      ref={ref}
+      className="slanted-container"
+      style={{
+        margin: '2rem auto',
+      }}
+    >
       <Box>
         <ReactAudioPlayer
           src="/assets/audios/The Grand Temple Project.mp3"
+          title="The Grand Temple Project"
           autoPlay={false}
           loop={false}
           controls={false}
